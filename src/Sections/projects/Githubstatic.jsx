@@ -2,23 +2,22 @@ import Textanimation from "../../components/Ui/Textaniamtion";
 
 const Githubstatic = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center ">
+    <div className="w-full lg:px-0 px-4 lg:mt-0 mt-3 flex flex-col items-center justify-center ">
       <h1 className="Satoshi text-[4vw]">
         <Textanimation
           text="        My GitHub Activity
 
 "
-          classname="Satoshi text-black text-[3.5vw]"
+          classname="Satoshi text-black lg:text-[3.5vw] text-2xl"
         />{" "}
       </h1>
 
-      {/* Full width BIG container */}
       <div
   className="
     border border-gray-500
-   py-10
+   lg:py-10
 
- px-30 py-10 overflow-x-auto flex justify-center
+ lg:px-30 py-6 overflow-x-auto flex justify-center
     shadow-lg
     rounded-xl
   "
@@ -33,8 +32,9 @@ const Githubstatic = () => {
             w-full 
             h-auto 
             object-contain 
-            scale-125
+            lg:scale-125
           "
+
           unoptimized
         />
       </div>

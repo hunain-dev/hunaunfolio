@@ -4,12 +4,12 @@ import SwiperSlider from "../../components/SwiperSlider"
 const ProjectsShowcase = () => {
 
   return (
-    <div className=" w-full h-screen  ">
+    <div className=" w-full lg:h-screen h-[80vh]     ">
       <div className="h-full w-full flex items-center justify-center relative">
 
         <div className="h-full flex items-center justify-center w-full   relative overflow-hidden">
 
-<h2 className="Garelin font-normal uppercase text-[14vw] ">
+<h2 className="Garelin font-normal uppercase lg:text-[14vw] text-8xl ">
 Projects
 </h2>
           <div className="absolute flex items-center justify-center left-0   w-full ">

@@ -6,10 +6,10 @@ const Ourservices = () => {
 
       {/* Top Section */}
       <div className="w-full px-[1vw] text-center">
-        <h2 className="Impacted font-medium text-[13vw] leading-[12vw] uppercase text-white">
+        <h2 className="Impacted font-medium lg:text-[13vw] text-5xl lg:leading-[12vw] uppercase text-white">
           Our Services,
         </h2>
-        <h2 className="Impacted font-medium text-[13vw] leading-[12vw] uppercase text-white">
+        <h2 className="Impacted font-medium lg:text-[13vw] text-5xl lg:leading-[12vw] leading-13 uppercase text-white">
           WHAT I OFFER, & WHY CHOOSE ME
         </h2>
       </div>
@@ -17,21 +17,27 @@ const Ourservices = () => {
       {/* Bottom Section */}
       <div className="mt-[-2vw] w-full">
         <div className="h-full w-full bg-[#e0e05f] flex items-center justify-center overflow-hidden border border-black">
-          <div className="flex items-center justify-center w-full h-[183vh] mt-[-10vw] overflow-hidden" data-scroll data-scroll-speed="0.3">
+          <div className="flex items-center justify-center w-full lg:h-[183vh] mt-[-10vw] overflow-hidden" data-scroll data-scroll-speed="0.3">
           <img
-      src="/public/assets/images/Ourservicesimages (1).png"
-      alt="Service 1"
-      height={670}
-      width={670}
-      className="object-cover object-center"
-    />     
-  <img
-      src="/public//assets/images/Ourservicesimages (2).png"
-      alt="Service 2"
-      height={670}
-      width={670}
-      className="object-cover object-center"
-    />          </div>
+  src="/public/assets/images/Ourservicesimages (1).png"
+  alt="Service 1"
+  className="
+    object-contai object-center
+    w-100 h-100         /* Mobile */
+    md:w-60 md:h-60   /* Small Laptop */
+    lg:w-300 lg:h-300   /* Desktop */
+  "
+/>
+<img
+  src="/public/assets/images/Ourservicesimages (2).png"
+  alt="Service 1"
+  className="
+    object-contai object-center
+    w-100 h-100         /* Mobile */
+    md:w-60 md:h-60   /* Small Laptop */
+    lg:w-300 lg:h-300   /* Desktop */
+  "
+/>        </div>
         </div>
       </div>
 

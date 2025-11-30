@@ -310,7 +310,16 @@
     width: 20vw;
     height: 31vw;
   }
-  
+  /* 📱 Mobile (0–640px) */
+@media (max-width: 640px) {
+  .swiper {
+    width: 60vw;
+    height: 90vw;
+  }
+}
+
+
+
   .swiper-slide {
     border-radius: 2vw;
     backdrop-filter: blur(20px);

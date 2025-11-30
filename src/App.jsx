@@ -8,7 +8,7 @@ import Projects from './Sections/projects/Projects'
 
 const App = () => {
   return (
-    <div className=' lg:pt-31 pt-10 w-full '>
+    <div className=' lg:pt-31 pt-13 w-full '>
       <Home/>
       <Aboutus/>
       <TechStack/>

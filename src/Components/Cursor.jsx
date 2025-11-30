@@ -107,7 +107,7 @@ const Cursor = () => {
   return (
     <canvas
       ref={canvasRef}
-      className='fixed top-0 left-0 h-screen w-screen pointer-events-none'
+      className='fixed top-0  left-0 h-screen w-screen pointer-events-none'
       style={{ background: 'transparent', zIndex: 9999 }}
     />
   )

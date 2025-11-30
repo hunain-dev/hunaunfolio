@@ -8,7 +8,7 @@ import Button from './Ui/Button';
   };
 const Header = () => {
   return (
-    <div className=" fixed top-0 left-1/2 -translate-x-1/2 h-[9vh] w-[93%] flex items-center justify-between z-999 mt-[1vw] lg:opacity-100 opacity-0">
+    <header className=" fixed top-0 left-1/2 -translate-x-1/2 h-[9vh] w-[93%] flex items-center justify-between z-999 mt-[1vw] lg:opacity-100 opacity-0">
       <div className="
       flex items-center justify-center 
       gap-[2.2vw] 
@@ -69,7 +69,7 @@ const Header = () => {
 
     </div>
   
-  </div>
+  </header>
   )
 }
 

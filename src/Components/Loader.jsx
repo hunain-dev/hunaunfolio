@@ -31,7 +31,7 @@ const Loader = ({ onComplete }) => {
   return (
     <div
       ref={loaderRef}
-      className="fixed lg:opacity-100 opacity-0 inset-0 z-999999 grid grid-cols-5 overflow-hidden"
+      className="fixed inset-0 z-999999 grid grid-cols-5 overflow-hidden"
     >
       <div className="column h-full bg-[#232A27]"></div>
       <div className="column h-full bg-[#232A27]"></div>

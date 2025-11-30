@@ -28,7 +28,7 @@ const Button = ({ btntext, classname, link,onclick }) => {
     <Link
       href={link || "#"}
       onClick={onclick}   // ✅ ADD
-      className={`group relative overflow-hidden cursor-pointer SuisseIntl  text-[1vw] border border-black text-black flex items-center justify-center gap-2 ${classname}`}
+      className={`group relative overflow-hidden cursor-pointer SuisseIntl   border border-black text-black flex items-center justify-center gap-2 ${classname}`}
     >
       <h2 className="relative z-10 transition-all duration-300 group-hover:text-white">
         {btntext}

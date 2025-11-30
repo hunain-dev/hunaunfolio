@@ -16,19 +16,19 @@ const TechStack = () => {
   const constraintsRef = useRef(null);
 
   return (
-    <div id="stack" className="myskills mt-[20vh] w-full px-[3vw] text-center">
-      <h1 className="Satoshi font-medium text-[3vw] text-[#242627] mb-8">
+    <div id="stack" className="myskills  lg:mt-[20vh] mt-17 w-full lg:px-[3vw] text-center">
+      <h1 className="Satoshi font-medium lg:text-[3vw] text-4xl text-[#242627] mb-8">
         My Skills
       </h1>
 
       <motion.div
-        className="skills flex flex-wrap justify-center items-center gap-[3.5vw] w-[70%] mx-auto py-[2vh] mt-[1vw]"
+        className="skills grid lg:grid-cols-7 grid-cols-4  gap-[3.5vw] lg:w-[70%] mx-auto py-[2vh] mt-[1vw]"
         ref={constraintsRef}
       >
         {skillsimg.map((elem, index) => (
           <motion.div
             key={index}
-            className="skill-item flex justify-center items-center h-[10vh] w-[10vh] rounded-[10vw] cursor-pointer"
+            className="skill-item flex justify-center items-center lg:h-[10vh] lg:w-[10vh] w-13 rounded-[10vw] cursor-pointer"
             drag
             dragConstraints={constraintsRef}
             dragElastic={0.2}

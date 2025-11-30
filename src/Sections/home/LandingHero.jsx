@@ -27,12 +27,12 @@ const LandingHero = () => {
   }, []);
 
   return (
-    <div className='min-full mb-7 w-full flex items-center justify-start flex-col'>
+    <div className='min-full lg:mb-7 mb-15 w-full flex items-center justify-start flex-col'>
         <div className='hfull w-full gap-2 flex items-center justify-start  flex-col'>
-        <h1 className='Fontspring uppercase lg:text-5xl text-3xl'>{`Hi I’am Muhammad Hunain`}</h1>
+        <h1 className='Fontspring uppercase lg:text-5xl text-4xl'>{`Hi I’am Muhammad Hunain`}</h1>
         <h4 className='ActayCondensed lg:text-2xl text-1xl'>Your product designer and developer partner!</h4>
         </div>
-        <div className='h-full mt-5 w-full '>
+        <div className='h-full lg:mt-5 mt-15 w-full '>
           <div className='Akrobat h-full w-full  relative flex gap-20'>
           {['Front-end reactjs developer','Front-end reactjs developer','Front-end reactjs developer' ].map(
             (elem, index) => {
@@ -55,14 +55,13 @@ const LandingHero = () => {
             }
           )}
                   
-          <div className='h-full flex items-center justify-center absolute top-0 left-0   w-full '>
+          <div className='h-full flex items-center justify-center absolute top-0 left-0  w-full '>
           <div className="Modelview" ref={modelRef}>
         {isVisible ? (
           <model-viewer
   src="/assets/images/cube.glb"
   alt="3D Cube"
-  className="w-94 h-91  lg:opacity-100 opacity-0"
-
+  className="lg:w-94 lg:h-91 w-80 h-50"
   auto-rotate
   camera-controls
   disable-zoom
