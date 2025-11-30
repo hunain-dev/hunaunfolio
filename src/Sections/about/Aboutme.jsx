@@ -10,7 +10,6 @@ const Aboutme = () => {
   const paraRef = useRef(null)
 
   useEffect(() => {
-    const mm = gsap.matchMedia();
     gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -52,7 +51,7 @@ const Aboutme = () => {
 
   }, []);
   return (
-    <div ref={sectionRef} className="lg:min-h-[80vh]  min-h-[30vh] overflow-hidden  text-white w-full">
+    <div ref={sectionRef} className="lg:min-h-[80vh]  min-h-[30vh]  md:min-h-[40vh] overflow-hidden  text-white w-full">
       <div className="h-full w-full">
         <div className="relative flex items-center justify-center flex-col w-full ">
           <h2
@@ -75,7 +74,7 @@ const Aboutme = () => {
             </span>
             n
           </h2>
-          <h4 ref={subtitleRef} className="group lg:text-8xl text-3xl lg:mt-5 mt-3">
+          <h4 ref={subtitleRef} className="group lg:text-8xl text-3xl md:text-5xl lg:mt-1 mt-1 lg:opacity-100 opacity-100 md:opacity-0">
             <span className="actay inline-block transition-transform duration-600 group-hover:-translate-x-50">
               Creative
             </span>
@@ -86,7 +85,7 @@ const Aboutme = () => {
           </h4>
           <div
   ref={paraRef}
-  className="h-full flex items-start  justify-start text-center lg:px-30 absolute lg:top-65 top-20 left-0 w-full opacity-0 translate-y-40"
+  className="h-full flex items-start  justify-start text-center lg:px-30 absolute lg:top-65 md:top-48 top-20 left-0 w-full opacity-0 translate-y-40"
 >
 
           <h4 className="actay lg:text-lg text-[2vw]">

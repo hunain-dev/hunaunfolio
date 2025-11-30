@@ -11,7 +11,7 @@ const HappyClients = () => {
     ]
   return (
     <div className='lg:gap-4 gap-4 w-full grid grid-cols-1'>
-        <div className='h-full w-full flex items-center justify-center lg:flex-row flex-col lg:gap-2 gap-3 '>
+        <div className='h-full w-full flex items-center justify-center lg:flex-row flex-col lg:gap-2 gap-3 md:gap-5 '>
             <span className='flex items-center justify-center'>   {Object.values(obj[0]).map((url, index) => (
     <img
     key={index}
@@ -20,7 +20,7 @@ const HappyClients = () => {
     className="w-9  md:w-14 lg:w-10 object-contain"
    />
       ))}</span>
-      <h3 className='actay lg:text-[1.3vw]  text-[#343539]'>5+ happy clients</h3>
+      <h3 className='actay lg:text-[1.3vw] md:text-2xl  text-[#343539]'>5+ happy clients</h3>
         </div>
         <div className='h-full w-full flex items-center justify-center'>
         <Button
@@ -28,8 +28,10 @@ const HappyClients = () => {
   link="/work"
   classname="
     actay 
-    px-4 py-2 text-[3vw]        /* MOBILE */
-    lg:px-5 lg:py-3 lg:text-[1vw]  /* laptop/desktop */
+    px-4 py-2 text-[3vw]       
+
+    lg:px-5 lg:py-3 lg:text-[1vw] 
+   md:text-[2vw]
   "
 />
         </div>

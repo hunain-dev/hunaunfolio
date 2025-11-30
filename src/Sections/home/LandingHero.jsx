@@ -29,17 +29,17 @@ const LandingHero = () => {
   return (
     <div className='min-full lg:mb-7 mb-15 w-full flex items-center justify-start flex-col'>
         <div className='hfull w-full gap-2 flex items-center justify-start  flex-col'>
-        <h1 className='Fontspring uppercase lg:text-5xl text-4xl'>{`Hi I’am Muhammad Hunain`}</h1>
-        <h4 className='ActayCondensed lg:text-2xl text-1xl'>Your product designer and developer partner!</h4>
+        <h1 className='Fontspring uppercase lg:text-5xl text-4xl md:text-6xl'>{`Hi I’am Muhammad Hunain`}</h1>
+        <h4 className='ActayCondensed lg:text-2xl text-1xl md:text-2xl'>Your product designer and developer partner!</h4>
         </div>
-        <div className='h-full lg:mt-5 mt-15 w-full '>
+        <div className='h-full lg:mt-5 mt-15 md:mt-14 w-full '>
           <div className='Akrobat h-full w-full  relative flex gap-20'>
           {['Front-end reactjs developer','Front-end reactjs developer','Front-end reactjs developer' ].map(
             (elem, index) => {
               return (
                 <motion.div
                   key={index}
-                  className="Akrobat inline-block whitespace-nowrap pr-3 text-[19vw]  text-[#343539]"
+                  className="Akrobat inline-block whitespace-nowrap pr-3 text-[19vw] md:text-[24vw]  text-[#343539]"
                   initial={{ x: '11%' }} 
                   animate={{ x: '-100%' }} 
                   
@@ -61,7 +61,7 @@ const LandingHero = () => {
           <model-viewer
   src="/assets/images/cube.glb"
   alt="3D Cube"
-  className="lg:w-94 lg:h-91 w-80 h-50"
+  className="lg:w-94 lg:h-91 w-80 h-50 md:w-84 md:h-84"
   auto-rotate
   camera-controls
   disable-zoom
