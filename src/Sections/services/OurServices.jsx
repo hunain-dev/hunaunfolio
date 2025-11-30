@@ -1,0 +1,46 @@
+// import Faqs from "./Faqs";
+
+const Ourservices = () => {
+  return (
+    <div  id="services" className="w-full mt-[8vh] h-full relative bg-[#689D48]">
+
+      {/* Top Section */}
+      <div className="w-full px-[1vw] text-center">
+        <h2 className="Impacted font-medium text-[13vw] leading-[12vw] uppercase text-white">
+          Our Services,
+        </h2>
+        <h2 className="Impacted font-medium text-[13vw] leading-[12vw] uppercase text-white">
+          WHAT I OFFER, & WHY CHOOSE ME
+        </h2>
+      </div>
+
+      {/* Bottom Section */}
+      <div className="mt-[-2vw] w-full">
+        <div className="h-full w-full bg-[#e0e05f] flex items-center justify-center overflow-hidden border border-black">
+          <div className="flex items-center justify-center w-full h-[183vh] mt-[-10vw] overflow-hidden" data-scroll data-scroll-speed="0.3">
+          <img
+      src="/public/assets/images/Ourservicesimages (1).png"
+      alt="Service 1"
+      height={670}
+      width={670}
+      className="object-cover object-center"
+    />     
+  <img
+      src="/public//assets/images/Ourservicesimages (2).png"
+      alt="Service 2"
+      height={670}
+      width={670}
+      className="object-cover object-center"
+    />          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      {/* <Faqs/> */}
+    
+
+    </div>
+  );
+};
+
+export default Ourservices;

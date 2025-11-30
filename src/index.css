@@ -1,0 +1,321 @@
+@import "tailwindcss";
+
+
+
+
+
+*{
+    box-sizing: border-box;
+  }
+  
+  body,html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: #F0F0F0;
+  }
+  
+  .smooth-scroll {
+  scroll-behavior: smooth;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: none;
+  }
+  
+  
+  ::selection{
+    background-color:#242627;
+    color: white;
+  }
+  
+  
+  @font-face {
+    font-family: 'Actay';
+    src: url('/Assets/Fonts/Actay-Regular.otf'); 
+      font-display: swap;
+  
+  }
+  
+  
+  .actay{
+    font-family: 'Actay' ;
+    src: url('/Assets/Fonts/Actay-Regular.otf'); 
+    font-display: swap;
+  
+  
+  }
+  
+  
+  @font-face {
+    font-family: 'Fontspring' ;
+    src: url('/assets/Fonts/Fontspring.ttf')
+     format("opentype");
+  }
+  
+  
+  .Fontspring{
+    font-family: 'Fontspring' ;
+    src: url('/public/assets/Fonts/Fontspring.ttf');
+    font-display: swap;
+  
+  
+  }
+  
+  @font-face {
+    font-family: 'ActayCondensed';
+    src: url('/public/Assets/Fonts/ActayCondensed-ThinItalic.otf');
+    font-display: swap;
+   
+  }
+  
+  .ActayCondensed{
+    font-family: 'ActayCondensed';
+    src: url('/public/Assets/Fonts/ActayCondensed-ThinItalic.otf');
+    font-display: swap;
+  
+  
+  }
+  
+  @font-face {
+    font-family: 'Akrobat';
+    src: url('/public/assets/Fonts/Akrobat.ttf');
+    font-display: swap;
+   
+  }
+  .Akrobat{
+    font-family: 'Akrobat';
+    src: url('/public/assets/Fonts/Akrobat.ttf');
+    font-display: swap;
+  
+  
+  }
+  
+  @font-face {
+    font-family: 'ppneuemontreal';
+    src: url('/public/assets//Fonts/ppneuemontreal-bold.otf');
+    font-display: swap;
+   
+  }
+  
+  
+  .ppneuemontreal{
+    font-family: 'ppneuemontreal';
+    src: url('/public/assets//Fonts/ppneuemontreal-bold.otf');
+    font-display: swap;
+  
+  
+  }
+  
+  
+  @font-face {
+    font-family: 'Morganite';
+    src: url('/Assets/Fonts/Morganite-Black.ttf');
+    font-display: swap;
+   
+  }
+  .Morganite{
+    font-family: 'Morganite';
+    src: url('/public/Assets/Fonts/Morganite-Black.ttf');
+    font-display: swap;
+  
+  
+  }
+  
+  
+  
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('/Assets/Fonts/Satoshi.ttf');
+    font-display: swap;
+   
+  }
+  
+  .Satoshi{
+    font-family: 'Satoshi';
+    src: url('/public/Assets/Fonts/Satoshi.ttf');
+    font-display: swap;
+  
+  
+  }
+  
+  @font-face {
+    font-family: 'Impacted';
+    src: url('/Assets/Fonts/Impacted.ttf');
+    font-display: swap;
+   
+  }
+  
+  
+  .Impacted{
+    font-family: 'Impacted';
+    src: url('/public/Assets/Fonts/Satoshi.ttf');
+    font-display: swap;
+  
+  
+  }
+  
+  
+  @font-face {
+    font-family: 'Garelin';
+    src: url('/public/Assets/Fonts/GarelinaBold-rgZ0p.ttf');
+    font-display: swap;
+  
+  }
+  
+  .Garelin{
+    font-family: 'Garelin';
+    src: url('/public/Assets/Fonts/GarelinaBold-rgZ0p.ttf');
+    font-display: swap;
+  
+  
+  }
+  
+  
+  
+  @font-face {
+    font-family: 'MarvinVisions';
+    src: url('/public/Assets/Fonts/MarvinVisions-Bold.otf');
+    font-display: swap;
+   
+  }
+  
+  @font-face {
+    font-family: 'Quasar';
+    src: url('/public/Assets/Fonts/Quasar.otf');
+    font-display: swap;
+   
+  }
+  @font-face {
+    font-family: 'sigana';
+    src: url('/public/Assets/Fonts/sigana-condensed.otf');
+    font-display: swap;
+   
+  }
+  @font-face {
+    font-family: 'impact';
+    src: url('/public/Assets/Fonts/impact.ttf');
+    font-display: swap;
+   
+  }
+  
+  @font-face {
+    font-family: 'Stadium';
+    src: url('/public/Assets/Fonts/Stadium.ttf');
+    font-display: swap;
+   
+  }
+  @font-face {
+    font-family: 'ThatAppeal';
+    src: url('/public/Assets/Fonts/ThatAppeal-FreeDemo-BF65b7880fefd18.otf'); 
+    font-display: swap;
+  
+  }
+  @font-face {
+    font-family: 'TypeMonster';
+    src: url('/public/Assets/Fonts/TypeMonster-FreeDemo-BF65d7910e35896.otf');
+    font-display: swap;
+   
+  }
+  
+  
+  
+  @font-face {
+    font-family: 'rejouice';
+    src: url('/public/Assets/Fonts/rejoucie.ttf'); 
+    font-display: swap;
+  
+  }
+  
+  @font-face {
+    font-family: 'gunplay';
+    src: url('/public/Assets/Fonts/gunplay.ttf');
+    font-display: swap;
+   
+  }
+  
+  
+  
+  
+  
+  
+  @font-face {
+    font-family: 'GeoplaceSC';
+    src: url('/public/Assets/Fonts/GeoplaceSC-Bold.ttf');
+    font-display: swap;
+   
+  }
+  
+  @font-face {
+    font-family: 'FaqroExtendedWideTrial';
+    src: url('/public/Assets/Fonts/FaqroExtendedWideTrial-Regular.ttf'); 
+    font-display: swap;
+  
+  }
+  
+  
+  @font-face {
+    font-family: 'Satoshi-black';
+    src: url('/public/Assets/Fonts/Satoshi-Black.otf');
+    font-display: swap;
+   
+  }
+  
+  .Satoshi-black{
+    font-family: 'Satoshi-black';
+  
+  }
+  @font-face {
+    font-family: 'Queen';
+    src: url('/public/Assets/Fonts/Queen.ttf');
+    font-display: swap;
+  
+  }
+  
+  .Queen{
+    font-family: 'Queen';
+  
+  }
+  
+  
+  
+  @font-face {
+    font-family: 'playwrite';
+    src: url('/public/Assets/Fonts/plauwrite.ttf');
+    font-display: swap;
+   
+  }
+  
+  
+  
+  
+  
+  @keyframes moveImage {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2%); 
+    }
+    100% {
+      transform: translateY(0); 
+    }
+  }
+  
+  
+  
+  
+  
+  .swiper {
+    width: 20vw;
+    height: 31vw;
+  }
+  
+  .swiper-slide {
+    border-radius: 2vw;
+    backdrop-filter: blur(20px);
+    background: rgba(37, 36, 36, 0.171);
+    border-radius: 15px;
+  
+  }
+  
