@@ -18,48 +18,48 @@ const Header = () => {
       shadow-[1px_1px_14px_rgba(29,28,28,0.5)]
       font-[Satoshi]">
       
- <Link href="#home">
+ <a href="#home">
   <Textanimation
     text="Home"
     classname="text-black text-[1.2vw]"
   />
-</Link>
-<Link href="#aboutus">
+</a>
+<a href='#aboutus'>
   <Textanimation
     text="About us"
     classname="text-black text-[1.2vw]"
   />
-</Link>
+</a>
   
   
-<Link href="#stack">
+<a href="#stack">
   <Textanimation
     text="Stack"
     classname="text-black text-[1.2vw]"
   />
-</Link>
+</a>
   
-<Link href="#services">
+<a href="#services">
   <Textanimation
     text="Services"
     classname="text-black text-[1.2vw]"
   />
-</Link>
+</a>
   
   
-<Link href="#project">
+<a href="#project">
   <Textanimation
     text="Project"
     classname="text-black text-[1.2vw]"
   />
-</Link>
+</a>
   
-<Link href="#contact">
+<a href="#contact">
   <Textanimation
     text="Contact"
     classname="text-black text-[1.2vw]"
   />
-</Link>
+</a>
   
     </div>
   

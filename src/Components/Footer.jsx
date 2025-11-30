@@ -108,49 +108,49 @@ const Footer = () => {
       </div>{" "}
       <div className="h-full py-10 w-full grid grid-cols-[1fr_1fr] px-3">
         <div className="h-full  flex items-center justify-start">
-          <Link href="#home">
+          <a href="#home">
             <Textanimation
               text="Mohammad hunain studio@"
               classname="text-black cursor-pointer actay  text-3xl"
             />
-          </Link>
+          </a>
         </div>
         <div className="h-full  flex items-center justify-between">
-          <Link href="#home">
+          <a href="#home">
             <Textanimation text="Home" classname="text-black actay  text-2xl" />
-          </Link>
+          </a>
 
-          <Link href="#aboutus">
+          <a href="#aboutus">
             <Textanimation
               text="About us"
               classname="text-black actay  text-2xl"
             />
-          </Link>
-          <Link href="#stack">
+          </a>
+          <a href="#stack">
             <Textanimation
               text="stack"
               classname="text-black actay  text-2xl"
             />
-          </Link>
+          </a>
 
-          <Link href="#services">
+          <a href="#services">
             <Textanimation
               text="Services"
               classname="text-black actay  text-2xl"
             />
-          </Link>
-          <Link href="#project">
+          </a>
+          <a href="#project">
             <Textanimation
               text="Projects"
               classname="text-black actay  text-2xl"
             />
-          </Link>
-          <Link href="#contact">
+          </a>
+          <a href="#contact">
             <Textanimation
               text="Contact"
               classname="text-black actay  text-2xl"
             />
-          </Link>
+          </a>
         </div>
       </div>
     </div>
