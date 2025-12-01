@@ -318,6 +318,26 @@
   }
 }
 
+/* for tablet responsive */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .swiper {
+    width: 45vw;
+    height: 60vw;
+  }
+}
+
+
+/* for laptop and screeen */
+
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .swiper {
+    
+    width: 25vw;
+    height: 35vw;
+  }
+}
 
 
   .swiper-slide {

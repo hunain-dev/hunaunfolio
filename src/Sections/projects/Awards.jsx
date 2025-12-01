@@ -9,12 +9,12 @@ const Awards = () => {
   ];
 
   return (
-    <div className="lg:h-screen lg:mt-10 mt-7  w-full flex flex-col items-center justify-center lg:px-8 px-1">
+    <div className="lg:h-screen lg:mt-10 mt-7 md:mt-20  w-full flex flex-col items-center justify-center lg:px-8 px-1">
       <h2 className="Satoshi font-[400] text-center text-[5vw] md:text-4xl lg:text-4xl">
         <Textanimation
           text="1st Runner-Up in Web Design | Techwiz Pakistan Web Design Competition
 "
-          classname="Satoshi text-black lg:text-[2.3vw] text-1xl"
+          classname="Satoshi text-black lg:text-[2.3vw] md:text-3xl text-1xl"
         />{" "}
       </h2>
 

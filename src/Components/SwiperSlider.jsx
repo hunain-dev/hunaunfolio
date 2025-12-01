@@ -131,7 +131,7 @@ const SwiperSlider = () => {
                     );
                   }
                 }}
-                className="lg:h-[40vh] h-[30vh]  w-full rounded-xl overflow-hidden block"
+                className="lg:h-[40vh] xl:h-[40vh]  h-[30vh] md:h-[26vh]  w-full rounded-xl overflow-hidden block"
               >
                 {index === 1 && elem.cardvideo ? (
                   <video
@@ -154,10 +154,10 @@ const SwiperSlider = () => {
                 )}
               </a>
 
-              <h1 className="actay lg:mt-9 mt-6 px-2 text-white font-500">
+              <h1 className="actay lg:mt-5 xl:mt-7 mt-6 px-2 text-white  lg:text-[2vw] xl:text-[1.3vw] md:text-[3vw] font-500">
                 {elem.desctittle}
               </h1>
-              <p className="actay mt-1 px-2 lg:text-[0.9vw] text-[3vw] text-white">
+              <p className="actay mt-1 px-2 lg:text-[1vw]  xl:text-[0.8vw] md:text-[2.3vw] text-[3vw] text-white">
                 {elem.carddesc}
               </p>
             </SwiperSlide>

@@ -60,7 +60,7 @@ const Footer = () => {
       </div>
       <div className="relative flex">
         {/* Main Content */}
-        <div className=" w-full  mx-auto  grid lg:grid-cols-2">
+        <div className=" w-full  mx-auto  grid lg:grid-cols-2 md:grid-cols-2  ">
           <div className="actay w-full    h-full  px-3 py-3">
             <Link href="#home">
               {" "}
@@ -87,9 +87,9 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="h-full px-7 py-3  flex lg:items-end items-center lg:justify-right flex-col">
-            <h3 className="actay lg:text-3xl text-2xl">Follow us</h3>
-            <div className="flex flex-row gap-4 mt-2 ">
+          <div className="h-full px-7 py-3  flex lg:items-end items-center  lg:justify-right md:items-end md:justify-right flex-col">
+            <h3 className="actay lg:text-3xl text-2xl md:text-3xl">Follow us</h3>
+            <div className="flex flex-row gap-4 mt-2 md:mt-4 ">
               {icons.map((item, idx) => (
                 <a
                   key={idx}
@@ -110,49 +110,49 @@ const Footer = () => {
           </div>
         </div>
       </div>{" "}
-      <div className="h-full py-10 w-full grid lg:grid-cols-[1fr_1fr] px-3">
+      <div className="h-full py-10 w-full grid lg:grid-cols-[1fr_1fr] md:grid-cols-[1fr_2fr] px-3">
         <div className="h-full  flex items-center justify-start">
           <a href="#home">
             <Textanimation
               text="Mohammad hunain studio@"
-              classname="text-black cursor-pointer actay lg:text-right text-center   lg:text-3xl text-2xl"
+              classname="text-black cursor-pointer actay lg:text-right text-center   lg:text-3xl md:text-[2vw] text-2xl"
             />
           </a>
         </div>
-        <div className="h-full lg:mt-0 mt-3  flex items-center justify-between lg:flex-row flex-col" >
+        <div className="h-full lg:mt-0 mt-3 md:mt-0  flex items-center justify-between lg:flex-row md:flex-row flex-col" >
           <a href="#home">
-            <Textanimation text="Home" classname="text-black actay  text-2xl" />
+            <Textanimation text="Home" classname="text-black actay  text-2xl md:text-[2.5vw] lg:text-[2vw]" />
           </a>
 
           <a href="#aboutus">
             <Textanimation
               text="About us"
-              classname="text-black actay  text-2xl"
+              classname="text-black actay  text-2xl md:text-[2.5vw] lg:text-[2vw]"
             />
           </a>
           <a href="#stack">
             <Textanimation
               text="stack"
-              classname="text-black actay  text-2xl"
+              classname="text-black actay  text-2xl md:text-[2.5vw] lg:text-[2vw]"
             />
           </a>
 
           <a href="#services">
             <Textanimation
               text="Services"
-              classname="text-black actay  text-2xl"
+              classname="text-black actay  text-2xl md:text-[2.5vw] lg:text-[2vw]"
             />
           </a>
           <a href="#project">
             <Textanimation
               text="Projects"
-              classname="text-black actay  text-2xl"
+              classname="text-black actay  text-2xl md:text-[2.5vw] lg:text-[2vw]"
             />
           </a>
           <a href="#contact">
             <Textanimation
               text="Contact"
-              classname="text-black actay  text-2xl"
+              classname="text-black actay  text-2xl lg:text-[2vw]"
             />
           </a>
         </div>

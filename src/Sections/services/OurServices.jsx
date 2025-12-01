@@ -6,10 +6,10 @@ const Ourservices = () => {
 
       {/* Top Section */}
       <div className="w-full px-[1vw] text-center">
-        <h2 className="Impacted font-medium lg:text-[13vw] text-5xl lg:leading-[12vw] uppercase text-white">
+        <h2 className="Impacted font-medium lg:text-[13vw] md:text-[14vw] text-5xl lg:leading-[12vw] uppercase text-white">
           Our Services,
         </h2>
-        <h2 className="Impacted font-medium lg:text-[13vw] text-5xl lg:leading-[12vw] leading-13 uppercase text-white">
+        <h2 className="Impacted font-medium lg:text-[13vw] text-5xl lg:leading-[12vw] md:leading-[12vw] md:text-[13vw] leading-13 uppercase text-white">
           WHAT I OFFER, & WHY CHOOSE ME
         </h2>
       </div>
@@ -24,8 +24,10 @@ const Ourservices = () => {
   className="
     object-contai object-center
     w-100 h-100         /* Mobile */
-    md:w-60 md:h-60   /* Small Laptop */
-    lg:w-300 lg:h-300   /* Desktop */
+    md:w-110 md:h-210   /* Small Laptop */
+    lg:w-230 lg:h-230   /* Desktop */
+    xl:w-300 xl:h-300   /* Desktop */
+
   "
 />
 <img
@@ -34,8 +36,9 @@ const Ourservices = () => {
   className="
     object-contai object-center
     w-100 h-100         /* Mobile */
-    md:w-60 md:h-60   /* Small Laptop */
-    lg:w-300 lg:h-300   /* Desktop */
+    md:w-110 md:h-210   /* Small Laptop */
+    lg:w-230 lg:h-230   /* Desktop */
+    xl:w-300 xl:h-300   /* Desktop */
   "
 />        </div>
         </div>

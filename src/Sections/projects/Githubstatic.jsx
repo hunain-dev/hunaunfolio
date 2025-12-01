@@ -8,16 +8,16 @@ const Githubstatic = () => {
           text="        My GitHub Activity
 
 "
-          classname="Satoshi text-black lg:text-[3.5vw] text-2xl"
+          classname="Satoshi text-black lg:text-[3.5vw] md:text-5xl text-2xl"
         />{" "}
       </h1>
 
       <div
   className="
     border border-gray-500
-   lg:py-10
+   lg:py-10 md:py-10
 
- lg:px-30 py-6 overflow-x-auto flex justify-center
+ lg:px-30 md:px-22 py-6 overflow-x-auto flex justify-center
     shadow-lg
     rounded-xl
   "
@@ -33,6 +33,7 @@ const Githubstatic = () => {
             h-auto 
             object-contain 
             lg:scale-125
+            md:scale-120
           "
 
           unoptimized

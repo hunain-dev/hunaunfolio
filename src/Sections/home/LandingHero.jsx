@@ -29,8 +29,8 @@ const LandingHero = () => {
   return (
     <div className='min-full lg:mb-7 mb-15 w-full flex items-center justify-start flex-col'>
         <div className='hfull w-full gap-2 flex items-center justify-start  flex-col'>
-        <h1 className='Fontspring uppercase lg:text-5xl text-4xl md:text-6xl'>{`Hi I’am Muhammad Hunain`}</h1>
-        <h4 className='ActayCondensed lg:text-2xl text-1xl md:text-2xl'>Your product designer and developer partner!</h4>
+        <h1 className='Fontspring uppercase lg:text-5xl xl:text-5xl text-4xl md:text-6xl'>{`Hi I’am Muhammad Hunain`}</h1>
+        <h4 className='ActayCondensed lg:text-2xl xl:text-1xl text-1xl md:text-2xl'>Your product designer and developer partner!</h4>
         </div>
         <div className='h-full lg:mt-5 mt-15 md:mt-14 w-full '>
           <div className='Akrobat h-full w-full  relative flex gap-20'>
