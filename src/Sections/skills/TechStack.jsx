@@ -28,7 +28,7 @@ const TechStack = () => {
         {skillsimg.map((elem, index) => (
           <motion.div
             key={index}
-            className="skill-item flex justify-center items-center lg:h-[10vh] lg:w-[10vh]  md:h-[6vh]  md:w-[6vh] w-13 rounded-[10vw] cursor-pointer"
+            className="skill-item flex justify-center items-center lg:h-[10vh] lg:w-[10vh]  md:h-[6vh]  md:w-[6vh] w-13 rounded-[10vw] cursor-pointer 2xl:h-[5vw] 2xl:w-[5vw]"
             drag
             dragConstraints={constraintsRef}
             dragElastic={0.2}

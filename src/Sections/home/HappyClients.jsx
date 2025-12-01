@@ -20,7 +20,7 @@ const HappyClients = () => {
     className="w-9  md:w-14 lg:w-10 object-contain"
    />
       ))}</span>
-      <h3 className='actay lg:text-[1.3vw] md:text-2xl  text-[#343539]'>5+ happy clients</h3>
+      <h3 className='actay lg:text-[1.3vw] md:text-2xl 2xl:text-2xl  text-[#343539]'>5+ happy clients</h3>
         </div>
         <div className='h-full w-full flex items-center justify-center'>
         <Button
@@ -32,6 +32,7 @@ const HappyClients = () => {
 
     lg:px-5 lg:py-3 lg:text-[1vw] 
    md:text-[2vw]
+   2xl:text-[1.1vw]
   "
 />
         </div>
