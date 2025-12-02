@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../../components/Ui/Button';
+import Button from '../../Components/Ui/Button';
 
 const HappyClients = () => {
     const obj = [
