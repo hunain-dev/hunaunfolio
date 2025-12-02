@@ -131,7 +131,7 @@ const SwiperSlider = () => {
                     );
                   }
                 }}
-                className="lg:h-[40vh] xl:h-[40vh]  h-[30vh] md:h-[26vh]  w-full rounded-xl overflow-hidden block"
+                className="lg:h-[40vh] xl:h-[40vh]  h-[23vh] md:h-[26vh]  w-full rounded-xl overflow-hidden block"
               >
                 {index === 1 && elem.cardvideo ? (
                   <video

@@ -116,7 +116,7 @@
   }
   .Morganite{
     font-family: 'Morganite';
-    src: url('/public/Assets/Fonts/Morganite-Black.ttf');
+    src: url('/Assets/Fonts/Morganite-Black.ttf');
     font-display: swap;
   
   
@@ -126,14 +126,14 @@
   
   @font-face {
     font-family: 'Satoshi';
-    src: url('/Assets/Fonts/Satoshi.ttf');
+    src: url('/Assets/Fonts/Satoshi.ttf') ;
     font-display: swap;
    
   }
   
   .Satoshi{
     font-family: 'Satoshi';
-    src: url('/public/Assets/Fonts/Satoshi.ttf');
+    src: url('/Assets/Fonts/Satoshi.ttf') ;
     font-display: swap;
   
   

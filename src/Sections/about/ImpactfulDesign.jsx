@@ -37,7 +37,7 @@ const Impactfulldesign = () => {
               <div className="text-content">
                 <div className="work-with-image"></div>
   
-                <h2 className="lg:text-[28vw] text-[43vw]  md:text-[45vw] font-[Morganite]">
+                <h2 className="Morganite lg:text-[28vw] text-[43vw]  md:text-[45vw]">
                   {elem.h1}
                 </h2>
                 <h2 className="lg:text-[28vw] text-[43vw] md:text-[45vw] font-[Morganite]">

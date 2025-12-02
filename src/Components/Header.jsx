@@ -33,20 +33,20 @@ const Header = () => {
       rounded-[5vw] 
       lg:px-[4vw] lg:py-[1vw]
       
-      px-[6.5vw] py-[3vw]
+      px-[6vw] py-[3vw]
       shadow-[1px_1px_14px_rgba(29,28,28,0.5)]
       font-[Satoshi]">
       
  <a href="#home">
   <Textanimation
     text="Home"
-    classname="text-black lg:text-[1.2vw] 2xl:text-[1.3vw] text-[3.5vw] "
+    classname="text-black lg:text-[1.2vw] 2xl:text-[1.3vw] text-[3.5vw]  "
   />
 </a>
 <a href='#aboutus'>
   <Textanimation
     text="About"
-    classname="text-black text-[1.2vw] 2xl:text-[1.3vw] text-[3.5vw] "
+    classname="text-black lg:text-[1.2vw] 2xl:text-[1.3vw] text-[3.5vw]   "
   />
 </a>
   
@@ -54,14 +54,14 @@ const Header = () => {
 <a href="#stack">
   <Textanimation
     text="Stack" 
-    classname="text-black text-[1.2vw] 2xl:text-[1.3vw] text-[3.5vw]"
+    classname="text-black lg:text-[1.2vw] 2xl:text-[1.3vw] text-[3.5vw] "
   />
 </a>
   
 <a href="#services">
   <Textanimation
     text="Services"
-    classname="text-black text-[1.2vw] 2xl:text-[1.3vw] text-[3.5vw]"
+    classname="text-black lg:text-[1.2vw] 2xl:text-[1.3vw] text-[3.5vw]  "
   />
 </a>
   
@@ -69,14 +69,14 @@ const Header = () => {
 <a href="#project">
   <Textanimation
     text="Project"
-    classname="text-black text-[1.2vw] 2xl:text-[1.3vw] text-[3.5vw]"
+    classname="text-black lg:text-[1.2vw] 2xl:text-[1.3vw] text-[3.5vw] "
   />
 </a>
   
 <a href="#contact">
   <Textanimation
     text="Contact"
-    classname="text-black text-[1.2vw] 2xl:text-[1.3vw] text-[3.5vw]"
+    classname="text-black lg:text-[1.2vw] 2xl:text-[1.3vw] text-[3.5vw] "
   />
 </a>
   
