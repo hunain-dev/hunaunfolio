@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import hunainVideo from "/public/assets/videos/hunainvideo-unscreen.gif";
+import hunainVideo from "/public/assets/videos/hunainvideo-unscreen.mp4";
   
 const Aboutme = () => {
   const sectionRef = useRef(null);
