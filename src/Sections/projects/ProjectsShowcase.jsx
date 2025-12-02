@@ -1,6 +1,4 @@
-"use client";
-
-import SwiperSlider from "../../components/SwiperSlider"
+import SwiperSlider from "../../Components/SwiperSlider"
 const ProjectsShowcase = () => {
 
   return (
