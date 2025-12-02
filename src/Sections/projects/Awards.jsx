@@ -4,7 +4,7 @@ import Textanimation from "../../Components/Ui/Textaniamtion";
 const Awards = () => {
   const data = [
     {
-      cardimg: "/public/Assets/images/winning.jpg",
+      cardimg: "assets/images/winning.jpg",
     },
   ];
 
@@ -32,6 +32,7 @@ const Awards = () => {
               height={500}
               width={500}
               className="w-full h-full object-cover object-center grayscale brightness-50 transition-all duration-500 ease-in-out group-hover:grayscale-0 group-hover:brightness-100"
+
             />
 
             {/* Optional overlay for smoother effect */}

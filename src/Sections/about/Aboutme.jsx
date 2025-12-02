@@ -61,14 +61,16 @@ const Aboutme = () => {
             Huna
             <span className="h-full   w-fit  ">
             <img
-  src="/public/assets/videos/hunainvideo-unscreen.gif"
-  alt="Hunain GIF"
+src="/public/assets/videos/hunainvideo-unscreen.gif"
+alt="Hunain GIF"
   className="
     object-cover
     w-11 h-auto      
     sm:w-32           
     lg:w-40   
   "
+  loading="lazy"
+
 />
 
             </span>

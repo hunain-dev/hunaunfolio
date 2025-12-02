@@ -4,13 +4,13 @@ import { useRef } from "react";
 
 const TechStack = () => {
   const skillsimg = [
-    { img: "/public/Assets/images/html.png" },
-    { img: "/public/Assets/images/css.png" },
-    { img: "/public/Assets/images/js.png" },
-    { img: "/public/Assets/images/react.png" },
-    { img: "/public/Assets/images/framer.png" },
-    { img: "/public/Assets/images/gsap.png" },
-    { img: "/public/Assets/images/nextjs.jpeg" },
+    { img: "assets/images/html.png" },
+    { img: "assets/images/css.png" },
+    { img: "assets/images/js.png" },
+    { img: "assets/images/react.png" },
+    { img: "assets/images/framer.png" },
+    { img: "assets/images/gsap.png" },
+    { img: "assets/images/nextjs.jpeg" },
   ];
 
   const constraintsRef = useRef(null);
