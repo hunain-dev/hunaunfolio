@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import SmoothScrolling from './hooks/SmoothScrolling.jsx'
 import { BrowserRouter } from 'react-router-dom'
-import Header from './components/Header.jsx'
+import Navbar from './Components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Loader from './components/Loader.jsx'
 import Chilli from './Components/Chilli.jsx'
@@ -19,7 +19,7 @@ createRoot(document.getElementById('root')).render(
       <Mousemove/>
       <Chilli/>
 
-      <Header/>
+      <Navbar/>
     <App/>
     <Footer/>
       </BrowserRouter>

@@ -6,7 +6,7 @@ import Button from './Ui/Button';
   const downloadResume = () => {
     window.open("/Assets/images/Muhammad Hunain Resume.pdf", "_blank");
   };
-const Header = () => {
+const Navbar = () => {
   return (
 <header
   className="
@@ -92,4 +92,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Navbar
