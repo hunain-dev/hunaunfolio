@@ -1,5 +1,5 @@
 import React from "react";
-import Textanimation from "../../components/Ui/Textaniamtion";
+import Textanimation from "../../Components/Ui/Textaniamtion";
 
 const Awards = () => {
   const data = [

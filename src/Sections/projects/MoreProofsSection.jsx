@@ -19,7 +19,6 @@ const MoreProofsSection = () => {
         trigger: containerRef.current,
         start: "top top",
         end: "+=300%", // scroll length
-        scrub: true,
         pin: true,
         scrub:4
       },
