@@ -45,6 +45,24 @@
   
   
   }
+
+
+    
+  @font-face {
+    font-family: 'Garelin';
+    src: url('/assets/Fonts/GarelinaBold-rgZ0p.ttf');
+    font-display: swap;
+  
+  }
+  
+  .Garelin{
+    font-family: 'Garelin';
+    src: url('/assets/Fonts/GarelinaBold-rgZ0p.ttf');
+    font-display: swap;
+  
+  
+  }
+  
   
   
   @font-face {
@@ -155,22 +173,7 @@
   
   }
   
-  
-  @font-face {
-    font-family: 'Garelin';
-    src: url('/public/Assets/Fonts/GarelinaBold-rgZ0p.ttf');
-    font-display: swap;
-  
-  }
-  
-  .Garelin{
-    font-family: 'Garelin';
-    src: url('/public/Assets/Fonts/GarelinaBold-rgZ0p.ttf');
-    font-display: swap;
-  
-  
-  }
-  
+
   
   
   @font-face {
