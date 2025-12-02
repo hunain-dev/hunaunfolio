@@ -2,7 +2,8 @@
 import React, { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-
+import hunainVideo from "/public/assets/videos/hunainvideo-unscreen.gif";
+  
 const Aboutme = () => {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
@@ -61,7 +62,7 @@ const Aboutme = () => {
             Huna
             <span className="h-full   w-fit  ">
             <img
-src="/public/assets/videos/hunainvideo-unscreen.gif"
+src={hunainVideo}
 alt="Hunain GIF"
   className="
     object-cover
