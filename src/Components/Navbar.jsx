@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import Textanimation from './Ui/Textaniamtion';
 import Button from './Ui/Button';
 
@@ -15,11 +14,8 @@ const Navbar = () => {
     lg:h-[9vh] lg:w-[93%] 
     flex items-center justify-between 
     z-999 mt-[1vw] lg:opacity-100
-    w-[100%]
-
+    w-full
     top-0
-
-    /* Mobile ke liye bottom se */
     sm:top-0
     top-auto bottom-2
   "
