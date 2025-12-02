@@ -7,8 +7,8 @@ import { BrowserRouter } from 'react-router-dom'
 import Navbar from './Components/Navbar.jsx'
 import Chilli from './Components/Chilli.jsx'
 import Mousemove from './Components/Mousemove.jsx'
-import Loader from './components/Loader.jsx'
-import Footer from './components/Footer.jsx'
+import Footer from './Components/Footer.jsx'
+import Loader from './Components/Loader.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -18,7 +18,6 @@ createRoot(document.getElementById('root')).render(
       <Loader/>
       <Mousemove/>
       <Chilli/>
-
       <Navbar/>
     <App/>
     <Footer/>
