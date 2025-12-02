@@ -8,7 +8,7 @@ import Navbar from './Components/Navbar.jsx'
 import Loader from './Components/Loader.jsx'
 import Chilli from './Components/Chilli.jsx'
 import Mousemove from './Components/Mousemove.jsx'
-import Footer from './components/Footer.jsx'
+import Footer from './Components/Footer.jsx'
 
 
 createRoot(document.getElementById('root')).render(
