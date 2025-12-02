@@ -2,8 +2,8 @@
 import React, { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import hunainVideo from "/public/assets/videos/hunainvideo-unscreen.mp4";
-  
+import hunainGif from '../../assets/hunainvideo-unscreen.gif'; // adjust path according to your file
+
 const Aboutme = () => {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
@@ -62,14 +62,13 @@ const Aboutme = () => {
             Huna
             <span className="h-full   w-fit  ">
             <img
-src={hunainVideo}
-alt="Hunain GIF"
+    src={hunainGif }
+  alt="Hunain GIF"
   className="
     object-cover
     w-11 h-auto      
     sm:w-32           
-    lg:w-40   
-  "
+    lg:w-40"
   loading="lazy"
 
 />
