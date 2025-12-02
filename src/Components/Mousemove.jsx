@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useRef } from 'react'
 
-const Cursor = () => {
+const Mousemove = () => {
   const canvasRef = useRef(null)
   const trailRef = useRef([])
   const mouseRef = useRef({ x: 0, y: 0 })
@@ -113,4 +113,4 @@ const Cursor = () => {
   )
 }
 
-export default Cursor
+export default Mousemove

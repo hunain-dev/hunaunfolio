@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import chilliwaling from "../../public/assets/images/chilliman.gif"
 gsap.registerPlugin(ScrollTrigger)
 
-const Chilliman = () => {
+const Chilli = () => {
   const imgRef = useRef(null)
 
   useEffect(() => {
@@ -59,4 +59,4 @@ end: "bottom+=4000",
   )
 }
 
-export default Chilliman
+export default Chilli
