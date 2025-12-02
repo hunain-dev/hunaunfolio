@@ -1,4 +1,4 @@
-import Textanimation from "../../components/Ui/Textaniamtion";
+import Textanimation from "../../Components/Ui/Textaniamtion";
 
 const Githubstatic = () => {
   return (
