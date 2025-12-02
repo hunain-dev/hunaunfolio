@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectsShowcase from "../projects/ProjectsShowcase"
+import ProjectsShowcase from "./ProjectsShowcase"
 import MoreProofsSection from './MoreProofsSection'
 import Awards from './Awards'
 import Githubstatic from './Githubstatic'
