@@ -32,7 +32,7 @@
   
   @font-face {
     font-family: 'Actay';
-    src: url('/Assets/Fonts/Actay-Regular.otf'); 
+    src: url('/assets/Fonts/Actay-Regular.otf'); 
       font-display: swap;
   
   }
@@ -40,7 +40,7 @@
   
   .actay{
     font-family: 'Actay' ;
-    src: url('/Assets/Fonts/Actay-Regular.otf'); 
+    src: url('/assets/Fonts/Actay-Regular.otf'); 
     font-display: swap;
   
   
@@ -82,14 +82,14 @@
   
   @font-face {
     font-family: 'ActayCondensed';
-    src: url('/public/Assets/Fonts/ActayCondensed-ThinItalic.otf');
+    src: url('/assets/Fonts/ActayCondensed-ThinItalic.otf');
     font-display: swap;
    
   }
   
   .ActayCondensed{
     font-family: 'ActayCondensed';
-    src: url('/public/Assets/Fonts/ActayCondensed-ThinItalic.otf');
+    src: url('/assets/Fonts/ActayCondensed-ThinItalic.otf');
     font-display: swap;
   
   
