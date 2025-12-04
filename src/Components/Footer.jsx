@@ -118,6 +118,7 @@ const Footer = () => {
             />
           </a>
         </div>
+        
         <div className="h-full lg:mt-0 mt-3 md:mt-0  flex items-center justify-between lg:flex-row md:flex-row flex-col" >
           <a href="#home">
             <Textanimation text="Home" classname="text-black actay  text-2xl md:text-[2.5vw] lg:text-[2vw]" />

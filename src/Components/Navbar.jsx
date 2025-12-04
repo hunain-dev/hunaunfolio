@@ -3,7 +3,7 @@ import Textanimation from './Ui/Textaniamtion';
 import Button from './Ui/Button';
 
   const downloadResume = () => {
-    window.open("/Assets/images/Muhammad Hunain Resume.pdf", "_blank");
+    window.open("/assets/images/hunainresume.pdf", "_blank");
   };
 const Navbar = () => {
   return (
