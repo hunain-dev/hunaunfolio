@@ -26,12 +26,12 @@ const LandingHero = () => {
   }, []);
 
   return (
-    <div className='min-full lg:mb-7 mb-15 w-full flex items-center justify-start flex-col'>
+    <div className='min-full lg:mb-5 mb-15 w-full flex items-center justify-start flex-col'>
         <div className='hfull w-full gap-2 flex items-center justify-start  flex-col'>
         <h1 className='Fontspring uppercase lg:text-5xl xl:text-6xl text-4xl md:text-6xl 2xl:text-7xl'>{`Hi I’am Muhammad Hunain`}</h1>
         <h4 className='ActayCondensed lg:text-2xl xl:text-[1.6vw] text-1xl md:text-2xl'>Your product designer and developer partner!</h4>
         </div>
-        <div className='h-full lg:mt-5 xl:mt-0 mt-15 md:mt-14 w-full '>
+        <div className='h-full lg:mt-4 xl:mt-0 mt-15 md:mt-14 w-full '>
           <div className='Akrobat h-full w-full  relative flex gap-20'>
           {['Front-end reactjs developer','Front-end reactjs developer','Front-end reactjs developer' ].map(
             (elem, index) => {
@@ -48,7 +48,7 @@ const LandingHero = () => {
                             duration: 90
                           }}
                 >
-                  <h1>{elem}</h1>
+                  <h1 >{elem}</h1>
                 </motion.div>
               );
             }
@@ -61,7 +61,7 @@ const LandingHero = () => {
  <model-viewer
  src="/assets/images/cube.glb"
  alt="3D Cube"
- className="lg:w-94 lg:h-91 xl:w-95 xl:h-95 w-80 h-50 md:w-84 md:h-84 2xl:w-110 2xl:h-110"
+ className="lg:w-100 lg:h-100  xl:w-98 xl:h-98 w-80 h-50 md:w-84 md:h-84 2xl:w-107  2xl:h-107"
  auto-rotate
  camera-controls
  disable-zoom
