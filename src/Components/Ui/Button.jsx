@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Button = ({ btntext, classname, link,onclick }) => {
+const Button = ({ btntext, classname, link,onclick,type  }) => {
   const isExternal = link?.startsWith("http");
 
   // agar link http ya https se start hota hai, to anchor tag use hoga
@@ -9,6 +9,7 @@ const Button = ({ btntext, classname, link,onclick }) => {
     return (
       <a
         href={link}
+        type={type }
         onClick={onclick}   // ✅ ADD
         target="_blank"
         rel="noopener noreferrer"
