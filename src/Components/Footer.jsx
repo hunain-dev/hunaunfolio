@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import Button from "./Ui/Button";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import Textanimation from "./Ui/Textaniamtion";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   const icons = [
@@ -74,17 +73,13 @@ const Footer = () => {
               </h2>
             </a> */}
         <div className="h-fit bg-black mt-6 lg:w-fit">
-  <a
-    href={`https://wa.me/923252991455?text=${encodeURIComponent("Hello Hunain")}`}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+
     <Button
+    href={`https://wa.me/923252991455?text=${encodeURIComponent("Hello Hunain")}`}
       btntext="Contact us"
       classname="uppercase px-15 py-2 bg-[#FFD900]"
       type="button"
     />
-  </a>
 </div>
 
           </div>
