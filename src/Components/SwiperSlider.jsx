@@ -7,6 +7,12 @@ import { EffectCards } from "swiper/modules";
 const SwiperSlider = () => {
   const cardcollection = [
     {
+      cardvideo: "/assets/Videos/Arthom.mp4",
+      desctittle: "artiom-yakushev",
+      carddesc:
+        "artiom-yakushev is an awwwards winning portoflio website that  i clone in 2 week",
+    },
+    {
       cardimg: "/assets/images/Creative.png",
       desctittle: "Creative Giants",
       carddesc:
@@ -133,7 +139,7 @@ const SwiperSlider = () => {
                 }}
                 className="lg:h-[40vh] xl:h-[40vh]  h-[23vh] md:h-[23vh]  w-full rounded-xl overflow-hidden block"
               >
-                {index === 1 && elem.cardvideo ? (
+                {(index === 0 || index === 2) && elem.cardvideo ? (
                   <video
                     src={elem.cardvideo}
                     autoPlay
