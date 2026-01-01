@@ -36,24 +36,24 @@ const Footer = () => {
     <div id="contact" className="min-h-full lg:mt-26 mt-15 w-full">
       <div className="h-full w-full flex items-center overflow-hidden">
         {/* Duplicate text manually for seamless loop */}
-        <div ref={textRef} className="flex whitespace-nowrap text-[11vw] actay">
+        <div ref={textRef} className="actay flex whitespace-nowrap text-[11vw] actay">
           {`Let's talk  Let's talk Let's talk `}
           {`Let's talk  Let's talk Let's talk `}
         </div>
 
-        <div className="flex whitespace-nowrap text-[11vw] actay">
+        <div className="actay not-first:flex whitespace-nowrap text-[11vw] ">
           {`Let's talk  Let's talk Let's talk `}
           {`Let's talk  Let's talk Let's talk `}
         </div>
-        <div className="flex whitespace-nowrap text-[11vw] actay">
+        <div className="actay flex whitespace-nowrap text-[11vw] ">
           {`Let's talk  Let's talk Let's talk `}
           {`Let's talk  Let's talk Let's talk `}
         </div>
-        <div className="flex whitespace-nowrap text-[11vw] actay">
+        <div className="actay flex whitespace-nowrap text-[11vw] ">
           {`Let's talk  Let's talk Let's talk `}
           {`Let's talk  Let's talk Let's talk `}
         </div>
-        <div className="flex whitespace-nowrap text-[11vw] actay">
+        <div className="actay flex whitespace-nowrap text-[11vw] ">
           {`Let's talk  Let's talk Let's talk `}
           {`Let's talk  Let's talk Let's talk `}
         </div>

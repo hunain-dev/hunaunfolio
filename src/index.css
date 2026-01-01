@@ -32,16 +32,14 @@
   
   @font-face {
     font-family: 'Actay';
-    src: url('/assets/Fonts/Actay-Regular.otf'); 
-      font-display: swap;
+    src: url('/assets/Fonts/Actay-Regular.woff')  format("woff"); 
+    font-display: swap;
   
   }
-  
+
   
   .actay{
-    font-family: 'Actay' ;
-    src: url('/assets/Fonts/Actay-Regular.otf'); 
-    font-display: swap;
+  font-family: "Actay", sans-serif;
   
   
   }
