@@ -9,6 +9,7 @@ import Chilli from './Components/Chilli.jsx'
 import Mousemove from './Components/Mousemove.jsx'
 import Footer from './Components/Footer.jsx'
 import Loader from './Components/Loader.jsx'
+import Cardsss from './Cardsss.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -21,7 +22,7 @@ createRoot(document.getElementById('root')).render(
       <Navbar/>
     <App/>
     <Footer/>
-      </BrowserRouter>
+     </BrowserRouter>
     </SmoothScrolling>
   
   </StrictMode>,

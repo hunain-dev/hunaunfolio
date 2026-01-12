@@ -1,116 +1,235 @@
-'use client'
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from "react";
+import { Renderer, Transform, Vec3, Color, Polyline } from "ogl";
 
-const Mousemove = () => {
-  const canvasRef = useRef(null)
-  const trailRef = useRef([])
-  const mouseRef = useRef({ x: 0, y: 0 })
-  const animationFrameRef = useRef(null)
-  const lastPointTimeRef = useRef(0)
+const Mousemove = ({
+  colors = ["blue"],
+  baseSpring = 0.03,
+  baseFriction = 0.9,
+  baseThickness = 30,
+  offsetFactor = 0.05,
+  maxAge = 500,
+  pointCount = 50,
+  speedMultiplier = 0.6,
+  enableFade = false,
+  enableShaderEffect = false,
+  effectAmplitude = 2,
+  backgroundColor = [0, 0, 0, 0],
+}) => {
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
+    const container = containerRef.current;
+    if (!container) return;
 
-    const ctx = canvas.getContext('2d')
-    
-    // Set canvas size
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-    }
-    resizeCanvas()
-    window.addEventListener('resize', resizeCanvas)
+    /* ================= Renderer ================= */
+    const renderer = new Renderer({
+      dpr: Math.min(window.devicePixelRatio, 2),
+      alpha: true,
+    });
 
-    // Mouse move handler
-    const handleMouseMove = (e) => {
-      mouseRef.current = {
-        x: e.clientX,
-        y: e.clientY
-      }
-      
-      const now = Date.now()
-      // Throttle: add point only every 16ms (~60fps)
-      if (now - lastPointTimeRef.current >= 16) {
-        // Add new point to trail
-        trailRef.current.push({
-          x: e.clientX,
-          y: e.clientY,
-          time: now
-        })
-        lastPointTimeRef.current = now
-        
-        // Keep only recent points (last 600ms)
-        trailRef.current = trailRef.current.filter(
-          point => now - point.time < 600
-        )
-      }
+    const gl = renderer.gl;
+
+    if (Array.isArray(backgroundColor) && backgroundColor.length === 4) {
+      gl.clearColor(
+        backgroundColor[0],
+        backgroundColor[1],
+        backgroundColor[2],
+        backgroundColor[3]
+      );
+    } else {
+      gl.clearColor(0, 0, 0, 0);
     }
 
-    // Animation loop
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-      
-      const trail = trailRef.current
-      if (trail.length < 2) {
-        animationFrameRef.current = requestAnimationFrame(animate)
-        return
+    Object.assign(gl.canvas.style, {
+      position: "absolute",
+      inset: "0",
+      width: "100%",
+      height: "100%",
+      pointerEvents: "none",
+    });
+
+    container.appendChild(gl.canvas);
+
+    /* ================= Scene ================= */
+    const scene = new Transform();
+    const lines = [];
+
+    /* ================= Shaders ================= */
+    const vertex = `
+      precision highp float;
+
+      attribute vec3 position;
+      attribute vec3 next;
+      attribute vec3 prev;
+      attribute vec2 uv;
+      attribute float side;
+
+      uniform vec2 uResolution;
+      uniform float uDPR;
+      uniform float uThickness;
+      uniform float uTime;
+      uniform float uEnableShaderEffect;
+      uniform float uEffectAmplitude;
+
+      varying vec2 vUV;
+
+      vec4 getPosition() {
+        vec4 current = vec4(position, 1.0);
+        vec2 aspect = vec2(uResolution.x / uResolution.y, 1.0);
+
+        vec2 nextScreen = next.xy * aspect;
+        vec2 prevScreen = prev.xy * aspect;
+        vec2 tangent = normalize(nextScreen - prevScreen);
+        vec2 normal = vec2(-tangent.y, tangent.x);
+
+        normal /= aspect;
+        normal *= mix(1.0, 0.1, pow(abs(uv.y - 0.5) * 2.0, 2.0));
+
+        float dist = length(nextScreen - prevScreen);
+        normal *= smoothstep(0.0, 0.02, dist);
+
+        float pixelWidth = current.w / (uResolution.y / uDPR);
+        normal *= pixelWidth * uThickness;
+
+        current.xy -= normal * side;
+
+        if (uEnableShaderEffect > 0.5) {
+          current.xy += normal * sin(uTime + current.x * 10.0) * uEffectAmplitude;
+        }
+
+        return current;
       }
 
-      // Draw ribbon trail
-      for (let i = 0; i < trail.length - 1; i++) {
-        const current = trail[i]
-        const next = trail[i + 1]
-        const progress = i / trail.length
-        
-        // Color interpolation
-        const colors = ['black',]
-        const colorIndex = Math.floor(progress * (colors.length - 1))
-        const color1 = colors[colorIndex]
-        
-        // Calculate opacity based on age
-        const age = Date.now() - current.time
-        const maxAge = 600
-        const opacity = Math.max(0, 1 - (age / maxAge))
-        
-        // Calculate thickness
-        const baseThickness = 45
-        const thickness = baseThickness * (1 - progress) * opacity
-        
-        ctx.beginPath()
-        ctx.moveTo(current.x, current.y)
-        ctx.lineTo(next.x, next.y)
-        ctx.strokeStyle = color1
-        ctx.lineWidth = thickness
-        ctx.lineCap = 'round'
-        ctx.lineJoin = 'round'
-        ctx.globalAlpha = opacity
-        ctx.stroke()
+      void main() {
+        vUV = uv;
+        gl_Position = getPosition();
       }
-      
-      ctx.globalAlpha = 1
-      animationFrameRef.current = requestAnimationFrame(animate)
-    }
+    `;
 
-    window.addEventListener('mousemove', handleMouseMove)
-    animate()
+    const fragment = `
+      precision highp float;
 
+      uniform vec3 uColor;
+      uniform float uOpacity;
+      uniform float uEnableFade;
+
+      varying vec2 vUV;
+
+      void main() {
+        float fade = 1.0;
+        if (uEnableFade > 0.5) {
+          fade = 1.0 - smoothstep(0.0, 1.0, vUV.y);
+        }
+        gl_FragColor = vec4(uColor, uOpacity * fade);
+      }
+    `;
+
+    /* ================= Resize ================= */
+    const resize = () => {
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      lines.forEach((l) => l.polyline.resize());
+    };
+    window.addEventListener("resize", resize);
+
+    /* ================= Lines ================= */
+    const center = (colors.length - 1) / 2;
+
+    colors.forEach((color, index) => {
+      const points = Array.from({ length: pointCount }, () => new Vec3());
+
+      const line = {
+        spring: baseSpring + (Math.random() - 0.5) * 0.05,
+        friction: baseFriction + (Math.random() - 0.5) * 0.05,
+        mouseVelocity: new Vec3(),
+        mouseOffset: new Vec3(
+          (index - center) * offsetFactor,
+          (Math.random() - 0.5) * 0.1,
+          0
+        ),
+        points,
+      };
+
+      line.polyline = new Polyline(gl, {
+        points,
+        vertex,
+        fragment,
+        uniforms: {
+          uColor: { value: new Color(color) },
+          uThickness: { value: baseThickness },
+          uOpacity: { value: 1 },
+          uTime: { value: 0 },
+          uEnableShaderEffect: { value: enableShaderEffect ? 1 : 0 },
+          uEffectAmplitude: { value: effectAmplitude },
+          uEnableFade: { value: enableFade ? 1 : 0 },
+        },
+      });
+
+      line.polyline.mesh.setParent(scene);
+      lines.push(line);
+    });
+
+    resize();
+
+    /* ================= Mouse ================= */
+    const mouse = new Vec3();
+
+    const updateMouse = (e) => {
+      const rect = container.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width;
+      const y = (e.clientY - rect.top) / rect.height;
+      mouse.set(x * 2 - 1, -y * 2 + 1, 0);
+    };
+
+    window.addEventListener("mousemove", updateMouse);
+
+    /* ================= Animation ================= */
+    const tmp = new Vec3();
+    let raf;
+
+    const update = (time) => {
+      raf = requestAnimationFrame(update);
+
+      lines.forEach((line) => {
+        tmp.copy(mouse).add(line.mouseOffset).sub(line.points[0]).multiply(line.spring);
+        line.mouseVelocity.add(tmp).multiply(line.friction);
+        line.points[0].add(line.mouseVelocity);
+
+        for (let i = 1; i < line.points.length; i++) {
+          line.points[i].lerp(line.points[i - 1], speedMultiplier);
+        }
+
+        line.polyline.mesh.program.uniforms.uTime.value = time * 0.001;
+        line.polyline.updateGeometry();
+      });
+
+      renderer.render({ scene });
+    };
+
+    update(0);
+
+    /* ================= Cleanup ================= */
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-      window.removeEventListener('resize', resizeCanvas)
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current)
-      }
-    }
-  }, [])
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", resize);
+      window.removeEventListener("mousemove", updateMouse);
+      container.removeChild(gl.canvas);
+    };
+  }, [
+    colors,
+    baseSpring,
+    baseFriction,
+    baseThickness,
+    offsetFactor,
+    maxAge,
+    pointCount,
+    speedMultiplier,
+    enableFade,
+    enableShaderEffect,
+    effectAmplitude,
+    backgroundColor,
+  ]);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      className='fixed top-0  left-0 h-screen w-screen pointer-events-none'
-      style={{ background: 'transparent', zIndex: 9999 }}
-    />
-  )
-}
+  return <div ref={containerRef} className=" z-9999 fixed w-full h-full" />;
+};
 
-export default Mousemove
+export default Mousemove;
