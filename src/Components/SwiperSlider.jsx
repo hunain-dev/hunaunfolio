@@ -7,10 +7,10 @@ import { EffectCards } from "swiper/modules";
 const SwiperSlider = () => {
   const cardcollection = [
     {
-      cardvideo: "/assets/Videos/Arthom.mp4",
-      desctittle: "artiom-yakushev",
+      cardimg: "/assets/images/elastic.jpg",
+      desctittle: "Estrela studio",
       carddesc:
-        "artiom-yakushev is an awwwards winning portoflio website that  i clone in 2 week",
+        "Estrela studio is an awwwards winning website these cloned with precision and attention to detail.",
     },
     {
       cardimg: "/assets/images/Creative.png",
