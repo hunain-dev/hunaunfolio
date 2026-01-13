@@ -1,10 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
-
 import { EffectCards } from "swiper/modules";
 
 const SwiperSlider = () => {
+  
   const cardcollection = [
     {
       cardimg: "/assets/images/elastic.jpg",
@@ -115,62 +115,65 @@ const SwiperSlider = () => {
       link: "https://wethinkelastic.netlify.app/",
     },
   ];
-  return (
-    <div>
-      <Swiper
-        effect={"cards"}
-        grabCursor={true}
-        modules={[EffectCards]}
-        className="mySwiper"
-      >
-        {cardcollection.map((elem, index) => {
-          return (
-            <SwiperSlide key={index}>
-              <a
-                href={index === 0 ? "#" : elem.link}
-                target="_blank"
-                onClick={(e) => {
-                  if (index === 0) {
-                    e.preventDefault();
-                    alert(
-                      "Please wait... this website is still under development."
-                    );
-                  }
-                }}
-                className="lg:h-[40vh] xl:h-[40vh]  h-[23vh] md:h-[23vh]  w-full rounded-xl overflow-hidden block"
-              >
-                {(index === 0 || index === 2) && elem.cardvideo ? (
-                  <video
-                    src={elem.cardvideo}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="h-full w-full object-cover"
-                  />
-                ) : (
-                  <img
-                    height={500}
-                    width={500}
-                    src={elem.cardimg}
-                    className="h-full w-full object-cover"
-                    alt={elem.desctittle}
-                    loading="lazy"
-                  />
-                )}
-              </a>
 
-              <h1 className="actay lg:mt-5 xl:mt-7 mt-6 px-2 text-white  lg:text-[2vw] xl:text-[1.3vw] md:text-[3vw] font-500">
-                {elem.desctittle}
-              </h1>
-              <p className="actay mt-1 px-2 lg:text-[1vw]  xl:text-[0.8vw] md:text-[2vw] text-[3vw] text-white">
-                {elem.carddesc}
-              </p>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-    </div>
+
+  return (
+    <>
+      <div>
+
+        <Swiper
+          effect={"cards"}
+          grabCursor={true}
+          modules={[EffectCards]}
+          className="mySwiper"
+        >
+          {cardcollection.map((elem, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <a
+                  href={index === 0 ? "#" : elem.link}
+                  target="_blank"
+                  onClick={(e) => {
+                    if (index === 0) {
+                      e.preventDefault();
+                      alert("“The project is scheduled to go live next week.”")
+                    }
+                  }}
+                  className="lg:h-[40vh] xl:h-[40vh] h-[23vh] md:h-[23vh]  w-full rounded-xl overflow-hidden block"
+                >
+                  {(index === 0 || index === 2) && elem.cardvideo ? (
+                    <video
+                      src={elem.cardvideo}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <img
+                      height={500}
+                      width={500}
+                      src={elem.cardimg}
+                      className="h-full w-full object-cover"
+                      alt={elem.desctittle}
+                      loading="lazy"
+                    />
+                  )}
+                </a>
+
+                <h1 className="actay lg:mt-5 xl:mt-7 mt-6 px-2 text-white  lg:text-[2vw] xl:text-[1.3vw] md:text-[3vw] font-500">
+                  {elem.desctittle}
+                </h1>
+                <p className="actay mt-1 px-2 lg:text-[1vw]  xl:text-[0.8vw] md:text-[2vw] text-[3vw] text-white">
+                  {elem.carddesc}
+                </p>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
+    </>
   );
 };
 
