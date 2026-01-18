@@ -7,18 +7,12 @@ const SwiperSlider = () => {
   
   const cardcollection = [
     {
-      cardimg: "/assets/images/elastic.jpg",
-      desctittle: "Estrela studio",
+      cardimg: "/assets/images/Parisbyemily.png",
+      desctittle: "Paris-by-Emily",
       carddesc:
-        "Estrela studio is an awwwards winning website these cloned with precision and attention to detail.",
+        "Paris-by-Emily is an awwwards winning website these cloned with precision and attention to detail.",
     },
-    {
-      cardimg: "/assets/images/Creative.png",
-      desctittle: "Creative Giants",
-      carddesc:
-        "Creative Giants is an Awwwards-winning website that I successfully cloned with precision and attention to detail.",
-      link: "https://klearmind-therapy-clinics.netlify.app/",
-    },
+ 
 
     {
       cardvideo: "/assets/Videos/commingsoon.mp4",
@@ -141,7 +135,7 @@ const SwiperSlider = () => {
                   }}
                   className="lg:h-[40vh] xl:h-[40vh] h-[23vh] md:h-[23vh]  w-full rounded-xl overflow-hidden block"
                 >
-                  {(index === 0 || index === 2) && elem.cardvideo ? (
+                  {(index === 1) && elem.cardvideo ? (
                     <video
                       src={elem.cardvideo}
                       autoPlay
