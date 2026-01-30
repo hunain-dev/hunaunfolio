@@ -12,6 +12,14 @@ const SwiperSlider = () => {
       carddesc:
         "Paris-by-Emily is an awwwards winning website these cloned with precision and attention to detail.",
     },
+    {
+      cardimg: "/assets/images/Jeskojets.png",
+      desctittle: "Jesko & Jets",
+      carddesc:
+        "JeskoJets is an awwwards winning website these cloned with precision and attention to detail.",
+        link: "https://jeskojets.netlify.app/",
+
+    },
  
 
     {
