@@ -34,28 +34,28 @@ const Footer = () => {
 
   return (
     <div id="contact" className="min-h-full lg:mt-26 mt-15 w-full">
-      <div className="h-full w-full flex items-center overflow-hidden">
+      <div className="h-full w-full flex items-center overflow-hidden ">
         {/* Duplicate text manually for seamless loop */}
-        <div ref={textRef} className="actay flex whitespace-nowrap text-[11vw] actay">
-          {`Let's talk  Let's talk Let's talk `}
-          {`Let's talk  Let's talk Let's talk `}
-        </div>
+        <div ref={textRef} className="actay tracking-tighter flex whitespace-nowrap text-[11vw] actay">
+        {`Let's create something extra ordinary together `}
+          {`Let's create something extra ordinary together `}
+          </div>
 
-        <div className="actay not-first:flex whitespace-nowrap text-[11vw] ">
-          {`Let's talk  Let's talk Let's talk `}
-          {`Let's talk  Let's talk Let's talk `}
+        <div className="actay not-first:flex tracking-tighter whitespace-nowrap text-[11vw] ">
+        {`Let's create something extra ordinary together `}
+        {`Let's create something extra ordinary together `}
         </div>
-        <div className="actay flex whitespace-nowrap text-[11vw] ">
-          {`Let's talk  Let's talk Let's talk `}
-          {`Let's talk  Let's talk Let's talk `}
+        <div className="actay flex whitespace-nowrap tracking-tighter text-[11vw] ">
+        {`Let's create something extra ordinary together `}
+        {`Let's create something extra ordinary together `}
         </div>
-        <div className="actay flex whitespace-nowrap text-[11vw] ">
-          {`Let's talk  Let's talk Let's talk `}
-          {`Let's talk  Let's talk Let's talk `}
-        </div>
-        <div className="actay flex whitespace-nowrap text-[11vw] ">
-          {`Let's talk  Let's talk Let's talk `}
-          {`Let's talk  Let's talk Let's talk `}
+        <div className="actay flex whitespace-nowrap tracking-tighter text-[11vw] ">
+        {`Let's create something extra ordinary together `}
+          {`Let's create something extra ordinary together `}
+          </div>
+        <div className="actay flex whitespace-nowrap tracking-tighter text-[11vw] ">
+        {`Let's create something extra ordinary together `}
+        {`Let's create something extra ordinary together `}
         </div>
       </div>
       <div className="relative flex">
