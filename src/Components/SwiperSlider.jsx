@@ -7,10 +7,10 @@ const SwiperSlider = () => {
   
   const cardcollection = [
     {
-      cardimg: "/assets/images/Parisbyemily.png",
-      desctittle: "Paris-by-Emily",
+      cardimg: "https://images.prismic.io/miux-studio/aEACjLh8WN-LVkl0_Home1.jpg?auto=format,compress",
+      desctittle: "MAdeinuxstudio",
       carddesc:
-        "Paris-by-Emily is an awwwards winning website these cloned with precision and attention to detail.",
+        "MAdeinuxstudio is an awwwards winning website these cloned with precision and attention to detail.",
     },
     {
       cardimg: "/assets/images/Jeskojets.png",
@@ -143,7 +143,7 @@ const SwiperSlider = () => {
                   }}
                   className="lg:h-[40vh] xl:h-[40vh] h-[23vh] md:h-[23vh]  w-full rounded-xl overflow-hidden block"
                 >
-                  {(index === 1) && elem.cardvideo ? (
+                  {(index === 2) && elem.cardvideo ? (
                     <video
                       src={elem.cardvideo}
                       autoPlay
