@@ -54,7 +54,7 @@ const LandingHero = () => {
             }
           )}
                   
-          <div className='h-full flex items-center justify-center z-99999 absolute top-0 left-0  w-full '>
+          <div className='h-full flex items-center justify-center z-1 absolute top-0 left-0  w-full '>
           <div className="Modelview" ref={modelRef}>
 
         {isVisible ? (

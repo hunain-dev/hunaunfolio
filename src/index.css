@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
 
-
-
-
 *{
     box-sizing: border-box;
   }
@@ -11,7 +8,7 @@
   body,html{
     scroll-behavior: smooth;
     overflow-x: hidden;
-    background-color: #F0F0F0;
+    background-color: #EAE6DD;
   }
   
   .smooth-scroll {
@@ -19,7 +16,7 @@
   }
   
   ::-webkit-scrollbar {
-    width: 0px;
+    width: 0%;
     background: none;
   }
   
@@ -45,6 +42,27 @@
   }
 
 
+  @font-face {
+    font-family:Victory ;
+    src: url(/assets/Fonts/Victory.ttf);
+  }
+
+  
+  .Victory{
+    font-family: "Victory";
+    font-display: swap;
+    }
+
+    @font-face {
+      font-family:amora ;
+      src: url(/assets/Fonts/amora.ttf);
+    }
+  
+    
+    .amora{
+      font-family: "amora";
+      font-display: swap;
+      }
     
   @font-face {
     font-family: 'Garelin';

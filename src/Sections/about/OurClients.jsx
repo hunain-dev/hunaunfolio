@@ -1,4 +1,3 @@
-"use client";
 import { motion } from "framer-motion";
 
 const cards = [
@@ -27,7 +26,7 @@ const cards = [
 const OurClients = () => {
   return (
     <div className="w-full  min-h-screen md:min-h-fit md:px-4   ">
-        <h2 className="actay lg:text-3xl text-2xl md:text-3xl text-center mt-10">Kind word from clients</h2>
+        <h2 className="actay lg:text-3xl text-2xl md:text-3xl text-center mt-10">Kinds word from clients</h2>
         <div className="w-full lg:mt-13 mt-7 md:mt-13  flex items-center justify-center lg:flex-row flex-col md:flex-row gap-6  ">
         {cards.map((card, index) => (
         <motion.div

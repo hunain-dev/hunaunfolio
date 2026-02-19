@@ -47,7 +47,7 @@ end: "bottom+=4000",
   }, [])    
 
   return (
-    <div className="chilliman lg:opacity-100 opacity-0 fixed bottom-0 right-0 z-99999 h-[25vh] w-[7%] sm:w-[10%] md:w-[14%] md:h-[20vh] flex items-end justify-end">
+    <div className="chilliman lg:opacity-100 opacity-0 fixed bottom-0 right-0 z-6 h-[25vh] w-[7%] sm:w-[10%] md:w-[14%] md:h-[20vh] flex items-end justify-end">
     <img
       ref={imgRef}
     src={chilliwaling}

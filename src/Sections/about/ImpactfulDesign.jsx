@@ -14,7 +14,7 @@ const Impactfulldesign = () => {
       <div className="relative w-full lg:mt-15 xl:mt-20 mt-20 p-[1vw] text-center uppercase text-[#1e1e1f] lg:leading-[21vw] leading-[34vw] md:leading-[33vw]   overflow-hidden">
   
         {/* Astronaut Image (No separate component now) */}
-        <div className="pointer-events-none absolute top-1/2 left-1/2 z-[99]  w-full -translate-x-1/2 -translate-y-1/2 overflow-hidden flex items-center justify-center">
+        <div className="pointer-events-none absolute top-1/2 left-1/2 z-[7]  w-full -translate-x-1/2 -translate-y-1/2 overflow-hidden flex items-center justify-center">
         <img
   src="/assets/images/astronuat.png"
   alt="Astronaut"

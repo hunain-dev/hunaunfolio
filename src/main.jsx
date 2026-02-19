@@ -4,22 +4,22 @@ import './index.css'
 import App from './App.jsx'
 import SmoothScrolling from './hooks/SmoothScrolling.jsx'
 import { BrowserRouter } from 'react-router-dom'
-import Navbar from './Components/Navbar.jsx'
+// import Navbar from './Components/Navbar.jsx'
 import Chilli from './Components/Chilli.jsx'
 import Mousemove from './Components/Mousemove.jsx'
 import Footer from './Components/Footer.jsx'
-import Loader from './Components/Loader.jsx'
-import Cardsss from './Cardsss.jsx'
+import Header from './Components/Header.jsx'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <SmoothScrolling>
       <BrowserRouter>
-      <Loader/>
+      {/* <Loader/> */}
       <Mousemove/>
       <Chilli/>
-      <Navbar/>
+      {/* <Navbar/> */}
+      <Header/>
     <App/>
     <Footer/>
      </BrowserRouter>
