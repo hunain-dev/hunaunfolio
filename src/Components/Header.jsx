@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { VscMenu } from "react-icons/vsc";
-import Hunainresume from "../../public/assets/images/Hunain.png"
 import Textanimation from './Ui/Textaniamtion';
 import { FaLocationArrow } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
@@ -94,7 +93,8 @@ const Header = () => {
         
         <div className='resume-section h-full pt-10 text-white  '>
           <div className=' w-full lg:px-10 px-6 md:px-20'>
-            <img src={Hunainresume} className='h-full  w-full object-cover' alt="" />
+            <img   src="/assets/images/hunain.png"
+ loading='lazy' className='h-full  w-full object-cover' alt="" />
           </div>
           <div className='h-fit w-full  flex items-center justify-center gap-1'>
             <h2 className='actay lg:text-[1.3vw] xl:text-1xl md:text-3xl 2xl:text-md text-center pt-3 '>Resume</h2>
