@@ -74,16 +74,16 @@ const Header = () => {
   ]
 
   return (
-    <div className=' w-full  py-4 flex-col items-center gap-2 justify-center bottom-0    flex  fixed z-999'>
+    <div className=' w-full lg:px-0 px-2  lg:py-4 py-3 flex-col items-center gap-2 justify-center bottom-0    flex  fixed z-999'>
 
       {/* We keep the menu in the DOM always, but handle visibility with GSAP */}
-      <div ref={menuRef} className=' w-lg py-4  overflow-hidden grid grid-cols-2  rounded-2xl bg-black '>
-        <div className='flex justify-center h-full w-full items-center gap-3  flex-col'>
+      <div ref={menuRef} className=' lg:w-lg  lg:py-4 md:py-10 py-4  overflow-hidden grid grid-cols-2  rounded-2xl bg-black'>
+        <div className='flex justify-center  h-full w-full items-center gap-3  flex-col'>
           {
             obj.map((elem, index) => {
               return (
                 <div key={index} className='menu-item ppneuemontreal flex items-center justify-center w-full px-3'>
-                  <button className='bg-[#BBFD6A] tracking-tight w-full py-3 rounded-[1vw] font-bold uppercase text-[1vw]'>
+                  <button className='bg-[#BBFD6A] tracking-tight w-full lg:py-3 py-2 rounded-[1vw] font-bold uppercase lg:text-[1vw] text-[3vw] md:text-2xl' >
                     <Textanimation text={elem.text} href={elem.href} />
                   </button>
                 </div>
@@ -91,36 +91,37 @@ const Header = () => {
             })
           }
         </div>
+        
         <div className='resume-section h-full pt-10 text-white  '>
-          <div className=' w-full px-10 '>
+          <div className=' w-full lg:px-10 px-6 md:px-20'>
             <img src={Hunainresume} className='h-full  w-full object-cover' alt="" />
           </div>
           <div className='h-fit w-full  flex items-center justify-center gap-1'>
-            <h2 className='actay text-[1.4vw] text-center pt-3'>Resume</h2>
-            <FaLocationArrow className='text-white mt-3 text-1xl ' />
-          </div>
+            <h2 className='actay lg:text-[1.3vw] xl:text-1xl md:text-3xl 2xl:text-md text-center pt-3 '>Resume</h2>
+            <FaLocationArrow className='text-white mt-3  2xl:text-sm xl:text-[1.3vw] lg:text-[1.5vw] text-1xl md:text-2xl  ' />
+          </div>  
         </div>
       </div>
 
-      <div className='actay p-2  cursor-pointer w-sm  rounded-1xl px-3  overflow-hidden  bg-[#000000] grid grid-cols-2'>
+      <div className='actay p-2  cursor-pointer lg:w-sm md:w-md 2xl:w-md w-full   rounded-1xl lg:px-3 px-2  overflow-hidden  bg-[#000000] grid grid-cols-2'>
         <div className=' h-full flex items-center justify-start gap-2 text-white'>
           <div onClick={() => {
             setMEnuoepn(prev => !prev)
           }} className='bg-[#BBFD6A] rounded-[0.3vw] p-1 px-2 text-black flex items-center justify-center'>
             {
               MEnuoepn ? (
-                <IoCloseOutline className='text-[1.6vw]' />
+                <IoCloseOutline className='lg:text-[1.6vw] text-1xl md:text-2xl' />
 
               ) :(
-                <VscMenu  className="text-[1.5vw]" />
+                <VscMenu  className="lg:text-[1.5vw] text-1xl md:text-2xl " />
 
               )
             }
           </div>
-          <h2 className=' text-[1.2vw]'>Menu</h2>
+          <h2 className=' lg:text-[1.2vw] text-1xl md:text-2xl'>Menu</h2>
         </div>
         <a href='#contact' className='h-full  cursor-pointer flex items-center justify-end '>
-          <button className='px-4 py-2 font-bold bg-[#BBFD6A] rounded-[0.3vw] text-[1.1vw] rounded-1xl'>Contact Us</button>
+          <button className='px-4 py-2 font-bold bg-[#BBFD6A] rounded-[0.3vw] lg:text-[1.1vw] text-sm md:text-lg rounded-1xl'>Contact Us</button>
         </a>
       </div>
 

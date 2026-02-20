@@ -57,7 +57,7 @@ const Loader = ({ onComplete }) => {
 
       {/* Number */}
       <div ref={contentRef} className='w-full flex text-black items-center justify-center'>
-        <h2 className='ppneuemontreal text-[25vw] tracking-tight uppercase'>
+        <h2 className='ppneuemontreal lg:text-[25vw] text-[35vw] md:text-[40vw] tracking-tight uppercase'>
           {count < 10 ? `0${count}` : count}
         </h2>
       </div>
