@@ -61,25 +61,21 @@ const Footer = () => {
       <div className="relative flex">
         {/* Main Content */}
         <div className=" w-full  mx-auto  grid lg:grid-cols-2 md:grid-cols-2  ">
-          <div className="actay w-full    h-full  px-3 py-3">
+          <div className="actay w-full     h-full  px-3 py-3">
             <a href="#home">
               <h2 className="uppercase   text-center  lg:text-left cursor-pointer text-lg">
                 Mohammad hunain studio@
               </h2>
             </a>
-            {/* <a href="mailto:huniiali1122@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you">
-              <h2 className="uppercase text-lg cursor-pointer   text-center  lg:text-left">
-                Huniiali1122@gmail.com
-              </h2>
-            </a> */}
-        <div className="h-fit bg-black mt-6 lg:w-fit">
-
-    <Button
-    href={`https://wa.me/923252991455?text=${encodeURIComponent("Hello Hunain")}`}
-      btntext="Contact us"
-      classname="uppercase px-15 py-2 bg-[#FFD900]"
-      type="button"
-    />
+         
+        <div className="h-fit mt-6 lg:w-fit">
+  
+      <Button
+      href={`https://wa.me/923252991455?text=${encodeURIComponent("Hello Hunain")}`}
+        btntext="0325-2991455"
+        classname="uppercase px-15 py-2 bg-[#BBFD6A]"
+        type="button"
+      />
 </div>
 
           </div>

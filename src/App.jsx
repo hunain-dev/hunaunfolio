@@ -6,7 +6,7 @@ import Aboutus from "./Sections/about/Aboutus"
 import Home from "./Sections/home/Home"
 const App = () => {
   return (
-    <div className='lg:pt-24 pt-13 w-full '>
+    <div className='lg:pt-15 pt-13 w-full '>
       <Home/>
       <Aboutus/>
       <TechStack/>
