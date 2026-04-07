@@ -57,23 +57,18 @@ const LandingHero = () => {
           })}
 
           <div className="h-full flex items-center justify-center z-1 absolute top-0 left-0  w-full ">
-            <div className="Modelview" ref={modelRef}>
-              {isVisible ? (
-                <model-viewer
-                  src="/assets/images/cube.glb"
-                  alt="3D Cube"
-                  className="lg:w-100 lg:h-100  xl:w-98 xl:h-98 w-80 h-50 md:w-84 md:h-84 2xl:w-107  2xl:h-107"
-                  auto-rotate
-                  camera-controls
-                  disable-zoom
-                  loading="lazy"
-                ></model-viewer>
-              ) : (
-                <div className="text-center text-gray-500 py-10">
-                  Loading model...
-                </div>
-              )}
-            </div>
+          <div className="Modelview" ref={modelRef}>
+  <model-viewer
+    src="/assets/images/cube.glb"
+    alt="3D Cube"
+    className="lg:w-100 lg:h-100 xl:w-98 xl:h-98 w-80 h-50 md:w-84 md:h-84 2xl:w-107 2xl:h-107"
+    auto-rotate
+    camera-controls
+    disable-zoom
+    loading="eager"  // lazy ke bajaye eager
+
+  ></model-viewer>
+</div>
           </div>
         </div>
       </div>
