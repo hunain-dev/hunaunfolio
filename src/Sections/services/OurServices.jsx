@@ -19,7 +19,7 @@ const Ourservices = () => {
         <div className="h-full w-full bg-[#e0e05f] flex items-center justify-center overflow-hidden border border-black">
           <div className="flex items-center justify-center w-full lg:h-[183vh] mt-[-10vw] overflow-hidden" data-scroll data-scroll-speed="0.3">
           <img
-  src="assets/images/Ourservicesimages (1).png"
+  src="assets/images/Ourservicesimages.webp"
   alt="Service 1"
   className="
     object-contai object-center
@@ -33,7 +33,7 @@ const Ourservices = () => {
 
 />
 <img
-  src="assets/images/Ourservicesimages (2).png"
+  src="assets/images/Ourservicesimages1.webp"
   alt="Service 1"
   className="
     object-contai object-center

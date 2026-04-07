@@ -7,13 +7,13 @@ const SwiperSlider = () => {
   
   const cardcollection = [
     {
-      cardimg: "https://images.prismic.io/miux-studio/aEACjLh8WN-LVkl0_Home1.jpg?auto=format,compress",
+      cardimg: "/assets/images/Madienstudio.webp",
       desctittle: "MAdeinuxstudio",
       carddesc:
         "MAdeinuxstudio is an awwwards winning website these cloned with precision and attention to detail.",
     },
     {
-      cardimg: "/assets/images/Jeskojets.png",
+      cardimg: "/assets/images/Jeskojets.webp",
       desctittle: "Jesko & Jets",
       carddesc:
         "JeskoJets is an awwwards winning website these cloned with precision and attention to detail.",
@@ -30,27 +30,27 @@ const SwiperSlider = () => {
       link: "https://mammoth-murals.netlify.app/",
     },
     {
-      cardimg: "/assets/images/Klearmindtherapy.png",
+      cardimg: "/assets/images/Klearmindtherapy.webp",
       desctittle: "Klearmind Clinics",
       carddesc:
         "A modern website for a Ketamine & IV therapy clinic in California.",
       link: "https://klearmind-therapy-clinics.netlify.app/",
     },
     {
-      cardimg: "/assets/images/Camille-Bas-1200x908.png",
+      cardimg: "/assets/images/Tobacco.webp",
       desctittle: "Digital Tobacco",
       carddesc: "Transforming traditional industry into digital excellence.",
       link: "https://tabaccino.netlify.app/",
     },
     {
-      cardimg: "/assets/images/jobs.jpg",
+      cardimg: "/assets/images/jobs.webp",
       desctittle: "Career Hunt",
       carddesc: "An interactive job-based game to test accuracy and focus.",
       link: "https://careerhant.netlify.app/",
     },
 
     {
-      cardimg: "/assets/images/ochidesign.png",
+      cardimg: "/assets/images/ochidesign.webp",
       desctittle: "Ochi Clone",
       carddesc:
         "Ochi Designs is a modern and minimalistic creative agency website clone, built to highlight branding, strategy, and interactive design.",
@@ -58,42 +58,42 @@ const SwiperSlider = () => {
     },
 
     {
-      cardimg: "/assets/images/Christmas image.png",
+      cardimg: "/assets/images/Christmas.webp",
       desctittle: "Santa's Companion",
       carddesc:
         "Santa Company is a festive and interactive web experience designed to capture the magic of the holiday season",
       link: "https://santas-store.netlify.app/",
     },
     {
-      cardimg: "/assets/images/tictac.png",
+      cardimg: "/assets/images/tictac.webp",
       desctittle: "Tic-Tac-Toe Game",
       carddesc:
         "Tic Tac Toe is a simple and interactive web game designed to capture the fun and competitive spirit of the classic two-player strategy",
       link: "https://reactxogame.netlify.app/",
     },
     {
-      cardimg: "/assets/images/spacer.png",
+      cardimg: "/assets/images/spacer.webp",
       desctittle: "spencergabor work",
       carddesc:
         "Memory Game is an engaging and interactive web-based project designed to challenge concentration and recall skills. With smooth animations,",
       link: "https://spancer-gabor.netlify.app/",
     },
     {
-      cardimg: "/assets/images/weather.jpg",
+      cardimg: "/assets/images/weather.webp",
       desctittle: "Weather App",
       carddesc:
         "Weather App is a modern and user-friendly web application designed to provide real-time weather updates for any location.",
       link: "https://macro-weather-app.netlify.app/",
     },
     {
-      cardimg: "/assets/images/Klearmindtherapy.png",
+      cardimg: "/assets/images/Klearmindtherapy.webp",
       desctittle: "Two Good Company",
       carddesc:
         "Two Good Company is a fully animated and responsive website clone inspired by the award-winning brand. With smooth animations, responsive layout,",
       link: "https://twogoodcompany.netlify.app/",
     },
     {
-      cardimg: "/assets/images/TwoGoodGoodSave.jpg",
+      cardimg: "/assets/images/TwoGoodGoodSave.webp",
       desctittle: "Furni – Interior Design",
       carddesc:
         "Furni is a modern and minimalistic interior design website built to showcase elegant layouts and stylish aesthetics. With smooth animations,",
@@ -101,7 +101,7 @@ const SwiperSlider = () => {
       link: "https://furni-interior-design.netlify.app/",
     },
     {
-      cardimg: "/assets/images/hello.jpg",
+      cardimg: "/assets/images/hello.webp",
       desctittle: "We think elastic",
       carddesc:
         "We Think Elastic is a modern and interactive website clone inspired by an award-winning design. With smooth animations, responsive layout,",
@@ -109,7 +109,7 @@ const SwiperSlider = () => {
       link: "https://myrejoucie.netlify.app/",
     },
     {
-      cardimg: "/assets/images/rejouices.jpeg",
+      cardimg: "/assets/images/rejouices.webp",
       desctittle: "rejouices",
       carddesc:
         "Rejouice is a fully animated and responsive website clone inspired by the award-winning agency site. With smooth animations,",
@@ -149,6 +149,7 @@ const SwiperSlider = () => {
                       autoPlay
                       loop
                       muted
+                      loading="lazy"
                       playsInline
                       className="h-full w-full object-cover"
                     />

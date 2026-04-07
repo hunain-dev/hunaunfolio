@@ -58,29 +58,23 @@ const Footer = () => {
         {`Let's create something extra ordinary together `}
         </div>
       </div>
-      <div className="relative flex">
+
+      <div className="relative flex lg:py-20">
         {/* Main Content */}
-        <div className=" w-full  mx-auto  grid lg:grid-cols-2 md:grid-cols-2  ">
-          <div className="actay w-full     h-full  px-3 py-3">
-            <a href="#home">
-              <h2 className="uppercase   text-center  lg:text-left cursor-pointer text-lg">
-                Mohammad hunain studio@
-              </h2>
-            </a>
-         
-        <div className="h-fit mt-6 lg:w-fit">
+        <div className=" w-full   mx-auto  grid lg:grid-cols-2 md:grid-cols-2  ">
+          <div className="actay w-full h-full  px-3 py-3">
+        <div className="h-fit mt-6 lg:w-fit ">
   
       <Button
       href={`https://wa.me/923252991455?text=${encodeURIComponent("Hello Hunain")}`}
         btntext="0325-2991455"
         classname="uppercase px-15 py-2 bg-[#BBFD6A]"
         type="button"
+        
       />
 </div>
-
-          </div>
+       </div>
           <div className="h-full px-7 py-3  flex lg:items-end items-center  lg:justify-right md:items-end md:justify-right flex-col">
-            <h3 className="actay lg:text-3xl text-2xl md:text-3xl">Follow us</h3>
             <div className="flex flex-row gap-4 mt-2 md:mt-4 ">
               {icons.map((item, idx) => (
                 <a
@@ -90,6 +84,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="inline-block"
                 >
+                  
                   <div
                     className="w-11 h-11 flex items-center justify-center rounded-full cursor-pointer shadow-lg transition-transform duration-500 border border-black hover:scale-125 hover:rotate-12 hover:shadow-2xl"
                     style={{ backgroundColor: item.color }}
@@ -101,48 +96,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>{" "}
-      <div className="h-full py-10 w-full grid lg:grid-cols-[1fr_1fr] md:grid-cols-[1fr_2fr] px-3">
-      
-        
-        <div className="h-full lg:mt-0 mt-3 md:mt-0  flex items-center justify-between lg:flex-row md:flex-row flex-col" >
-          <a href="#home">
-            <Textanimation text="Home" classname="text-black actay  text-2xl md:text-[2.5vw] lg:text-[1.7vw]" />
-          </a>
-
-          <a href="#aboutus">
-            <Textanimation
-              text="About us"
-              classname="text-black actay  text-2xl md:text-[2.5vw] lg:text-[1.7vw]"
-            />
-          </a>
-          <a href="#stack">
-            <Textanimation
-              text="stack"
-              classname="text-black actay  text-2xl md:text-[2.5vw] lg:text-[1.7vw]"
-            />
-          </a>
-
-          <a href="#services">
-            <Textanimation
-              text="Services"
-              classname="text-black actay  text-2xl md:text-[2.5vw] lg:text-[1.6vw]"
-            />
-          </a>
-          <a href="#project">
-            <Textanimation
-              text="Projects"
-              classname="text-black actay  text-2xl md:text-[2.5vw] lg:text-[1.7vw]"
-            />
-          </a>
-          <a href="#contact">
-            <Textanimation
-              text="Contact"
-              classname="text-black actay  text-2xl lg:text-[1.7vw]"
-            />
-          </a>
-        </div>
       </div>
+
+
     </div>
   );
 };

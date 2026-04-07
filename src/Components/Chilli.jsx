@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import chilliwaling from "../../public/assets/images/chilliman.gif"
+import chilliwaling from "../../public/assets/Videos/Chilliman.webm"
 gsap.registerPlugin(ScrollTrigger)
 
 const Chilli = () => {
@@ -47,12 +47,17 @@ end: "bottom+=4000",
   }, [])    
 
   return (
-    <div className="chilliman lg:opacity-100 opacity-0 fixed bottom-0 right-0 z-6 h-[25vh] w-[7%] sm:w-[10%] md:w-[14%] md:h-[20vh] flex items-end justify-end">
-    <img
+    <div className="chilliman  lg:opacity-100 opacity-0 w-fit fixed bottom-0 right-0 z-6 h-[25vh] w-[7%] sm:w-[10%] md:w-[14%] md:h-[20vh] flex items-end justify-end">
+    <video
+    poster="preview.webp"
+    loading="lazy"
+    autoPlay 
+    loop 
+    muted
       ref={imgRef}
     src={chilliwaling}
       alt=""
-      className="h-full object-contain"
+      className="h-full mix-blend-multiply  object-contain"
     />
   </div>
   

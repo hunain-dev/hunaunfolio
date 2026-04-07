@@ -2,20 +2,21 @@ import { motion } from "framer-motion";
 
 const cards = [
   {
-    img: "../../../assets/images/client1.png",
+    img: "../../../assets/images/client1.webp",
     title: "Marketing Manager",
     tag: "Marrie vong",
     desc:"Thank you, Hunain! You built our agency’s website exactly the way I wanted. Clean, fast and beautifully animated. Keep it up!"
   },
   {
-    img: "https://images.unsplash.com/photo-1518135714426-c18f5ffb6f4d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhhbmRzaGFrZXxlbnwwfHwwfHx8MA%3D%3D",
+    img: "../../../assets/images/Client2.webp",
     title: "Team Leader",
     tag: "Uzair khan",
     desc:"Welcome Hunain! Thank you so much for helping us fix critical bugs and supporting our project. Your contribution truly made a difference"
 
   },
   {
-    img: "https://cdn.pixabay.com/photo/2025/06/02/12/27/man-9637000_1280.jpg",
+    
+    img: "../../../assets/images/Client3.webp",
     title: "Development Team",
     tag: "Mostafa",
     desc:"Welcome Hunain! Thank you so much for helping us fix critical bugs and supporting our project. Your contribution truly made a difference"
@@ -40,6 +41,7 @@ const OurClients = () => {
             src={card.img}
             className="w-full h-full object-cover"
             alt="img"
+            loading="lazy"
           />
 
           {/* Hover Text Box */}

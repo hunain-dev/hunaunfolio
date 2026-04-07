@@ -93,7 +93,8 @@ const Header = () => {
         
         <div className='resume-section h-full pt-10 text-white  '>
           <div className=' w-full lg:px-10 px-6 md:px-20'>
-            <img   src="/assets/images/hunain.png"
+            <img   src="/assets/images/hunain.webp"
+            
  loading='lazy' className='h-full  w-full object-cover' alt="" />
           </div>
           <div className='h-fit w-full  flex items-center justify-center gap-1'>
@@ -121,7 +122,7 @@ const Header = () => {
           <h2 className=' lg:text-[1.2vw] text-1xl md:text-2xl'>Menu</h2>
         </div>
         <a href='#contact' className='h-full  cursor-pointer flex items-center justify-end '>
-          <button className='px-4 py-2 font-bold bg-[#BBFD6A] rounded-[0.3vw] lg:text-[1.1vw] text-sm md:text-lg rounded-1xl'>Contact Us</button>
+          <button className='px-4 py-2 font-bold bg-[#BBFD6A]  cursor-pointer rounded-[0.3vw] lg:text-[1.1vw] text-sm md:text-lg rounded-1xl'>Contact Us</button>
         </a>
       </div>
 

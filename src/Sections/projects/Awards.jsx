@@ -4,7 +4,7 @@ import Textanimation from "../../Components/Ui/Textaniamtion";
 const Awards = () => {
   const data = [
     {
-      cardimg: "assets/images/winning.jpg",
+      cardimg: "assets/images/winning.webp",
     },
   ];
 

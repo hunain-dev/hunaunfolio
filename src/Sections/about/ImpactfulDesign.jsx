@@ -16,7 +16,8 @@ const Impactfulldesign = () => {
         {/* Astronaut Image (No separate component now) */}
         <div className="pointer-events-none absolute top-1/2 left-1/2 z-[7]  w-full -translate-x-1/2 -translate-y-1/2 overflow-hidden flex items-center justify-center">
         <img
-  src="/assets/images/astronuat.png"
+  src="/assets/images/astronuat.webp"
+  
   alt="Astronaut"
   loading="lazy"
   className="
