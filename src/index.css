@@ -20,12 +20,10 @@
     background: none;
   }
   
-  
   ::selection{
     background-color:#242627;
     color: white;
   }
-  
   
   @font-face {
     font-family: 'Actay';
@@ -34,47 +32,45 @@
   
   }
 
-  
   .actay{
   font-family: "Actay", sans-serif;
-  
   
   }
 
 
   @font-face {
     font-family:Victory ;
-    src: url(/assets/Fonts/Victory.ttf);
+    src: url(/assets/Fonts/Victory.ttf) format("woff");
+    font-display: swap;
+
   }
 
   
   .Victory{
     font-family: "Victory";
-    font-display: swap;
     }
 
     @font-face {
-      font-family:amora ;
-      src: url(/assets/Fonts/amora.ttf);
+    font-family:amora ;
+    src: url(/assets/Fonts/amora.ttf) format("woff");
+    font-display: swap;
     }
   
-    
     .amora{
       font-family: "amora";
-      font-display: swap;
+
       }
+      
     
   @font-face {
     font-family: 'Garelin';
-    src: url('/assets/Fonts/GarelinaBold-rgZ0p.ttf');
+    src: url('/assets/Fonts/GarelinaBold-rgZ0p.ttf')  format("woff");
     font-display: swap;
   
   }
   
   .Garelin{
     font-family: 'Garelin';
-    src: url('/assets/Fonts/GarelinaBold-rgZ0p.ttf');
-    font-display: swap;
   
   
   }
@@ -83,60 +79,53 @@
   
   @font-face {
     font-family: 'Fontspring' ;
-    src: url('/assets/Fonts/Fontspring.ttf')
-     format("opentype");
+    src: url('/assets/Fonts/Fontspring.ttf')  format("woff");
+    font-display: swap;
+
   }
   
   
   .Fontspring{
     font-family: 'Fontspring' ;
-    src: url('/public/assets/Fonts/Fontspring.ttf');
-    font-display: swap;
   
   
   }
   
   @font-face {
     font-family: 'ActayCondensed';
-    src: url('/assets/Fonts/ActayCondensed-ThinItalic.otf');
+    src: url('/assets/Fonts/ActayCondensed-ThinItalic.otf')  format("woff");
     font-display: swap;
+
    
   }
   
   .ActayCondensed{
     font-family: 'ActayCondensed';
-    src: url('/assets/Fonts/ActayCondensed-ThinItalic.otf');
-    font-display: swap;
   
   
   }
   
   @font-face {
     font-family: 'Akrobat';
-    src: url('/public/assets/Fonts/Akrobat.ttf');
+    src: url('/public/assets/Fonts/Akrobat.ttf')  format("woff");
     font-display: swap;
    
   }
+
   .Akrobat{
     font-family: 'Akrobat';
-    src: url('/public/assets/Fonts/Akrobat.ttf');
-    font-display: swap;
-  
   
   }
   
   @font-face {
     font-family: 'ppneuemontreal';
-    src: url('/public/assets//Fonts/ppneuemontreal-bold.otf');
+    src: url('/public/assets//Fonts/ppneuemontreal-bold.otf')  format("woff");
     font-display: swap;
-   
   }
   
   
   .ppneuemontreal{
     font-family: 'ppneuemontreal';
-    src: url('/public/assets//Fonts/ppneuemontreal-bold.otf');
-    font-display: swap;
   
   
   }
@@ -144,14 +133,12 @@
   
   @font-face {
     font-family: 'Morganite';
-    src: url('/Assets/Fonts/Morganite-Black.ttf');
+    src: url('/Assets/Fonts/Morganite-Black.ttf')  format("woff");
     font-display: swap;
    
   }
   .Morganite{
     font-family: 'Morganite';
-    src: url('/Assets/Fonts/Morganite-Black.ttf');
-    font-display: swap;
   
   
   }
@@ -160,31 +147,30 @@
   
   @font-face {
     font-family: 'Satoshi';
-    src: url('/Assets/Fonts/Satoshi.ttf') ;
+    src: url('/Assets/Fonts/Satoshi.ttf')  format("woff");
     font-display: swap;
+ 
    
   }
   
   .Satoshi{
     font-family: 'Satoshi';
-    src: url('/Assets/Fonts/Satoshi.ttf') ;
-    font-display: swap;
   
   
   }
   
   @font-face {
     font-family: 'Impacted';
-    src: url('/Assets/Fonts/Impacted.ttf');
+    src: url('/Assets/Fonts/Impacted.ttf')  format("woff");
     font-display: swap;
+
    
   }
   
   
   .Impacted{
     font-family: 'Impacted';
-    src: url('/public/Assets/Fonts/Satoshi.ttf');
-    font-display: swap;
+   
   
   
   }
@@ -194,63 +180,58 @@
   
   @font-face {
     font-family: 'MarvinVisions';
-    src: url('/public/Assets/Fonts/MarvinVisions-Bold.otf');
+    src: url('/public/Assets/Fonts/MarvinVisions-Bold.otf')  format("woff");
     font-display: swap;
    
   }
   
   @font-face {
     font-family: 'Quasar';
-    src: url('/public/Assets/Fonts/Quasar.otf');
+    src: url('/public/Assets/Fonts/Quasar.otf') format("woff");
     font-display: swap;
    
   }
   @font-face {
     font-family: 'sigana';
-    src: url('/public/Assets/Fonts/sigana-condensed.otf');
+    src: url('/public/Assets/Fonts/sigana-condensed.otf')  format("woff");
     font-display: swap;
    
   }
   @font-face {
     font-family: 'impact';
-    src: url('/public/Assets/Fonts/impact.ttf');
+    src: url('/public/Assets/Fonts/impact.ttf')  format("woff");
     font-display: swap;
    
   }
   
   @font-face {
     font-family: 'Stadium';
-    src: url('/public/Assets/Fonts/Stadium.ttf');
-    font-display: swap;
-   
+    src: url('/public/Assets/Fonts/Stadium.ttf')  format("woff");
+    font-display: swap;   
   }
   @font-face {
     font-family: 'ThatAppeal';
-    src: url('/public/Assets/Fonts/ThatAppeal-FreeDemo-BF65b7880fefd18.otf'); 
-    font-display: swap;
-  
+    src: url('/public/Assets/Fonts/ThatAppeal-FreeDemo-BF65b7880fefd18.otf')  format("woff");
+    font-display: swap;  
   }
   @font-face {
     font-family: 'TypeMonster';
-    src: url('/public/Assets/Fonts/TypeMonster-FreeDemo-BF65d7910e35896.otf');
-    font-display: swap;
-   
+    src: url('/public/Assets/Fonts/TypeMonster-FreeDemo-BF65d7910e35896.otf')  format("woff");
+    font-display: swap;   
   }
   
   
   
   @font-face {
     font-family: 'rejouice';
-    src: url('/public/Assets/Fonts/rejoucie.ttf'); 
-    font-display: swap;
-  
+    src: url('/public/Assets/Fonts/rejoucie.ttf')  format("woff");
+    font-display: swap;  
   }
   
   @font-face {
     font-family: 'gunplay';
-    src: url('/public/Assets/Fonts/gunplay.ttf');
-    font-display: swap;
-   
+    src: url('/public/Assets/Fonts/gunplay.ttf')  format("woff");
+    font-display: swap;   
   }
   
   
@@ -260,24 +241,21 @@
   
   @font-face {
     font-family: 'GeoplaceSC';
-    src: url('/public/Assets/Fonts/GeoplaceSC-Bold.ttf');
-    font-display: swap;
-   
+    src: url('/public/Assets/Fonts/GeoplaceSC-Bold.ttf')  format("woff");
+    font-display: swap;   
   }
   
   @font-face {
     font-family: 'FaqroExtendedWideTrial';
-    src: url('/public/Assets/Fonts/FaqroExtendedWideTrial-Regular.ttf'); 
-    font-display: swap;
-  
+    src: url('/public/Assets/Fonts/FaqroExtendedWideTrial-Regular.ttf')  format("woff");
+    font-display: swap;  
   }
   
   
   @font-face {
     font-family: 'Satoshi-black';
-    src: url('/public/Assets/Fonts/Satoshi-Black.otf');
-    font-display: swap;
-   
+    src: url('/public/Assets/Fonts/Satoshi-Black.otf')  format("woff");
+    font-display: swap;   
   }
   
   .Satoshi-black{
@@ -286,9 +264,8 @@
   }
   @font-face {
     font-family: 'Queen';
-    src: url('/public/Assets/Fonts/Queen.ttf');
-    font-display: swap;
-  
+    src: url('/public/Assets/Fonts/Queen.ttf')  format("woff");
+    font-display: swap;  
   }
   
   .Queen{
@@ -300,9 +277,8 @@
   
   @font-face {
     font-family: 'playwrite';
-    src: url('/public/Assets/Fonts/plauwrite.ttf');
-    font-display: swap;
-   
+    src: url('/public/Assets/Fonts/plauwrite.ttf')  format("woff");
+    font-display: swap;   
   }
   
   
@@ -321,9 +297,7 @@
     }
   }
   
-  
-  
-  
+
   
   .swiper {
     width: 20vw;
