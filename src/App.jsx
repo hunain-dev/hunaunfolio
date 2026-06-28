@@ -11,10 +11,7 @@ const App = () => {
       <Aboutus/>
       <TechStack/>
       <Ourservices/>
-      <Projects/>
-
-
-      
+      <Projects/>      
     </div>
   )
 }
