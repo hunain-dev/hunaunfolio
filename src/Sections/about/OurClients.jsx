@@ -67,19 +67,58 @@
 
 // export default OurClients;
 
-import React from "react";
+import gsap from "gsap";
 
 const OurClients = () => {
+  // const [seeresult, setseeresult] = useState(false)
+
+  const tl = gsap.timeline();
+
+ const means = tl.current;
+
+
+  const obj = [
+    {
+      backgroundcolor: "blue",
+    },
+
+    {
+      backgroundcolor: "black",
+    },
+
+    {
+      backgroundcolor: "black",
+    },
+  ];
+
+
+  
   return (
     <div className=" w-full mt-7">
-      <div className="h-[40vh] text-3xl flex items-center justify-center w-full bg-blue-400">
+      <div className="h-[40vh]  text-2xl flex items-center justify-center w-full">
         <h1>hi my name is hunain</h1>
       </div>
 
-      <div className="h-screen  w-full  grid grid-cols-3 p-11 flex items-center justify-center">
-        <div className="h-full rounded-lg  w-sm bg-red-500"></div>
-        <div className="h-full w-sm rounded-lg   bg-red-300"></div>
-        <div className="h-full w-sm rounded-lg bg-red-200"></div>
+      <div className="h-screen  w-full relative ">
+               <div className="h-21 w-21 flex items-center justify-center  rounded-full cursor-pointer absolute z-9 text-white bg-red-500">
+                <h1>see</h1>
+
+               </div>
+
+               <div className="h-full items-center p-13 justify-center  w-full grid grid-cols-3">
+               {obj.map((elem, index) => {
+          return (
+            <div
+              key={index}
+              className="h-full rounded-lg w-sm"
+              style={{ backgroundColor: elem.backgroundcolor }}
+            ></div>
+          );
+        })}
+               </div>
+
+
+     
       </div>
     </div>
   );

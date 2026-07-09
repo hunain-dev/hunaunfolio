@@ -9,7 +9,7 @@ import Chilli from './Components/Chilli.jsx'
 import Mousemove from './Components/Mousemove.jsx'
 import Footer from './Components/Footer.jsx'
 import Header from './Components/Header.jsx'
-import Loader from './Components/Loader.jsx'
+// import Loader from './Components/Loader.jsx'
 
 
 createRoot(document.getElementById('root')).render(

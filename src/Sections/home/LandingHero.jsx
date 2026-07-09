@@ -29,7 +29,7 @@ const LandingHero = () => {
       <div className="h-full w-full gap-2 flex items-center justify-start  flex-col">
         <h1 className="Fontspring uppercase lg:text-5xl xl:text-6xl text-4xl md:text-6xl 2xl:text-7xl">{`Hi I’am Muhammad Hunain`}</h1>
         <h4 className="ActayCondensed lg:text-2xl xl:text-[1.6vw] text-1xl md:text-2xl">
-          Your product designer and developer partner!
+          Your product hunain  and developer partner!
         </h4>
       </div>
       <div className="h-full  lg:mt-4 xl:mt-0 mt-15 md:mt-14 w-full ">

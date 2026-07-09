@@ -14,12 +14,13 @@ const SmoothScrolling = ({ children }) => {
         smartphone: { smooth: true },
         tablet: { smooth: true },
       });
-
+//.
       return () => {
         if (locoScroll) locoScroll.destroy();
       };
     }
-  }, []);
+
+  },[]);
 
   return (
     <div ref={scrollRef} data-scroll-container>
