@@ -7,7 +7,6 @@ const Awards = () => {
       cardimg: "assets/images/winning.webp",
     },
   ];
-
   return (
     <div className="lg:h-screen lg:mt-10 mt-7 md:mt-20  w-full flex flex-col items-center justify-center lg:px-8 px-1">
       <h2 className="Satoshi font-[400] text-center text-[5vw] md:text-4xl lg:text-4xl">
@@ -17,7 +16,6 @@ const Awards = () => {
           classname="Satoshi text-black lg:text-[2.3vw] md:text-3xl text-1xl"
         />{" "}
       </h2>
-
       <div className="flex justify-center w-full gap-8 flex-wrap py-10">
         {data.map((elem, index) => (
           <div

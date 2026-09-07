@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import Button from "./Ui/Button";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import Textanimation from "./Ui/Textaniamtion";
-
 const Footer = () => {
   const icons = [
     {
@@ -34,7 +33,7 @@ const Footer = () => {
 
   return (
     <div id="contact" className="min-h-full lg:mt-26 mt-15 w-full">
-      <div className="h-full w-full flex items-center overflow-hidden ">
+      <div className="h-full w-full  flex items-center overflow-hidden ">
         {/* Duplicate text manually for seamless loop */}
         <div ref={textRef} className="actay tracking-tighter flex whitespace-nowrap text-[11vw] actay">
         {`Let's create something extra ordinary together `}
@@ -58,10 +57,9 @@ const Footer = () => {
         {`Let's create something extra ordinary together `}
         </div>
       </div>
-
-      <div className="relative flex lg:py-20">
+      <div className="relative flex lg:py-12 xl:py-11 2xl:py-14 ">
         {/* Main Content */}
-        <div className=" w-full   mx-auto  grid lg:grid-cols-2 md:grid-cols-2  ">
+        <div className=" w-full     mx-auto  grid lg:grid-cols-2 md:grid-cols-2  ">
           <div className="actay w-full h-full  px-3 py-3">
         <div className="h-fit mt-6 lg:w-fit ">
   

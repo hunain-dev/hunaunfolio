@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../../Components/Ui/Button';
 
 const HappyClients = () => {
+
     const obj = [
         {
           tagimg1: "https://framerusercontent.com/images/um3bxT2WVFF4kr6enjXB8pntPlo.svg",
@@ -12,8 +13,9 @@ const HappyClients = () => {
 
   return (
     <div className='lg:gap-4 gap-4 w-full grid grid-cols-1'>
-        <div className='h-full w-full flex items-center justify-center lg:flex-row flex-col lg:gap-2 gap-3 md:gap-5 '>
-            <span className='flex items-center justify-center'>{Object.values(obj[0]).map((url, index) => (
+        <div className='h-full w-full flex items-center justify-center lg:flex-row flex-col lg:gap-2 gap-3 md:gap-5'>
+            <span className='flex items-center justify-center'>{Object.values(obj[0]).map((url, 
+            index) => (
     <img
     key={index}
     src={url}
@@ -36,11 +38,7 @@ const HappyClients = () => {
          2xl:text-[1.1vw]
         "
       />
-
         </div>
-
-
-      
     </div>
   )
 }

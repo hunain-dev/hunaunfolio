@@ -23,6 +23,7 @@ const TechStack = () => {
       <motion.div
         className="skills grid lg:grid-cols-7 md:grid-cols-7 grid-cols-4  gap-[3.5vw] lg:w-[70%] mx-auto py-[2vh] mt-[1vw]"
         ref={constraintsRef}
+        
       >
         {skillsimg.map((elem, index) => (
           <motion.div

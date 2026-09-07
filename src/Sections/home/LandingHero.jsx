@@ -56,6 +56,7 @@ const LandingHero = () => {
             );
           })}
 
+
           <div className="h-full flex items-center justify-center z-1 absolute top-0 left-0  w-full ">
           <div className="Modelview" ref={modelRef}>
   <model-viewer
@@ -66,7 +67,6 @@ const LandingHero = () => {
     camera-controls
     disable-zoom
     loading="eager"  // lazy ke bajaye eager
-
   ></model-viewer>
 </div>
           </div>
