@@ -50,7 +50,7 @@ const Aboutme = () => {
   return (
     <div
       ref={sectionRef}
-      className="lg:pb-6 xl:pb-24  overflow-hidden  text-white w-full"
+      className="lg:pb-6 xl:pb-24 overflow-hidden text-white w-full"
     >
       <div className="h-full w-full">
         <div className="relative flex items-center justify-center flex-col w-full ">
@@ -87,9 +87,9 @@ const Aboutme = () => {
           </h4>
           <div
             ref={paraRef}
-            className="h-full flex items-start justify-start text-center lg:px-20 xl:px-20 absolute lg:top-55 xl:top-70 md:top-48 top-20 left-0 w-full opacity-0 translate-y-40"
+            className=" flex items-center justify-start text-center lg:px-20 xl:px-8 absolute lg:top-55 xl:top-70 md:top-48 top-20 left-0 w-full opacity-0"
           >
-            <h4 className="actay lg:text-[1.6vw] xl:text-lg  text-[2vw] 2xl:text-2xl">
+            <h4 className="actay lg:text-[1.6vw] xl:text-xl  text-[2vw] 2xl:text-2xl">
               Hi! I'm Muhammad Hunain, a Web Designer and Web Developer from
               Karachi, Pakistan. I specialize in creating interactive, visually
               appealing websites using ReactJS, GSAP, Framer Motion, and other

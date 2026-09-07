@@ -8,7 +8,7 @@ const Awards = () => {
     },
   ];
   return (
-    <div className="lg:h-screen lg:mt-10 mt-7 md:mt-20  w-full flex flex-col items-center justify-center lg:px-8 px-1">
+    <div className="lg:h-screen lg:mt-4 mt-7 md:mt-20  w-full flex flex-col items-center justify-center lg:px-8 px-1">
       <h2 className="Satoshi font-[400] text-center text-[5vw] md:text-4xl lg:text-4xl">
         <Textanimation
           text="1st Runner-Up in Web Design | Techwiz Pakistan Web Design Competition

@@ -5,24 +5,19 @@ const Githubstatic = () => {
     <div className="w-full lg:px-0 px-4 lg:mt-0 mt-3 flex flex-col items-center justify-center ">
       <h1 className="Satoshi text-[4vw]">
         <Textanimation
-          text="        My GitHub Activity
-
-"
+          text="My GitHub Activity"
           classname="Satoshi text-black lg:text-[3.5vw] md:text-5xl text-2xl"
         />{" "}
       </h1>
 
       <div
-  className="
+        className="
     border border-gray-500
-   lg:py-10 md:py-10
-
- lg:px-30 md:px-22 py-6 overflow-x-auto flex justify-center
+   lg:py-11 md:py-10  lg:px-35 md:px-22 py-6 overflow-x-auto flex justify-center
     shadow-lg
     rounded-xl
   "
->
-
+      >
         <img
           src="https://ghchart.rshah.org/hunain-dev"
           alt="GitHub Contributions"
@@ -32,10 +27,9 @@ const Githubstatic = () => {
             w-full 
             h-auto 
             object-contain 
-            lg:scale-125
+            lg:scale-136
             md:scale-120
           "
-
           unoptimized
         />
       </div>

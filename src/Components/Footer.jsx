@@ -21,10 +21,10 @@ const Footer = () => {
 
     gsap.fromTo(
       text,
-      { x: 20 },
+      { x: 30 },
       {
         x: -width,
-        duration: 140, // adjust speed
+        duration: width / 100, // adjust speed
         repeat: -1,
         ease: "linear",
       }
@@ -32,37 +32,38 @@ const Footer = () => {
   }, []);
 
   return (
-    <div id="contact" className="min-h-full lg:mt-26 mt-15 w-full">
-      <div className="h-full w-full  flex items-center overflow-hidden ">
+    <div id="contact" className="min-h-full lg:mt-19  mt-15 w-full">
+
+
+      <div className="h-full w-full  flex items-center overflow-hidden text-[13vw] ">
         {/* Duplicate text manually for seamless loop */}
-        <div ref={textRef} className="actay tracking-tighter flex whitespace-nowrap text-[11vw] actay">
+        <div ref={textRef} className="actay tracking-tighter flex whitespace-nowrap  actay">
         {`Let's create something extra ordinary together `}
           {`Let's create something extra ordinary together `}
           </div>
 
-        <div className="actay not-first:flex tracking-tighter whitespace-nowrap text-[11vw] ">
+        <div className="actay not-first:flex tracking-tighter whitespace-nowrap ">
         {`Let's create something extra ordinary together `}
         {`Let's create something extra ordinary together `}
         </div>
-        <div className="actay flex whitespace-nowrap tracking-tighter text-[11vw] ">
+        <div className="actay flex whitespace-nowrap tracking-tighter ">
         {`Let's create something extra ordinary together `}
         {`Let's create something extra ordinary together `}
         </div>
-        <div className="actay flex whitespace-nowrap tracking-tighter text-[11vw] ">
+        <div className="actay flex whitespace-nowrap tracking-tighter  ">
         {`Let's create something extra ordinary together `}
           {`Let's create something extra ordinary together `}
           </div>
-        <div className="actay flex whitespace-nowrap tracking-tighter text-[11vw] ">
+        <div className="actay flex whitespace-nowrap tracking-tighter ">
         {`Let's create something extra ordinary together `}
         {`Let's create something extra ordinary together `}
         </div>
       </div>
-      <div className="relative flex lg:py-12 xl:py-11 2xl:py-14 ">
+      <div className="relative flex  h-fit  lg:py-12 xl:py-9 2xl:py-14 ">
         {/* Main Content */}
-        <div className=" w-full     mx-auto  grid lg:grid-cols-2 md:grid-cols-2  ">
+        <div className=" w-full mx-auto  grid lg:grid-cols-2 md:grid-cols-2  ">
           <div className="actay w-full h-full  px-3 py-3">
         <div className="h-fit mt-6 lg:w-fit ">
-  
       <Button
       href={`https://wa.me/923252991455?text=${encodeURIComponent("Hello Hunain")}`}
         btntext="0325-2991455"
