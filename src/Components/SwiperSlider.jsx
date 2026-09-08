@@ -118,16 +118,14 @@ const SwiperSlider = () => {
     },
   ];
 
-
   return (
     <>
-      <div>
 
         <Swiper
           effect={"cards"}
           grabCursor={true}
           modules={[EffectCards]}
-          className="mySwiper"
+          className="mySwiper "
         >
           {cardcollection.map((elem, index) => {
             return (
@@ -141,7 +139,7 @@ const SwiperSlider = () => {
                       alert("“The project is scheduled to go live next week.”")
                     }
                   }}
-                  className="lg:h-[40vh] xl:h-[40vh] h-[23vh] md:h-[23vh]  w-full rounded-xl overflow-hidden block"
+                  className="lg:h-[40vh] xl:h-[45vh] h-[23vh] md:h-[23vh]  w-full rounded-xl overflow-hidden block"
                 >
                   {(index === 2) && elem.cardvideo ? (
                     <video
@@ -165,17 +163,16 @@ const SwiperSlider = () => {
                   )}
                 </a>
 
-                <h1 className="actay lg:mt-5 xl:mt-7 mt-6 px-2 text-white  lg:text-[2vw] xl:text-[1.3vw] md:text-[3vw] font-500">
+                <h1 className="actay lg:mt-5 xl:mt-7 mt-6 px-2 text-white  lg:text-[2vw] xl:text-[1.5vw] md:text-[3vw] font-500">
                   {elem.desctittle}
                 </h1>
-                <p className="actay mt-1 px-2 lg:text-[1vw]  xl:text-[0.8vw] md:text-[2vw] text-[3vw] text-white">
+                <p className="actay mt-1 px-2 lg:text-[1vw]  xl:text-[0.9vw] md:text-[2vw] text-[3vw] text-white">
                   {elem.carddesc}
                 </p>
               </SwiperSlide>
             );
           })}
         </Swiper>
-      </div>
     </>
   );
 };

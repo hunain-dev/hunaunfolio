@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import hunainGif from "../../assets/hunainvideo-unscreen.gif"; // adjust path according to your file
+import hunainGif from "../../assets/hunainvideo-unscreen.gif"; 
+
 
 const Aboutme = () => {
   const sectionRef = useRef(null);
@@ -18,6 +19,7 @@ const Aboutme = () => {
         end: "+=500%",
         scrub: true,
         pin: true,
+        // markers:true,
       },
     });
 
@@ -41,10 +43,10 @@ const Aboutme = () => {
       paraRef.current,
       {
         opacity: 1,
-        y: -2,
+        y: -5,
         ease: "power2.out",
       },
-      0.1, // ye delay hai
+      0.5, // ye delay hai
     );
   }, []);
   return (
@@ -56,8 +58,7 @@ const Aboutme = () => {
         <div className="relative flex items-center justify-center flex-col w-full ">
           <h2
             ref={textRef}
-            className="ppneuemontreal font-500 flex items-center justify-center uppercase lg:text-[24vw] text-[24vw] lg:leading-[4%] leading-25"
-          >
+            className="ppneuemontreal font-500 flex items-center justify-center uppercase lg:text-[24vw] text-[24vw] lg:leading-[4%] leading-25">
             Huna
             <span className="h-full w-fit">
               <img
@@ -68,7 +69,7 @@ const Aboutme = () => {
     w-11 h-auto      
     sm:w-32           
     lg:w-40"
-                loading="lazy"
+ loading="lazy"
               />
             </span>
             n

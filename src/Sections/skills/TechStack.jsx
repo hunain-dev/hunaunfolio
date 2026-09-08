@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import Textanimation from "../../Components/Ui/Textaniamtion";
 
 const TechStack = () => {
   const skillsimg = [
@@ -15,13 +16,14 @@ const TechStack = () => {
   const constraintsRef = useRef(null);
 
   return (
-    <div id="stack" className="myskills  lg:mt-[20vh] mt-17 w-full lg:px-[3vw] text-center">
-      <h1 className="Satoshi font-medium lg:text-[3vw] md:text-[6vw]  text-4xl text-[#242627] mb-8">
+    <div id="stack" className="myskills    lg:mt-[20vh] mt-9 w-full lg:px-[3vw] text-center">
+      <Textanimation  text="My Skills" classname="Satoshi font-medium lg:text-[3vw] md:text-[6vw]  text-4xl text-[#242627] mb-2"/>
+      {/* <h1 className="Satoshi font-medium lg:text-[3vw] md:text-[6vw]  text-4xl text-[#242627] mb-8">
         My Skills
-      </h1>
+      </h1> */}
 
       <motion.div
-        className="skills grid lg:grid-cols-7 md:grid-cols-7 grid-cols-4  gap-[3.5vw] lg:w-[70%] mx-auto py-[2vh] mt-[1vw]"
+        className="skills grid lg:grid-cols-7 md:grid-cols-7 grid-cols-4  gap-[3.5vw] lg:w-[75%] mx-auto py-[1vh] mt-[1vw]"
         ref={constraintsRef}
         
       >
@@ -39,7 +41,7 @@ const TechStack = () => {
               loading="lazy"
               width={100}
               height={100}
-              className="w-full h-full object-cover rounded-[2vw]"
+              className=" h-15 w-full object-cover  rounded-[1vw]"
             />
           </motion.div>
         ))}

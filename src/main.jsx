@@ -20,7 +20,7 @@ createRoot(document.getElementById('root')).render(
       <Mousemove/>
       <Chilli/>
       {/* <Navbar/> */}
-      {/* <Header/> */}
+      <Header/>
     <App/>
     <Footer/>
      </BrowserRouter>

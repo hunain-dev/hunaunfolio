@@ -43,8 +43,8 @@ const LandingHero = () => {
             return (
               <motion.div
                 key={index}
-                className="Akrobat inline-block whitespace-nowrap pr-3 text-[19vw] md:text-[24vw]  text-[#343539]"
-                initial={{ x: "30%" }}
+                className="Akrobat inline-block whitespace-nowrap pr-3 text-[19vw] md:text-[24vw] text-[#343539]"
+                initial={{ x: "4%" }}
                 animate={{ x: "-100%" }}
                 transition={{
                   ease: "linear",

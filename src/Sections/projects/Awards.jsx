@@ -9,12 +9,11 @@ const Awards = () => {
   ];
   return (
     <div className="lg:h-screen lg:mt-4 mt-7 md:mt-20  w-full flex flex-col items-center justify-center lg:px-8 px-1">
-      <h2 className="Satoshi font-[400] text-center text-[5vw] md:text-4xl lg:text-4xl">
+      <h2 className="text-center">
         <Textanimation
-          text="1st Runner-Up in Web Design | Techwiz Pakistan Web Design Competition
-"
-          classname="Satoshi text-black lg:text-[2.3vw] md:text-3xl text-1xl"
-        />{" "}
+          text="1st Runner-Up in Web Design | Techwiz Pakistan Web Design Competition"
+          classname="Satoshi lg:text-[2.3vw] md:text-3xl text-1xl"
+        />
       </h2>
       <div className="flex justify-center w-full gap-8 flex-wrap py-10">
         {data.map((elem, index) => (
@@ -25,7 +24,7 @@ const Awards = () => {
             {/* Image default grayscale/opacity */}
             <img
               src={elem.cardimg}
-              alt="Certification"
+              alt="Certificatinpm run dev"
               loading="lazy"
               height={500}
               width={500}

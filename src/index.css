@@ -305,11 +305,13 @@
   }
   
 
-  
+/*   
   .swiper {
     width: 20vw;
-    height: 31vw;
-  }
+    height: 20vw;
+  } */
+
+
   /* 📱 Mobile (0–640px) */
 @media (max-width: 640px) {
   .swiper {
@@ -334,8 +336,8 @@
 @media (min-width: 1024px) and (max-width: 1280px) {
   .swiper {
     
-    width: 25vw;
-    height: 35vw;
+    width: 22vw;
+    height: 33vw;
   }
 }
 

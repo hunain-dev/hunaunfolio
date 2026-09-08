@@ -4,13 +4,15 @@ import MoreProofsSection from './MoreProofsSection'
 import Awards from './Awards'
 import Githubstatic from './Githubstatic'
 import Faqs from '../../Components/Ui/Common/Faqs'
+import Textanimation from '../../Components/Ui/Textaniamtion'
 const Projects = () => {
   return (
     <div id="project" className='h-full  w-full mt-10'>
        <div className="lg:px-30 mx-auto mb-[1vw]">
-      <h2 className="Satoshi font-medium lg:text-[3vw] md:text-[6vw] text-4xl mb-4 text-center  text-[#242627]">
-        Work Collection
-      </h2>
+        <div className=' flex  items-center justify-center mb-5'>
+        <Textanimation  text="Work Collection" classname="Satoshi font-medium lg:text-[3vw] md:text-[6vw]  text-4xl text-[#242627] mb-2"/>
+           </div>
+    
       <h5 className="Satoshi font-medium lg:text-[1.7vw] md:text-3xl text-1xl text-center text-[#242627]">
         Explore my collection of dynamic and engaging UI animations crafted using ReactJS, GSAP ScrollTrigger, and Locomotive Scroll. From smooth transitions to interactive experiences, each project showcases my expertise in bringing static designs to life with creativity, precision, and seamless motion.
       </h5>

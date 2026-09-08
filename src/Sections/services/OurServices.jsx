@@ -5,8 +5,8 @@ const Ourservices = () => {
     <div  id="services" className="w-full mt-[8vh] h-full relative bg-[#689D48]">
 
       {/* Top Section */}
-      <div className="w-full px-[1vw] text-center">
-        <h2 className="Impacted font-medium lg:text-[13vw] md:text-[14vw] text-5xl lg:leading-[12vw] uppercase text-white">
+      <div className="w-full  px-[1vw] text-center">
+        <h2 className="Impacted font-medium lg:text-[12vw] md:text-[14vw] text-5xl lg:leading-[12vw] uppercase text-white">
           Our Services,
         </h2>
         <h2 className="Impacted font-medium lg:text-[13vw] text-5xl lg:leading-[12vw] md:leading-[12vw] md:text-[13vw] leading-13 uppercase text-white">
@@ -15,9 +15,9 @@ const Ourservices = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="mt-[-2vw] w-full">
+      <div className=" w-full">
         <div className="h-full w-full bg-[#e0e05f] flex items-center justify-center overflow-hidden border border-black">
-          <div className="flex items-center justify-center w-full lg:h-[183vh] mt-[-10vw] overflow-hidden" data-scroll data-scroll-speed="0.3">
+          <div className="flex items-center justify-center w-full lg:h-[183vh] mt-[-10vw] overflow-hidden" data-scroll data-scroll-speed="0.4">
           <img
   src="assets/images/Ourservicesimages.webp"
   alt="Service 1"
@@ -26,7 +26,7 @@ const Ourservices = () => {
     w-100 h-100         /* Mobile */
     md:w-110 md:h-210   /* Small Laptop */
     lg:w-230 lg:h-230   /* Desktop */
-    xl:w-300 xl:h-300   /* Desktop */
+    xl:w-300 xl:h-250   /* Desktop */
 
   "
   loading="lazy"
@@ -40,7 +40,7 @@ const Ourservices = () => {
     w-100 h-100         /* Mobile */
     md:w-110 md:h-210   /* Small Laptop */
     lg:w-230 lg:h-230   /* Desktop */
-    xl:w-300 xl:h-300   /* Desktop */
+    xl:w-300 xl:h-250   /* Desktop */
   "
   loading="lazy"
 />        </div>
