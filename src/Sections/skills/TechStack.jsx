@@ -16,21 +16,19 @@ const TechStack = () => {
   const constraintsRef = useRef(null);
 
   return (
-    <div id="stack" className="myskills    lg:mt-[20vh] mt-9 w-full lg:px-[3vw] text-center">
+    <div id="stack" className="myskills  lg:mt-[13vh]  mt-9 w-full lg:px-[3vw] text-center">
       <Textanimation  text="My Skills" classname="Satoshi font-medium lg:text-[3vw] md:text-[6vw]  text-4xl text-[#242627] mb-2"/>
-      {/* <h1 className="Satoshi font-medium lg:text-[3vw] md:text-[6vw]  text-4xl text-[#242627] mb-8">
-        My Skills
-      </h1> */}
+    
 
       <motion.div
-        className="skills grid lg:grid-cols-7 md:grid-cols-7 grid-cols-4  gap-[3.5vw] lg:w-[75%] mx-auto py-[1vh] mt-[1vw]"
+        className="grid lg:grid-cols-7 md:grid-cols-7 grid-cols-4   gap-[3.5vw] lg:w-[75%] bg-black mx-auto py-[2vh] mt-[1vw]"
         ref={constraintsRef}
         
       >
         {skillsimg.map((elem, index) => (
           <motion.div
             key={index}
-            className="skill-item flex justify-center items-center lg:h-[10vh] lg:w-[10vh]  md:h-[6vh]  md:w-[6vh] w-13 rounded-[10vw] cursor-pointer 2xl:h-[5vw] 2xl:w-[5vw]"
+            className="skill-item flex justify-center items-center  bg-black md:h-[6vh]  md:w-[6vh] w-full  h-40  cursor-pointer 2xl:h-[5vw] 2xl:w-[5vw]"
             drag
             dragConstraints={constraintsRef}
             dragElastic={0.2}
@@ -38,10 +36,10 @@ const TechStack = () => {
             <img
               src={elem.img}
               alt={`Skill ${index + 1}`}
-              loading="lazy"
+          loading="lazy"  
               width={100}
               height={100}
-              className=" h-15 w-full object-cover  rounded-[1vw]"
+              className=" h-15 lg:w-14 w-15 object-contain "
             />
           </motion.div>
         ))}

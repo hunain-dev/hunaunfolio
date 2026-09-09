@@ -139,17 +139,15 @@
   
   
   @font-face {
-    font-family: 'Morganite';
-    src: url('/Assets/Fonts/Morganite-Black.ttf')  format("woff");
+    font-family: "Morganite";
+    src: url("/Assets/Fonts/Morganite-Black.ttf") format("truetype");
     font-display: swap;
-   
   }
-  .Morganite{
-    font-family: 'Morganite';
-  
-  
+
+
+  .Morganite {
+    font-family: "Morganite", sans-serif;
   }
-  
   
   
   @font-face {

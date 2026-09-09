@@ -11,6 +11,9 @@ const Aboutme = () => {
   const paraRef = useRef(null);
 
   useEffect(() => {
+    let mm = gsap.matchMedia();
+
+
     gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -28,15 +31,29 @@ const Aboutme = () => {
       y: -30,
     });
 
-    tl.to(
-      subtitleRef.current,
-      {
-        scale: 0.4,
-        y: -135,
-        ease: "power2.out",
-      },
-      0,
-    );
+    mm.add("(min-width: 768px)", () => {
+      tl.to(
+        subtitleRef.current,
+        {
+          scale: 0.4,
+          y: -135,
+          ease: "power2.out",
+        },
+        0
+      );
+    });
+
+    mm.add("(max-width: 767px)", () => {
+      tl.to(
+        subtitleRef.current,
+        {
+          scale: 0.8,
+          y: -70,
+          ease: "power2.out",
+        },
+        0
+      );
+    });    
 
     // Paragraph comes UP from bottom
     tl.to(
@@ -52,10 +69,9 @@ const Aboutme = () => {
   return (
     <div
       ref={sectionRef}
-      className="lg:pb-6 xl:pb-24 overflow-hidden text-white w-full"
-    >
+      className="lg:pb-6 xl:pb-24 pb-20 overflow-hidden text-white w-full">
       <div className="h-full w-full">
-        <div className="relative flex items-center justify-center flex-col w-full ">
+        <div className="relative flex items-center justify-center flex-col w-full  ">
           <h2
             ref={textRef}
             className="ppneuemontreal font-500 flex items-center justify-center uppercase lg:text-[24vw] text-[24vw] lg:leading-[4%] leading-25">
@@ -88,9 +104,9 @@ const Aboutme = () => {
           </h4>
           <div
             ref={paraRef}
-            className=" flex items-center justify-start text-center lg:px-20 xl:px-8 absolute lg:top-55 xl:top-70 md:top-48 top-20 left-0 w-full opacity-0"
+            className="h-fit flex items-center justify-start text-center lg:px-20 px-2 xl:px-8 absolute lg:top-55 xl:top-70 md:top-48 top-23 left-0 w-full opacity-0"
           >
-            <h4 className="actay lg:text-[1.6vw] xl:text-xl  text-[2vw] 2xl:text-2xl">
+            <h4 className="actay lg:text-[1.6vw] xl:text-xl  text-[2.4vw] 2xl:text-2xl">
               Hi! I'm Muhammad Hunain, a Web Designer and Web Developer from
               Karachi, Pakistan. I specialize in creating interactive, visually
               appealing websites using ReactJS, GSAP, Framer Motion, and other

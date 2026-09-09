@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Textanimation from "../../Components/Ui/Textaniamtion";
 
 const cards = [
   {
@@ -26,9 +27,13 @@ const cards = [
 
 const OurClients = () => {
   return (
-    <div className="w-full  min-h-screen md:min-h-fit md:px-4   ">
-        <h2 className="actay lg:text-3xl xl:text-2xl  text-2xl md:text-3xl text-center mt-10">Kinds word from clients</h2>
+    <div className="w-full  min-h-screen md:min-h-fit md:px-4">
+      <div className="flex items-center justify-center">
+      <Textanimation text="Kinds word from clients" classname="Satoshi font-medium   lg:text-3xl  xl:text-3xl  text-2xl md:text-3xl text-center mt-10"/>
+      </div>
+   
         <div className="w-full lg:mt-9 mt-7 md:mt-13  flex items-center justify-center lg:flex-row flex-col md:flex-row gap-6  ">
+
         {cards.map((card, index) => (
         <motion.div
           key={index}

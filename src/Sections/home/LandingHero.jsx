@@ -28,7 +28,7 @@ const LandingHero = () => {
     <div className="min-full lg:mb-3  mb-15 w-full flex items-center justify-start flex-col">
       <div className="h-full w-full gap-1  flex items-center justify-start  flex-col">
         <h1 className="Fontspring uppercase lg:text-5xl xl:text-6xl text-4xl md:text-6xl 2xl:text-7xl">{`Hi I’am Muhammad Hunain`}</h1>
-        <h4 className="ActayCondensed lg:text-2xl xl:text-[1.6vw] text-1xl md:text-2xl">
+        <h4 className="ActayCondensed lg:text-2xl xl:text-[1.6vw] text-sm md:text-2xl">
           Your product hunain  and developer partner!
         </h4>
       </div>
@@ -44,7 +44,7 @@ const LandingHero = () => {
               <motion.div
                 key={index}
                 className="Akrobat inline-block whitespace-nowrap pr-3 text-[19vw] md:text-[24vw] text-[#343539]"
-                initial={{ x: "4%" }}
+                initial={{ x: "15%" }}
                 animate={{ x: "-100%" }}
                 transition={{
                   ease: "linear",
