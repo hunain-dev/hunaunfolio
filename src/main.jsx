@@ -22,7 +22,7 @@ createRoot(document.getElementById('root')).render(
       {/* <Navbar/> */}
       <Header/>
     <App/>
-    {/* <Footer/> */}
+    <Footer/>
      </BrowserRouter>
     </SmoothScrolling>
   
