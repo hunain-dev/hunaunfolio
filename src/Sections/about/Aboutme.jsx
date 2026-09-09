@@ -11,27 +11,25 @@ const Aboutme = () => {
   const paraRef = useRef(null);
 
   useEffect(() => {
-    let mm = gsap.matchMedia();
-
-
     gsap.registerPlugin(ScrollTrigger);
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top +=20%",
-        end: "+=500%",
-        scrub: true,
-        pin: true,
-        // markers:true,
-      },
-    });
-
-    tl.to(textRef.current, {
-      scale: 0.4,
-      y: -30,
-    });
-
-    mm.add("(min-width: 768px)", () => {
+  
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top +=20%",
+          end: "+=500%",
+          scrub: true,
+          pin: true,
+    
+        }
+      });
+  
+      tl.to(textRef.current, {
+        scale: 0.4,
+        y: -30,
+      });
+  
       tl.to(
         subtitleRef.current,
         {
@@ -41,30 +39,19 @@ const Aboutme = () => {
         },
         0
       );
-    });
-
-    mm.add("(max-width: 767px)", () => {
+  
       tl.to(
-        subtitleRef.current,
+        paraRef.current,
         {
-          scale: 0.8,
-          y: -70,
+          opacity: 1,
+          y: -5,
           ease: "power2.out",
         },
-        0
+        0.5
       );
-    });    
-
-    // Paragraph comes UP from bottom
-    tl.to(
-      paraRef.current,
-      {
-        opacity: 1,
-        y: -5,
-        ease: "power2.out",
-      },
-      0.5, // ye delay hai
-    );
+    }, sectionRef);
+  
+    return () => ctx.revert();
   }, []);
   return (
     <div

@@ -10,6 +10,7 @@ import Mousemove from './Components/Mousemove.jsx'
 import Footer from './Components/Footer.jsx'
 import Header from './Components/Header.jsx'
 import Loader from './Components/Loader.jsx'
+import TechStack from './Sections/skills/TechStack.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -22,7 +23,8 @@ createRoot(document.getElementById('root')).render(
       {/* <Navbar/> */}
       <Header/>
     <App/>
-    <Footer/>
+    <Footer/> 
+    <TechStack/> 
      </BrowserRouter>
     </SmoothScrolling>
   
