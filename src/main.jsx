@@ -24,7 +24,6 @@ createRoot(document.getElementById('root')).render(
       <Header/>
     <App/>
     <Footer/> 
-    <TechStack/> 
      </BrowserRouter>
     </SmoothScrolling>
   
