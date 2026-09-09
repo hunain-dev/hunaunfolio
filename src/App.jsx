@@ -7,11 +7,14 @@ import Home from "./Sections/home/Home"
 const App = () => {
   return (
     <div className='lg:pt-7 pt-6 w-full'>
-      <Home/>
+      {/* <Home/>
       <Aboutus/>
       <TechStack/>
       <Ourservices/>
-      <Projects/>      
+      <Projects/>       */}
+
+<TechStack/>
+
     </div>
   )
 }

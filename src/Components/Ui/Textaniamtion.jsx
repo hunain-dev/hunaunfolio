@@ -11,7 +11,8 @@ const Textanimation = ({ text, classname,href }) => {
       </a>
 
       {/* Bottom Text (hidden initially, slides in on hover) */}
-      <a  href={href} className="font-[400] block  absolute left-0 top-full transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:-translate-y-full">
+      <a  href={href}   className="font-[400] block absolute left-0 top-full w-full text-center transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:-translate-y-full"
+      >
         {text}
       </a>
     </div>
