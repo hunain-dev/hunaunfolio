@@ -73,10 +73,10 @@ const Header = () => {
   ]
 
   return (
-    <div className=' w-full lg:px-0 px-2  lg:py-4 py-3 flex-col items-center gap-2 justify-center bottom-0    flex  fixed z-999'>
+    <div className=' lg:px-0 px-2   lg:py-6 py-3 flex-col items-center gap-1 justify-center bottom-0 left-1/2 -translate-x-1/2 flex fixed z-999'>
 
       {/* We keep the menu in the DOM always, but handle visibility with GSAP */}
-      <div ref={menuRef} className=' lg:w-lg  lg:py-4 md:py-10 py-4  overflow-hidden grid grid-cols-2  rounded-2xl bg-black'>
+      <div ref={menuRef} className=' lg:w-lg  lg:py-5 md:py-10 py-4  overflow-hidden grid grid-cols-2  rounded-1xl bg-black'>
         <div className='flex justify-center  h-full w-full items-center gap-3  flex-col'>
           {
             obj.map((elem, index) => {
@@ -97,9 +97,10 @@ const Header = () => {
             
  loading='lazy' className='h-full  w-full object-cover' alt="" />
           </div>
-          <div className='h-fit w-full  flex items-center justify-center gap-1'>
-            <h2 className='actay lg:text-[1.3vw] xl:text-1xl md:text-3xl 2xl:text-md text-center pt-3 '>Resume</h2>
-            <FaLocationArrow className='text-white mt-3  2xl:text-sm xl:text-[1.3vw] lg:text-[1.5vw] text-1xl md:text-2xl  ' />
+          <div className='h-fit w-full   mt-3  flex items-center justify-center gap-1'>
+            <Textanimation text="Resume" classname="actay lg:text-[1.3vw] xl:text-1xl md:text-3xl 2xl:text-md text-center"/>
+            {/* <h2 className=' '>Resume</h2> */}
+            <FaLocationArrow className='text-white  2xl:text-sm xl:text-[1.3vw] lg:text-[1.5vw] text-1xl md:text-2xl  ' />
           </div>  
         </div>
       </div>

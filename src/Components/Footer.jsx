@@ -59,7 +59,7 @@ const Footer = () => {
         {`Let's create something extra ordinary together `}
         </div>
       </div>
-      <div className="relative flex  h-fit  lg:py-12 xl:py-9 2xl:py-14 ">
+      <div className="relative flex   z-99  h-fit  lg:py-12 xl:py-9 2xl:py-14 ">
         {/* Main Content */}
         <div className=" w-full mx-auto  grid lg:grid-cols-2 md:grid-cols-2  ">
           <div className="actay w-full h-full  px-3 py-3">
@@ -73,7 +73,7 @@ const Footer = () => {
       />
 </div>
        </div>
-          <div className="h-full px-7 py-3  flex lg:items-end items-center  lg:justify-right md:items-end md:justify-right flex-col">
+          <div className="h-full px-7 py-3 cursor-pointer  flex lg:items-end items-center  lg:justify-right md:items-end md:justify-right flex-col">
             <div className="flex flex-row gap-4 mt-2 md:mt-4 ">
               {icons.map((item, idx) => (
                 <a
