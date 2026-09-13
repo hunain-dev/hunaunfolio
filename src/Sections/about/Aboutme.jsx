@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import hunainGif from "../../assets/hunainvideo-unscreen.gif"; 
-
+import hunainGif from "../../assets/hunainvideo-unscreen.gif";
 
 const Aboutme = () => {
   const sectionRef = useRef(null);
@@ -12,7 +11,9 @@ const Aboutme = () => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-  
+    const mm = gsap.matchMedia();
+
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -21,25 +22,35 @@ const Aboutme = () => {
           end: "+=500%",
           scrub: true,
           pin: true,
-    
-        }
+        },
       });
-  
+      
+
       tl.to(textRef.current, {
         scale: 0.4,
         y: -30,
       });
-  
-      tl.to(
-        subtitleRef.current,
-        {
+
+      
+
+      mm.add("(max-width: 768px)", () => {
+        // Mobile
+        tl.to(subtitleRef.current, {
+          scale: 0.8  ,
+          y: -70,
+          ease: "power2.out",
+        }, 0);
+      });
+
+      mm.add("(min-width: 769px)", () => {
+        // Desktop
+        tl.to(subtitleRef.current, {
           scale: 0.4,
           y: -135,
           ease: "power2.out",
-        },
-        0
-      );
-  
+        }, 0);
+      });
+
       tl.to(
         paraRef.current,
         {
@@ -47,21 +58,23 @@ const Aboutme = () => {
           y: -5,
           ease: "power2.out",
         },
-        0.5
+        0.5,
       );
     }, sectionRef);
-  
+
     return () => ctx.revert();
   }, []);
   return (
     <div
       ref={sectionRef}
-      className="lg:pb-6 xl:pb-24 pb-20 overflow-hidden text-white w-full">
+      className="lg:pb-6 xl:pb-24 pb-20 overflow-hidden text-white w-full"
+    >
       <div className="h-full w-full">
         <div className="relative flex items-center justify-center flex-col w-full  ">
           <h2
             ref={textRef}
-            className="ppneuemontreal font-500 flex items-center justify-center uppercase lg:text-[24vw] text-[24vw] lg:leading-[4%] leading-25">
+            className="ppneuemontreal font-500 flex items-center justify-center uppercase lg:text-[24vw] text-[24vw] lg:leading-[4%] leading-25"
+          >
             Huna
             <span className="h-full w-fit">
               <img
@@ -72,7 +85,7 @@ const Aboutme = () => {
     w-11 h-auto      
     sm:w-32           
     lg:w-40"
- loading="lazy"
+                loading="lazy"
               />
             </span>
             n
@@ -91,9 +104,9 @@ const Aboutme = () => {
           </h4>
           <div
             ref={paraRef}
-            className="h-fit flex items-center justify-start text-center lg:px-20 px-2 xl:px-8 absolute lg:top-55 xl:top-70 md:top-48 top-23 left-0 w-full opacity-0"
+            className="h-fit flex items-center justify-start text-center lg:px-20 px-1 xl:px-8 absolute lg:top-55 xl:top-70 md:top-48 top-23 left-0 w-full opacity-0"
           >
-            <h4 className="actay lg:text-[1.6vw] xl:text-xl  text-[2.4vw] 2xl:text-2xl">
+            <h4 className="actay lg:text-[1.6vw] xl:text-xl  text-[2.3vw] 2xl:text-2xl">
               Hi! I'm Muhammad Hunain, a Web Designer and Web Developer from
               Karachi, Pakistan. I specialize in creating interactive, visually
               appealing websites using ReactJS, GSAP, Framer Motion, and other
