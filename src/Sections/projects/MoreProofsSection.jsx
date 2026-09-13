@@ -20,7 +20,7 @@ const MoreProofsSection = () => {
         start: "top top",
         end: "+=300%", // scroll length
         pin: true,
-        scrub:4
+        scrub:4,
       },
     });
 
@@ -60,20 +60,20 @@ const MoreProofsSection = () => {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen w-full flex items-center justify-center bg-[#F55A00] relative overflow-hidden"
+      className="h-screen w-full flex items-center justify-center bg-[#F55A00] relative overflow-hidden"
     >
       {/* Need */}
 
       <h1
         ref={youRef}
-        className="absolute text-white Morganite lg:text-[35vw] text-[60vw] uppercase"
+        className="absolute text-white Morganite lg:text-[35vw] text-[41vh] uppercase"
       >
         You
       </h1>
 
       <h1
         ref={needRef}
-        className="absolute text-white Morganite lg:text-[35vw] text-[60vw] uppercase"
+        className="absolute text-white Morganite lg:text-[35vw] text-[41vh] uppercase"
       >
         Need
       </h1>
@@ -81,7 +81,7 @@ const MoreProofsSection = () => {
       {/* More */}
       <h1
         ref={moreRef}
-        className="absolute text-white Morganite lg:text-[35vw] text-[60vw] uppercase"
+        className="absolute text-white Morganite lg:text-[35vw] text-[41vh] uppercase"
       >
         More
       </h1>
@@ -89,7 +89,7 @@ const MoreProofsSection = () => {
       {/* Proof */}
       <h1
         ref={proofRef}
-        className="absolute text-white Morganite lg:text-[35vw] text-[60vw] uppercase"
+        className="absolute text-white Morganite lg:text-[35vw] text-[31vh] uppercase"
       >
         Proof?
       </h1>

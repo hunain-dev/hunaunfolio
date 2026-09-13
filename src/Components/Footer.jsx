@@ -32,10 +32,10 @@ const Footer = () => {
   }, []);
 
   return (
-    <div id="contact" className="min-h-full lg:mt-19  mt-15 w-full">
+    <div id="contact" className="min-h-full lg:mt-19   w-full">
 
 
-      <div className="h-full w-full  flex items-center overflow-hidden text-[13vw] ">
+      <div className="h-full w-full  flex items-center overflow-hidden lg:text-[13vw] text-[18vw] ">
         {/* Duplicate text manually for seamless loop */}
         <div ref={textRef} className="actay tracking-tighter flex whitespace-nowrap  actay">
         {`Let's create something extra ordinary together `}

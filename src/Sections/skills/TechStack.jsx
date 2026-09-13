@@ -17,12 +17,12 @@ const TechStack = () => {
   ];
 
   return (
-    <div id="stack" className="myskills   lg:mt-[13vh]   mt-9 w-full  text-center">
+    <div id="stack" className="myskills lg:mt-[13vh] mt-9 w-full  text-center">
       <Textanimation  text="My Skills" classname="Satoshi font-medium lg:text-[3vw] md:text-[6vw]  text-3xl text-[#242627] mb-6"/>
 
       <div
   ref={constraintsRef}
-  className="relative w-full lg:px-20 lg:pb-6 px-4  grid xl:grid-cols-5 lg:grid-cols-5 grid-cols-3 md:grid-cols-5  lg:gap-11 gap-5 overflow-hidden">
+  className="relative w-full lg:px-20 lg:pb-5    grid xl:grid-cols-5 lg:grid-cols-5 grid-cols-3 md:grid-cols-5  lg:gap-11 gap-5 ">
   {textphyscis.map((elem, index) => {
     return (
   <motion.h1
