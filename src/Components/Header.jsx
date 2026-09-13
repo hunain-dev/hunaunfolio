@@ -73,7 +73,7 @@ const Header = () => {
   ]
 
   return (
-    <div className=' lg:px-0 px-2  opacity-0   lg:py-6 py-3 flex-col items-center gap-1 justify-center bottom-0 left-1/2 -translate-x-1/2 flex fixed z-999'>
+    <div className=' lg:px-0 px-2 w-full lg:py-6 py-3  flex-col items-center gap-1 justify-center bottom-0 left-1/2 -translate-x-1/2 flex fixed z-999'>
 
       {/* We keep the menu in the DOM always, but handle visibility with GSAP */}
       <div ref={menuRef} className=' lg:w-lg  lg:py-5 md:py-10 py-4  overflow-hidden grid grid-cols-2  rounded-1xl bg-black'>
@@ -92,7 +92,7 @@ const Header = () => {
         </div>
         
         <div className='resume-section h-full pt-10 text-white  '>
-          <div className=' w-full lg:px-10 px-6 md:px-20'>
+          <div className=' w-full lg:px-10 px-5 md:px-20'>
             <img   src="/assets/images/hunain.webp"
             
  loading='lazy' className='h-full  w-full object-cover' alt="" />

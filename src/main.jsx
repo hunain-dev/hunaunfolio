@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <SmoothScrolling>
       <BrowserRouter>
-      {/* <Loader/> */}
+      <Loader/>
       <Mousemove/>
       <Chilli/>
       {/* <Navbar/> */}
