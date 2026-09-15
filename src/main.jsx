@@ -25,6 +25,5 @@ createRoot(document.getElementById('root')).render(
     <Footer/> 
      </BrowserRouter>
     </SmoothScrolling>
-  
   </StrictMode>,
 )
