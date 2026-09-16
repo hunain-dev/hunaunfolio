@@ -229,7 +229,7 @@ const Mousemove = ({
     backgroundColor,
   ]);
 
-  return <div ref={containerRef}     className="fixed inset-0 z-50 pointer-events-none"
+  return <div ref={containerRef} className="fixed inset-0 z-50 pointer-events-none"
  />;
 };
 

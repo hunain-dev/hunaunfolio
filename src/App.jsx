@@ -14,7 +14,7 @@ const App = () => {
       {/*  front area*/}
 {/* Background / Grid */}
 <div className="fixed inset-0 z-0 grid grid-cols-2 pointer-events-none">
-  <div className="h-full w-full border-r border-[#E1E1E1]"></div>
+  <div className="h-full w-full border-r border-[#cbcaca]"></div>
   <div className="h-full w-full"></div>
 </div>
 

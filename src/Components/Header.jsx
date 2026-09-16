@@ -126,6 +126,8 @@ const Header = () => {
     <div className=" lg:px-0 px-2 w-full  lg:py-3 py-3  flex-col items-center gap-1 justify-center top-0 left-1/2 -translate-x-1/2 flex fixed z-999">
       {/* We keep the menu in the DOM always, but handle visibility with GSAP */}
 
+
+{/* main menu */}
       <div className="actay p-1  cursor-pointer lg:w-sm md:w-md 2xl:w-md w-full   rounded-1xl lg:px-3 px-2  overflow-hidden   bg-[#201D1D] grid grid-cols-2">
         <div className=" h-full flex items-center  justify-start gap-1 text-white">
           <div
@@ -151,6 +153,10 @@ const Header = () => {
           </button>
         </a>
       </div>
+
+{/* main menu */}
+
+
 
       {/* offer anything say something client */}
 
@@ -181,6 +187,12 @@ const Header = () => {
           ))}
         </motion.div>
       </div>
+
+
+      {/* offer anything say something client */}
+
+
+
 
       {/* menu bar open */}
 
@@ -222,6 +234,11 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+
+      {/* menu bar open */}
+
+
     </div>
   );
 };
