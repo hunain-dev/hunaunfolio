@@ -14,7 +14,7 @@ const Header = () => {
     // Set initial state so it's hidden but exists in the DOM
     gsap.set(menuRef.current, {
       scaleY: 0,
-      transformOrigin: "bottom center",
+      transformOrigin: "top center",
       autoAlpha: 0,
       display: "none"
     });
@@ -25,8 +25,8 @@ const Header = () => {
         scaleY: 1,
         autoAlpha: 1,
         display: "grid",
-        duration: 0.8,
-        scrub:3,
+        duration: 0.9,
+        scrub:true,
         ease: "power4.inOut",
       })
       // Stagger the text items appearance inside
@@ -73,10 +73,36 @@ const Header = () => {
   ]
 
   return (
-    <div className=' lg:px-0 px-2 w-full lg:py-6 py-3  flex-col items-center gap-1 justify-center bottom-0 left-1/2 -translate-x-1/2 flex fixed z-999'>
+    <div className=' lg:px-0 px-2 w-full  lg:py-3 py-3  flex-col items-center gap-1 justify-center top-0 left-1/2 -translate-x-1/2 flex fixed z-999'>
 
       {/* We keep the menu in the DOM always, but handle visibility with GSAP */}
-      <div ref={menuRef} className=' lg:w-lg  lg:py-5 md:py-10 py-4  overflow-hidden grid grid-cols-2  rounded-1xl bg-black'>
+    
+
+      <div className='actay p-2  cursor-pointer lg:w-sm md:w-md 2xl:w-md w-full   rounded-1xl lg:px-3 px-2  overflow-hidden   bg-[#201D1D] grid grid-cols-2'>
+        <div className=' h-full flex items-center  justify-start gap-1 text-white'>
+          <div onClick={() => {
+            setMEnuoepn(prev => !prev)
+          }} className=' rounded-[0.3vw] p-1  text-white flex items-center justify-center'>
+            {
+              MEnuoepn ? (
+                <IoCloseOutline className='lg:text-[1.6vw] text-1xl md:text-2xl ' />
+
+              ) :(
+                <VscMenu  className="lg:text-[1.5vw] text-1xl md:text-2xl -mt-1  " />
+
+              )
+            }
+          </div>
+          <h2 className=' lg:text-[1.1vw] text-1xl md:text-2xl'>Menu</h2>
+        </div>
+        <a href='#contact' className='h-full  cursor-pointer flex items-center justify-end '>
+          <button className='px-4 py-2 font-bold bg-[#BBFD6A]  cursor-pointer rounded-[0.3vw] lg:text-[1.1vw] text-sm md:text-lg rounded-1xl'>Contact Us</button>
+        </a>
+      </div>
+
+      {/* menu bar open */}
+
+      <div ref={menuRef} className=' lg:w-lg  lg:py-5 md:py-10 py-4  overflow-hidden grid grid-cols-2  rounded-1xl bg-[#201D1D]'>
         <div className='flex justify-center  h-full w-full items-center gap-3  flex-col'>
           {
             obj.map((elem, index) => {
@@ -103,28 +129,6 @@ const Header = () => {
             <FaLocationArrow className='text-white  2xl:text-sm xl:text-[1.3vw] lg:text-[1.5vw] text-1xl md:text-2xl  ' />
           </div>  
         </div>
-      </div>
-
-      <div className='actay p-2  cursor-pointer lg:w-sm md:w-md 2xl:w-md w-full   rounded-1xl lg:px-3 px-2  overflow-hidden  bg-[#000000] grid grid-cols-2'>
-        <div className=' h-full flex items-center justify-start gap-2 text-white'>
-          <div onClick={() => {
-            setMEnuoepn(prev => !prev)
-          }} className='bg-[#BBFD6A] rounded-[0.3vw] p-1 px-2 text-black flex items-center justify-center'>
-            {
-              MEnuoepn ? (
-                <IoCloseOutline className='lg:text-[1.6vw] text-1xl md:text-2xl' />
-
-              ) :(
-                <VscMenu  className="lg:text-[1.5vw] text-1xl md:text-2xl " />
-
-              )
-            }
-          </div>
-          <h2 className=' lg:text-[1.2vw] text-1xl md:text-2xl'>Menu</h2>
-        </div>
-        <a href='#contact' className='h-full  cursor-pointer flex items-center justify-end '>
-          <button className='px-4 py-2 font-bold bg-[#BBFD6A]  cursor-pointer rounded-[0.3vw] lg:text-[1.1vw] text-sm md:text-lg rounded-1xl'>Contact Us</button>
-        </a>
       </div>
 
     </div>

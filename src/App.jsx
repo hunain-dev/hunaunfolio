@@ -7,11 +7,26 @@ import Home from "./Sections/home/Home"
 const App = () => {
   return (
     <div className='lg:pt-7 pt-6 w-full'>
-      <Home/>
-      <Aboutus/>
-      <TechStack/>
-      <Ourservices/>
-      <Projects/>      
+
+     
+
+
+      {/*  front area*/}
+{/* Background / Grid */}
+<div className="fixed inset-0 z-0 grid grid-cols-2 pointer-events-none">
+  <div className="h-full w-full border-r border-[#E1E1E1]"></div>
+  <div className="h-full w-full"></div>
+</div>
+
+
+{/* Main Content */}
+<div className="relative z-10 w-full">
+  <Home />
+  <Aboutus />
+  <TechStack />
+  <Ourservices />
+  <Projects />
+</div>
 
 
     </div>
