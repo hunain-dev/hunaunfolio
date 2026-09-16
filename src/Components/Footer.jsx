@@ -59,6 +59,10 @@ const Footer = () => {
         {`Let's create something extra ordinary together `}
         </div>
       </div>
+
+
+
+      
       <div className="relative flex   z-99  h-fit  lg:py-12 xl:py-9 2xl:py-14 ">
         {/* Main Content */}
         <div className=" w-full mx-auto  grid lg:grid-cols-2 md:grid-cols-2  ">
