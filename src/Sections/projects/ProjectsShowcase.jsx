@@ -1,5 +1,6 @@
-  import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const projects = [
   {
@@ -83,13 +84,9 @@ const ProjectsShowcase = () => {
       const angle = index * angleStep - 110;
 
       gsap.set(item, {
-        x:
-          Math.cos((angle * Math.PI) / 180) *
-          radius,
+        x: Math.cos((angle * Math.PI) / 180) * radius,
 
-        y:
-          Math.sin((angle * Math.PI) / 180) *
-          radius,
+        y: Math.sin((angle * Math.PI) / 180) * radius,
 
         rotation: angle + 90,
       });
@@ -116,9 +113,7 @@ const ProjectsShowcase = () => {
         shortest += items.length;
       }
 
-      current =
-        (current + shortest + items.length) %
-        items.length;
+      current = (current + shortest + items.length) % items.length;
 
       rotation -= shortest * angleStep;
 
@@ -146,10 +141,7 @@ const ProjectsShowcase = () => {
     // ========================================
 
     const prev = () => {
-      goTo(
-        (current - 1 + items.length) %
-          items.length
-      );
+      goTo((current - 1 + items.length) % items.length);
     };
 
     // ========================================
@@ -183,10 +175,7 @@ const ProjectsShowcase = () => {
       }
     };
 
-    window.addEventListener(
-      "keydown",
-      handleKeyDown
-    );
+    window.addEventListener("keydown", handleKeyDown);
 
     // ========================================
     // AUTO PLAY
@@ -203,20 +192,11 @@ const ProjectsShowcase = () => {
     return () => {
       clearInterval(autoPlay);
 
-      nextButton?.removeEventListener(
-        "click",
-        next
-      );
+      nextButton?.removeEventListener("click", next);
 
-      prevButton?.removeEventListener(
-        "click",
-        prev
-      );
+      prevButton?.removeEventListener("click", prev);
 
-      window.removeEventListener(
-        "keydown",
-        handleKeyDown
-      );
+      window.removeEventListener("keydown", handleKeyDown);
 
       gsap.killTweensOf(itemsContainer);
     };
@@ -225,16 +205,14 @@ const ProjectsShowcase = () => {
   return (
     <section
       ref={sliderRef}
-      className="slider relative w-full h-screen overflow-hidden"
+      className="slider relative w-full h-screen overflow-hidden mb-10"
     >
- 
-
       <div
         className="
           items
           absolute
           inset-0
-          top-[115%]
+          top-[120%]
           origin-[50%_50%]
           cursor-grab
           select-none
@@ -289,7 +267,6 @@ const ProjectsShowcase = () => {
         ))}
       </div>
 
-
       <div
         className="
           controls
@@ -297,30 +274,19 @@ const ProjectsShowcase = () => {
           bottom-8
           left-1/2
           -translate-x-1/2
-          h-[10vh]
           gap-[5vw]
           flex
           items-center
           justify-between
-          text-[3vw]
+          text-[2vw]
           cursor-pointer
         "
       >
-        <button
-          type="button"
-          className="prev cursor-pointer"
-          aria-label="Previous"
-        >
-          ➡
-        </button>
 
-        <button
-          type="button"
-          className="next cursor-pointer"
-          aria-label="Next"
-        >
-          ⬅
-        </button>
+<FaArrowLeft type="button" className="prev cursor-pointer" />
+<FaArrowRight className="next cursor-pointer " aria-label="Next" />
+
+
       </div>
     </section>
   );

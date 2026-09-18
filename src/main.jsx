@@ -16,17 +16,15 @@ import ProjectShowcase from './Sections/projects/ProjectsShowcase.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <SmoothScrolling>
-      {/* <BrowserRouter>
-      <Loader/>
+      <BrowserRouter>
+      {/* <Loader/> */}
       <Mousemove/>
       <Chilli/>
       <Header/>
     <App/>
     <Footer/> 
-     </BrowserRouter> */}
+     </BrowserRouter>
 
-     <ProjectShowcase/>
-     <div className='h-screen w-full bg-red-500'></div>
     </SmoothScrolling>
   </StrictMode>,
 )
