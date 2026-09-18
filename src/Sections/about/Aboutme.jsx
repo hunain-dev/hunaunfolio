@@ -13,7 +13,6 @@ const Aboutme = () => {
     gsap.registerPlugin(ScrollTrigger);
     const mm = gsap.matchMedia();
 
-
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -24,31 +23,36 @@ const Aboutme = () => {
           pin: true,
         },
       });
-      
 
       tl.to(textRef.current, {
         scale: 0.4,
         y: -30,
       });
 
-      
-
       mm.add("(max-width: 768px)", () => {
         // Mobile
-        tl.to(subtitleRef.current, {
-          scale: 0.8  ,
-          y: -70,
-          ease: "power2.out",
-        }, 0);
+        tl.to(
+          subtitleRef.current,
+          {
+            scale: 0.8,
+            y: -70,
+            ease: "power2.out",
+          },
+          0,
+        );
       });
 
       mm.add("(min-width: 769px)", () => {
         // Desktop
-        tl.to(subtitleRef.current, {
-          scale: 0.4,
-          y: -135,
-          ease: "power2.out",
-        }, 0);
+        tl.to(
+          subtitleRef.current,
+          {
+            scale: 0.4,
+            y: -135,
+            ease: "power2.out",
+          },
+          0,
+        );
       });
 
       tl.to(
@@ -67,7 +71,7 @@ const Aboutme = () => {
   return (
     <div
       ref={sectionRef}
-      className="lg:pb-6 xl:pb-24 pb-20 overflow-hidden text-white w-full"
+      className="lg:pb-6 xl:pb-24 pb-20  text-white w-full"
     >
       <div className="h-full w-full">
         <div className="relative flex items-center justify-center flex-col w-full  ">

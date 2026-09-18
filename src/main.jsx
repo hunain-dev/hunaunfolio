@@ -10,20 +10,23 @@ import Mousemove from './Components/Mousemove.jsx'
 import Footer from './Components/Footer.jsx'
 import Header from './Components/Header.jsx'
 import TechStack from './Sections/skills/TechStack.jsx'
+import ProjectShowcase from './Sections/projects/ProjectsShowcase.jsx'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <SmoothScrolling>
-      <BrowserRouter>
-      {/* <Loader/> */}
+      {/* <BrowserRouter>
+      <Loader/>
       <Mousemove/>
       <Chilli/>
-      {/* <Navbar/> */}
       <Header/>
     <App/>
-    {/* <Footer/>  */}
-     </BrowserRouter>
+    <Footer/> 
+     </BrowserRouter> */}
+
+     <ProjectShowcase/>
+     <div className='h-screen w-full bg-red-500'></div>
     </SmoothScrolling>
   </StrictMode>,
 )
