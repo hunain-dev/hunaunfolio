@@ -25,8 +25,9 @@ const Ourservices = () => {
     object-contai object-center
     w-100 h-100         /* Mobile */
     md:w-110 md:h-210   /* Small Laptop */
-    lg:w-230 lg:h-230   /* Desktop */
+    lg:w-230 lg:h-240   /* Desktop */
     xl:w-300 xl:h-250   /* Desktop */
+    2xl:w-300 2xl:h-260   /* Desktop */
 
   "
   loading="lazy"

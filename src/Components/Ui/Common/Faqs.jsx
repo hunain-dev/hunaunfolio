@@ -41,7 +41,7 @@ Responsive and performance-optimized websites
   };
 
   return (
-    <div className=' pt-16  w-full overflow-hidden '>
+    <div className=' pt-16  w-full  z-99999 overflow-hidden '>
         <div className='actay  flex items-center lg:gap-2 md:gap-5 justify-center flex-col w-full '>
         <h6 className='flex items-center text-gray-600'>
   <span className='w-3 h-3 bg-[#8CFF2E] rounded-full mr-2'></span>

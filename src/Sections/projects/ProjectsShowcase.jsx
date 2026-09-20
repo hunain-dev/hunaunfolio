@@ -240,14 +240,16 @@ const ProjectsShowcase = () => {
   return (
     <section
       ref={sliderRef}
-      className="slider relative w-full h-screen overflow-hidden"
+      className="slider relative w-full lg:mt-13 xl:mt-0  h-screen overflow-hidden"
     >
       <div
         className="
           items
           absolute
           inset-0
-          top-[165%]
+          lg:top-[150%]
+          2xl:top-[140%]
+          top-0
           origin-[50%_50%]
           cursor-grab
           select-none
@@ -265,8 +267,11 @@ const ProjectsShowcase = () => {
           top-1/2
           -translate-x-1/2
           -translate-y-1/2
-          w-[19vw]
-          h-[18vw]
+          xl:w-[17vw]
+          xl:h-[45vh]
+          lg:h-[45vh]
+          lg:w-[20vw]
+
           rounded-[1.2rem]
           overflow-hidden
           cursor-pointer

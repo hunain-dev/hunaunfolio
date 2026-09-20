@@ -40,7 +40,7 @@ const Faqs = () => {
 
 
   return (
-    <div className='bg-white w-full grid lg:grid-cols-1 grid-cols-1  md:grid-cols-2 lg:px-40 px-0 lg:mt-22 lg:pb-0 md:pb-22 pb-40 '>
+    <div className=' w-full grid lg:grid-cols-1 grid-cols-1  md:grid-cols-2 lg:px-40 px-0 lg:mt-22 lg:pb-0 md:pb-22 pb-40  '>
      
         <div className='h-full '>
            <div className="lg:py-12 py-9 lg:px-1 px-4">

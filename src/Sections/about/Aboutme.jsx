@@ -29,31 +29,63 @@ const Aboutme = () => {
         y: -30,
       });
 
-      mm.add("(max-width: 768px)", () => {
-        // Mobile
-        tl.to(
-          subtitleRef.current,
-          {
-            scale: 0.8,
-            y: -70,
-            ease: "power2.out",
-          },
-          0,
-        );
-      });
+  // Mobile
+mm.add("(max-width: 767px)", () => {
+  tl.to(
+    subtitleRef.current,
+    {
+      scale: 0.8,
+      y: -70,
+      ease: "power2.out",
+    },
+    0,
+  );
+});
 
-      mm.add("(min-width: 769px)", () => {
-        // Desktop
-        tl.to(
-          subtitleRef.current,
-          {
-            scale: 0.4,
-            y: -135,
-            ease: "power2.out",
-          },
-          0,
-        );
-      });
+// Tablet
+mm.add("(min-width: 768px) and (max-width: 1023px)", () => {
+  tl.to(
+    subtitleRef.current,
+    {
+      scale: 1,
+      y: -93,
+      ease: "power2.out",
+
+    },
+    0,
+  );
+});
+
+// Desktop
+mm.add("(min-width: 1024px) and (max-width: 1439px)", () => {
+  tl.to(
+    subtitleRef.current,
+    {
+      scale: 0.6,
+      y: -131,
+      ease: "power2.out",
+
+    },
+    0,
+  );
+});
+
+// Large Desktop
+mm.add("(min-width: 1440px)", () => {
+  tl.to(
+    subtitleRef.current,
+    {
+      scale: 0.4,
+      y: -135,
+      ease: "power2.out",
+      backgroundColor:"orange",
+
+
+    },
+    0,
+  );
+});
+
 
       tl.to(
         paraRef.current,
@@ -71,7 +103,7 @@ const Aboutme = () => {
   return (
     <div
       ref={sectionRef}
-      className="lg:pb-6 xl:pb-24 pb-20  text-white w-full"
+      className="lg:pb-6 xl:pb-24 pb-20 text-white w-full"
     >
       <div className="h-full w-full">
         <div className="relative flex items-center justify-center flex-col w-full  ">
@@ -96,7 +128,7 @@ const Aboutme = () => {
           </h2>
           <h4
             ref={subtitleRef}
-            className="group lg:text-8xl text-3xl md:text-5xl lg:mt-1 mt-1 lg:opacity-100 opacity-100 md:opacity-0"
+            className="group lg:text-8xl text-3xl md:text-5xl xl:mt-1 mt-1 lg:mt-0 lg:opacity-100 opacity-100 md:opacity-100"
           >
             <span className="actay inline-block transition-transform duration-600 group-hover:-translate-x-50">
               Creative
@@ -108,9 +140,9 @@ const Aboutme = () => {
           </h4>
           <div
             ref={paraRef}
-            className="h-fit flex items-center justify-start text-center lg:px-20 px-1 xl:px-8 absolute lg:top-55 xl:top-70 md:top-48 top-23 left-0 w-full opacity-0"
+            className="h-fit flex items-center justify-start text-center lg:px-20 px-1 xl:px-8 md:px-8 absolute lg:top-55 xl:top-70 md:top-48 top-23 left-0 w-full opacity-0"
           >
-            <h4 className="actay lg:text-[1.6vw] xl:text-xl  text-[2.3vw] 2xl:text-2xl">
+            <h4 className="actay lg:text-[1.6vw] md:text-sm xl:text-xl  text-[2.3vw] 2xl:text-2xl">
               Hi! I'm Muhammad Hunain, a Web Designer and Web Developer from
               Karachi, Pakistan. I specialize in creating interactive, visually
               appealing websites using ReactJS, GSAP, Framer Motion, and other

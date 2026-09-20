@@ -66,14 +66,14 @@ const MoreProofsSection = () => {
 
       <h1
         ref={youRef}
-        className="absolute text-white Morganite lg:text-[35vw] text-[41vh] uppercase"
+        className="absolute text-white Morganite lg:text-[35vw] text-[41vh] md:text-[40vh] uppercase"
       >
         You
       </h1>
 
       <h1
         ref={needRef}
-        className="absolute text-white Morganite lg:text-[35vw] text-[41vh] uppercase"
+        className="absolute text-white Morganite lg:text-[35vw] text-[41vh] md:text-[40vh] uppercase"
       >
         Need
       </h1>
@@ -81,7 +81,7 @@ const MoreProofsSection = () => {
       {/* More */}
       <h1
         ref={moreRef}
-        className="absolute text-white Morganite lg:text-[35vw] text-[41vh] uppercase"
+        className="absolute text-white Morganite lg:text-[35vw] text-[41vh] md:text-[40vh] uppercase"
       >
         More
       </h1>
@@ -89,7 +89,7 @@ const MoreProofsSection = () => {
       {/* Proof */}
       <h1
         ref={proofRef}
-        className="absolute text-white Morganite lg:text-[35vw] text-[31vh] uppercase"
+        className="absolute text-white Morganite lg:text-[35vw] text-[31vh] md:text-[40vh] uppercase"
       >
         Proof?
       </h1>

@@ -160,7 +160,7 @@ const Header = () => {
 
       {/* offer anything say something client */}
 
-      <div className="relative w-fit overflow-hidden  bg-[#A0FD62]">
+      <div className="relative w-fit overflow-hidden  lg:opacity-100 opacity-0 bg-[#A0FD62]">
         {/* Width determine karne ke liye sirf 3 items */}
         <div className="flex  invisible">
           {textobj.slice(0, 3).map((elem, index) => (
