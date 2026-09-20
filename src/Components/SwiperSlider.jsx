@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import { EffectCards } from "swiper/modules";
-
+import wethink from "../../public/assets/images/wethink.png"
 const SwiperSlider = () => {
   
   const cardcollection = [
@@ -101,7 +101,7 @@ const SwiperSlider = () => {
       link: "https://furni-interior-design.netlify.app/",
     },
     {
-      cardimg: "/assets/images/hello.webp",
+      cardimg: {wethink},
       desctittle: "We think elastic",
       carddesc:
         "We Think Elastic is a modern and interactive website clone inspired by an award-winning design. With smooth animations, responsive layout,",

@@ -17,13 +17,14 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <SmoothScrolling>
       <BrowserRouter>
-      {/* <Loader/> */}
       <Mousemove/>
       <Chilli/>
       <Header/>
     <App/>
     <Footer/> 
      </BrowserRouter>
+
+
 
     </SmoothScrolling>
   </StrictMode>,

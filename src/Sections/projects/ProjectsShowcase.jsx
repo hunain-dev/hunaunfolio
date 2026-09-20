@@ -3,50 +3,98 @@ import gsap from "gsap";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const projects = [
+
+
   {
-    title: "Chair",
+    title: "MAdeinuxstudio",
     image:
-      "https://cdn.cosmos.so/f4589303-22a8-4ad1-8ab7-02fa8a0af0ec?format=webp",
+      "/assets/images/Madienstudio.webp",
   },
   {
-    title: "Skin",
+    title: "jesko & Jets",
     image:
-      "https://cdn.cosmos.so/686e7ba8-cbb8-41ba-bc88-9d8c2bd19ed8?format=webp&w=2048",
+      "/assets/images/Jeskojets.webp",
   },
   {
-    title: "Black & White",
-    image:
-      "https://cdn.cosmos.so/06d6831f-1ead-4a8f-a47a-d0ca32262260?format=webp",
+    title: "Mammoth Murals",
+    cardvideo:
+      "/assets/Videos/commingsoon.mp4",
   },
   {
-    title: "Butterfly",
+    title: "Klearmind Clinics",
     image:
-      "https://cdn.cosmos.so/9c020ef4-5d24-44d5-89fb-fe21ed3bb175?format=webp",
+      "/assets/images/Klearmindtherapy.webp",
   },
   {
-    title: "Shadow",
+    title: "Digital Tobacco",
     image:
-      "https://cdn.cosmos.so/9c046dec-1f12-4bfd-a299-71521c60e39f?format=webp",
+      "/assets/images/Tobacco.webp",
   },
   {
-    title: "Perception",
+    title: "Career Hunt",
     image:
-      "https://cdn.cosmos.so/c4ff3589-4ed8-4b73-b402-2f00fff7a6e2?format=webp",
+      "/assets/images/jobs.webp",
   },
   {
-    title: "Portrait",
+    title: "Ochi Clone",
     image:
-      "https://cdn.cosmos.so/6946e847-933f-4990-8cd8-3e4862060dba?format=webp",
+      "/assets/images/ochidesign.webp",
   },
   {
-    title: "Bifur",
+    title: "Santa's Companion",
     image:
-      "https://cdn.cosmos.so/7ebeae71-98a1-45be-b5af-56c79e014c8d?format=webp",
+      "/assets/images/Christmas.webp",
   },
+
   {
-    title: "Terracotta",
+    title: "Tic-Tac-Toe Game",
     image:
-      "https://cdn.cosmos.so/071fdb5f-dc62-4afb-ace9-161ebc7d4f96?format=webp",
+      "/assets/images/tictac.webp",
+  },
+
+
+
+  {
+    title: "spencergabor work",
+    image:
+      "/assets/images/spacer.webp",
+  },
+
+  {
+    title: "Weather App",
+    image:
+      "/assets/images/weather.webp",
+  },
+
+
+
+  {
+    title: "Two Good Company",
+    image:
+      "/assets/images/Klearmindtherapy.webp",
+  },
+
+
+
+  {
+    title: "Furni – Interior Design",
+    image:
+      "/assets/images/twogoodco.webp",
+  },
+
+  
+  {
+    title: "We think elastic",
+    image:
+      "/assets/images/wethink.png",
+  },
+
+
+  
+  {
+    title: "rejouices",
+    image:
+      "/assets/images/rejouices.webp",
   },
 ];
 
@@ -69,8 +117,11 @@ const ProjectsShowcase = () => {
     // SETTINGS
     // ========================================
 
-    const radius = 500;
     const angleStep = 360 / items.length;
+    const cardGap = 1.5; // increase for more space between cards
+    const cardWidth = items[0].offsetWidth;
+    const radius =
+      (cardWidth * cardGap) / (2 * Math.sin((angleStep * Math.PI) / 360));
 
     let current = 0;
     let rotation = 0;
@@ -212,7 +263,7 @@ const ProjectsShowcase = () => {
           items
           absolute
           inset-0
-          top-[120%]
+          top-[183%]
           origin-[50%_50%]
           cursor-grab
           select-none
@@ -229,7 +280,7 @@ const ProjectsShowcase = () => {
               top-1/2
               -translate-x-1/2
               -translate-y-1/2
-              w-[15vw]
+              w-[19vw]
               h-[18vw]
               rounded-[1.2rem]
               overflow-hidden
@@ -238,18 +289,42 @@ const ProjectsShowcase = () => {
               origin-center
             "
           >
-            <img
-              className="
-                w-full
-                h-full
-                block
-                object-cover
-                grayscale-[25%]
-              "
-              src={project.image}
-              alt={project.title}
-              draggable="false"
-            />
+
+            {
+}
+
+
+
+ {
+  (index == 2) && project.cardvideo ? (
+    <video
+    src={project.cardvideo}
+    autoPlay
+    loop
+    muted
+    loading="lazy"
+    playsInline
+    className="h-full w-full object-cover"
+  />
+
+  ) :(
+
+    <img
+    className="
+      w-full
+      h-full
+      block
+      object-cover
+      grayscale-[25%]
+      rounded-[1rem]
+    "
+    src={project.image}
+    alt={project.title}
+    draggable="false"
+  />
+  )
+ }
+
 
             <span
               className="
@@ -271,10 +346,10 @@ const ProjectsShowcase = () => {
         className="
           controls
           absolute
-          bottom-8
+          bottom-9
           left-1/2
           -translate-x-1/2
-          gap-[5vw]
+          gap-[4vw]
           flex
           items-center
           justify-between
