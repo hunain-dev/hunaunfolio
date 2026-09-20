@@ -130,6 +130,7 @@ const SwiperSlider = () => {
           {cardcollection.map((elem, index) => {
             return (
               <SwiperSlide key={index}>
+                
                 <a
                   href={index === 0 ? "#" : elem.link}
                   target="_blank"

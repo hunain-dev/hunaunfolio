@@ -3,98 +3,82 @@ import gsap from "gsap";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const projects = [
-
-
   {
     title: "MAdeinuxstudio",
-    image:
-      "/assets/images/Madienstudio.webp",
+    image: "/assets/images/Madienstudio.webp",
   },
   {
     title: "jesko & Jets",
-    image:
-      "/assets/images/Jeskojets.webp",
+    image: "/assets/images/Jeskojets.webp",
+    link: "https://jetsofjets.vercel.app/",
+
   },
   {
     title: "Mammoth Murals",
-    cardvideo:
-      "/assets/Videos/commingsoon.mp4",
+    cardvideo: "/assets/Videos/commingsoon.mp4",
+    link: "https://jetsofjets.vercel.app/",
+
   },
   {
     title: "Klearmind Clinics",
-    image:
-      "/assets/images/Klearmindtherapy.webp",
+    image: "/assets/images/Klearmindtherapy.webp",
+    link:"https://klearmind-sec-lives.vercel.app/"
+
   },
   {
     title: "Digital Tobacco",
-    image:
-      "/assets/images/Tobacco.webp",
+    image: "/assets/images/Tobacco.webp",
+        link:"https://tabacco-awwwards-website-clone.vercel.app/"
   },
   {
     title: "Career Hunt",
-    image:
-      "/assets/images/jobs.webp",
+    image: "/assets/images/jobs.webp",
+    link:"https://job-board-app-azure-alpha.vercel.app/"
+
   },
   {
     title: "Ochi Clone",
-    image:
-      "/assets/images/ochidesign.webp",
+    image: "/assets/images/ochidesign.webp",
+    link:"https://ochi-web-production.vercel.app/"
+
   },
   {
     title: "Santa's Companion",
-    image:
-      "/assets/images/Christmas.webp",
+    image: "/assets/images/Christmas.webp",
+    link:"https://christmas-website-in-reactjs.vercel.app/"
+
   },
 
   {
     title: "Tic-Tac-Toe Game",
-    image:
-      "/assets/images/tictac.webp",
+    image: "/assets/images/tictac.webp",
+    link:"https://tic-tac-toe-game-azure-xi.vercel.app/"
+
   },
-
-
 
   {
     title: "spencergabor work",
-    image:
-      "/assets/images/spacer.webp",
+    image: "/assets/images/spacer.webp",
+    link:"https://gabor-cyl3.vercel.app/"
   },
 
   {
     title: "Weather App",
-    image:
-      "/assets/images/weather.webp",
+    image: "/assets/images/weather.webp",
+    link:"https://weather-app-bay-two-4enjejutpd.vercel.app/"
   },
-
-
-
-  {
-    title: "Two Good Company",
-    image:
-      "/assets/images/Klearmindtherapy.webp",
-  },
-
 
 
   {
     title: "Furni – Interior Design",
-    image:
-      "/assets/images/twogoodco.webp",
+    image: "/assets/images/twogoodco.webp",
+    link:"https://furni-modern-interior-design-studio.vercel.app/"
   },
 
-  
-  {
-    title: "We think elastic",
-    image:
-      "/assets/images/wethink.png",
-  },
-
-
-  
   {
     title: "rejouices",
-    image:
-      "/assets/images/rejouices.webp",
+    image: "/assets/images/rejouices.webp",
+    link:""
   },
 ];
 
@@ -256,14 +240,14 @@ const ProjectsShowcase = () => {
   return (
     <section
       ref={sliderRef}
-      className="slider relative w-full h-screen overflow-hidden mb-10"
+      className="slider relative w-full h-screen overflow-hidden"
     >
       <div
         className="
           items
           absolute
           inset-0
-          top-[183%]
+          top-[165%]
           origin-[50%_50%]
           cursor-grab
           select-none
@@ -271,60 +255,59 @@ const ProjectsShowcase = () => {
         "
       >
         {projects.map((project, index) => (
-          <div
-            key={index}
-            className="
-              item
-              absolute
-              left-1/2
-              top-1/2
-              -translate-x-1/2
-              -translate-y-1/2
-              w-[19vw]
-              h-[18vw]
-              rounded-[1.2rem]
-              overflow-hidden
-              cursor-pointer
-              select-none
-              origin-center
-            "
+
+          <a
+          key={index}
+          className="
+          item
+          absolute
+          left-1/2
+          top-1/2
+          -translate-x-1/2
+          -translate-y-1/2
+          w-[19vw]
+          h-[18vw]
+          rounded-[1.2rem]
+          overflow-hidden
+          cursor-pointer
+          select-none
+          origin-center
+        "
+                href={index === 0 ? "#" : project.link}
+           target="_blank"
+           onClick={()=>{
+            if (index === 0 || index === 12) {
+              alert("The project is scheduled to go live next week.");
+            }
+
+           }}
+           
           >
 
-            {
-}
-
-
-
- {
-  (index == 2) && project.cardvideo ? (
-    <video
-    src={project.cardvideo}
-    autoPlay
-    loop
-    muted
-    loading="lazy"
-    playsInline
-    className="h-full w-full object-cover"
-  />
-
-  ) :(
-
-    <img
-    className="
+            {index == 2 && project.cardvideo ? (
+              <video
+                src={project.cardvideo}
+                autoPlay
+                loop
+                muted
+                loading="lazy"
+                playsInline
+                className="h-full w-full object-cover"
+              />
+            ) : (
+              <img
+                className="
       w-full
       h-full
       block
       object-cover
-      grayscale-[25%]
-      rounded-[1rem]
+    
     "
-    src={project.image}
-    alt={project.title}
-    draggable="false"
-  />
-  )
- }
-
+                src={project.image}
+                alt={project.title}
+                draggable="false"
+              />
+            )}
 
             <span
               className="
@@ -338,7 +321,7 @@ const ProjectsShowcase = () => {
             >
               {project.title}
             </span>
-          </div>
+          </a>
         ))}
       </div>
 
@@ -357,11 +340,8 @@ const ProjectsShowcase = () => {
           cursor-pointer
         "
       >
-
-<FaArrowLeft type="button" className="prev cursor-pointer" />
-<FaArrowRight className="next cursor-pointer " aria-label="Next" />
-
-
+        <FaArrowLeft type="button" className="prev cursor-pointer" />
+        <FaArrowRight className="next cursor-pointer " aria-label="Next" />
       </div>
     </section>
   );
