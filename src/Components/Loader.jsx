@@ -37,7 +37,8 @@ const Loader = () => {
     }, [])
 
     return (
-        <div className='loader h-screen w-full flex items-center justify-center fixed z-[99999] bg-[#F4F4F4]'>
+        <div className='loader h-screen w-full flex items-center justify-center fixed     pointer-events: none;
+ z-[99999] bg-[#F4F4F4]'>
             <h2 className='actay loader-text text-[6vh]'>
                 Hey
             </h2>

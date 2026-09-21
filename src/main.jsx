@@ -19,7 +19,6 @@ createRoot(document.getElementById('root')).render(
     <SmoothScrolling>
       <BrowserRouter>
       <Mousemove/>
-      <Loader/>
       <Chilli/>
       <Header/>
     <App/>

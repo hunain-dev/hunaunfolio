@@ -61,8 +61,8 @@ mm.add("(min-width: 1024px) and (max-width: 1439px)", () => {
   tl.to(
     subtitleRef.current,
     {
-      scale: 0.6,
-      y: -131,
+      scale: 0.5,
+      y: -141,
       ease: "power2.out",
 
     },

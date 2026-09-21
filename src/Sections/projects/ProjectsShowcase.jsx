@@ -90,54 +90,56 @@ const ProjectsShowcase = () => {
 
     if (!slider) return;
 
-    const items = gsap.utils.toArray(".item", slider);
     const itemsContainer = slider.querySelector(".items");
     const nextButton = slider.querySelector(".next");
     const prevButton = slider.querySelector(".prev");
 
-    if (!items.length || !itemsContainer) return;
-
-    // ========================================
-    // SETTINGS
-    // ========================================
-
-    const angleStep = 360 / items.length;
-    const cardGap = 1.5; // increase for more space between cards
-    const cardWidth = items[0].offsetWidth;
-    const radius =
-      (cardWidth * cardGap) / (2 * Math.sin((angleStep * Math.PI) / 360));
+    if (!itemsContainer) return;
 
     let current = 0;
     let rotation = 0;
     let isAnimating = false;
+    let angleStep = 0;
 
-    // ========================================
-    // PUT ITEMS AROUND CIRCLE
-    // ========================================
+    const getItems = () => gsap.utils.toArray(".item", slider);
 
-    items.forEach((item, index) => {
-      const angle = index * angleStep - 110;
+    const layoutItems = () => {
+      const items = getItems();
+      if (!items.length) return;
 
-      gsap.set(item, {
-        x: Math.cos((angle * Math.PI) / 180) * radius,
+      const isMobile = window.innerWidth < 768;
+      const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
 
-        y: Math.sin((angle * Math.PI) / 180) * radius,
+      angleStep = 360 / items.length;
+      const cardGap = isMobile ? 1.3 : isTablet ? 1.3 : 1.5;
+      const cardWidth = items[0].offsetWidth;
+      const radius =
+        (cardWidth * cardGap) / (2 * Math.sin((angleStep * Math.PI) / 360));
+      const startAngle = isMobile ? -92 : isTablet ? -104 : -110;
 
-        rotation: angle + 90,
+      items.forEach((item, index) => {
+        const angle = index * angleStep + startAngle;
+
+        gsap.set(item, {
+          x: Math.cos((angle * Math.PI) / 180) * radius,
+          y: Math.sin((angle * Math.PI) / 180) * radius,
+          rotation: angle + 90,
+        });
       });
-    });
 
-    // ========================================
-    // GO TO ITEM
-    // ========================================
+      gsap.set(itemsContainer, {
+        rotation,
+        y: isMobile ? window.innerHeight * 0.08 : isTablet ? window.innerHeight * 0.02 : 0,
+      });
+    };
 
     const goTo = (index) => {
-      if (isAnimating) return;
+      const items = getItems();
+      if (!items.length || isAnimating) return;
 
       isAnimating = true;
 
       const diff = index - current;
-
       let shortest = diff;
 
       if (diff > items.length / 2) {
@@ -149,90 +151,68 @@ const ProjectsShowcase = () => {
       }
 
       current = (current + shortest + items.length) % items.length;
-
       rotation -= shortest * angleStep;
 
       gsap.to(itemsContainer, {
         rotation,
         duration: 1,
         ease: "power2.inOut",
-
         onComplete: () => {
           isAnimating = false;
         },
       });
     };
 
-    // ========================================
-    // NEXT
-    // ========================================
-
     const next = () => {
+      const items = getItems();
       goTo((current + 1) % items.length);
     };
 
-    // ========================================
-    // PREVIOUS
-    // ========================================
-
     const prev = () => {
+      const items = getItems();
       goTo((current - 1 + items.length) % items.length);
     };
 
-    // ========================================
-    // BUTTON EVENTS
-    // ========================================
+    const handleItemClick = (event) => {
+      const item = event.target.closest(".item");
+      if (!item) return;
+
+      const items = getItems();
+      const index = items.indexOf(item);
+      if (index !== -1) goTo(index);
+    };
+
+    const handleKeyDown = (event) => {
+      if (event.key === "ArrowRight") next();
+      if (event.key === "ArrowLeft") prev();
+    };
+
+    let resizeTimer;
+    const handleResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(layoutItems, 150);
+    };
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(layoutItems);
+    });
 
     nextButton?.addEventListener("click", next);
     prevButton?.addEventListener("click", prev);
-
-    // ========================================
-    // ITEM CLICK
-    // ========================================
-
-    items.forEach((item, index) => {
-      item.addEventListener("click", () => {
-        goTo(index);
-      });
-    });
-
-    // ========================================
-    // KEYBOARD
-    // ========================================
-
-    const handleKeyDown = (event) => {
-      if (event.key === "ArrowRight") {
-        next();
-      }
-
-      if (event.key === "ArrowLeft") {
-        prev();
-      }
-    };
-
+    slider.addEventListener("click", handleItemClick);
     window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("resize", handleResize);
 
-    // ========================================
-    // AUTO PLAY
-    // ========================================
-
-    const autoPlay = setInterval(() => {
-      next();
-    }, 2000);
-
-    // ========================================
-    // CLEANUP
-    // ========================================
+    const autoPlay = setInterval(next, 2000);
 
     return () => {
       clearInterval(autoPlay);
-
+      clearTimeout(resizeTimer);
       nextButton?.removeEventListener("click", next);
-
       prevButton?.removeEventListener("click", prev);
-
+      slider.removeEventListener("click", handleItemClick);
       window.removeEventListener("keydown", handleKeyDown);
-
+      window.removeEventListener("resize", handleResize);
       gsap.killTweensOf(itemsContainer);
     };
   }, []);
@@ -240,17 +220,20 @@ const ProjectsShowcase = () => {
   return (
     <section
       ref={sliderRef}
-      className="slider relative w-full lg:mt-13 xl:mt-0  h-screen overflow-hidden"
+      className="slider  relative w-full lg:mt-0  mt-3 xl:mt-0 min-h-[78vh] md:h-[92vh] lg:h-[100vh] xl:h-screen overflow-hidden"
     >
       <div
         className="
           items
           absolute
           inset-0
-          lg:top-[150%]
-          2xl:top-[140%]
-          top-0
+          top-[135%]
+          md:top-[160%]
+          lg:top-[162%]
+          xl:top-[160%]
+          2xl:top-[160%]
           origin-[50%_50%]
+          max-lg:origin-[50%_42%]
           cursor-grab
           select-none
           touch-pan-y
@@ -267,11 +250,14 @@ const ProjectsShowcase = () => {
           top-1/2
           -translate-x-1/2
           -translate-y-1/2
+          w-[65vw]
+          h-[36vh]
+          md:w-[53vw]
+          md:h-[42vh]
+          lg:w-[20vw]
+          lg:h-[45vh]
           xl:w-[17vw]
           xl:h-[45vh]
-          lg:h-[45vh]
-          lg:w-[20vw]
-
           rounded-[1.2rem]
           overflow-hidden
           cursor-pointer
@@ -280,11 +266,11 @@ const ProjectsShowcase = () => {
         "
                 href={index === 0 ? "#" : project.link}
            target="_blank"
-           onClick={()=>{
+           onClick={(e) => {
             if (index === 0 || index === 12) {
+              e.preventDefault();
               alert("The project is scheduled to go live next week.");
             }
-
            }}
            
           >
@@ -318,9 +304,12 @@ const ProjectsShowcase = () => {
               className="
                 absolute
                 z-2
-                left-[1.5vw]
-                bottom-[1.3vw]
-                text-base
+                left-[3vw]
+                bottom-[2vw]
+                text-sm
+                md:text-base
+                lg:left-[1.5vw]
+                lg:bottom-[1.3vw]
                 text-[whitesmoke]
               "
             >
@@ -334,14 +323,22 @@ const ProjectsShowcase = () => {
         className="
           controls
           absolute
-          bottom-9
+          bottom-6
+          md:bottom-8
+          lg:bottom-9
           left-1/2
           -translate-x-1/2
-          gap-[4vw]
+          gap-10
+          md:gap-[4vw]
           flex
           items-center
           justify-between
-          text-[2vw]
+          text-3xl
+          lg:text-4xl
+          2xl:text-6xl
+          xl:text-3xl
+          
+          md:text-[5vw]
           cursor-pointer
         "
       >
