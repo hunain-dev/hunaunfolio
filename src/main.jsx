@@ -11,6 +11,7 @@ import Footer from './Components/Footer.jsx'
 import Header from './Components/Header.jsx'
 import TechStack from './Sections/skills/TechStack.jsx'
 import ProjectShowcase from './Sections/projects/ProjectsShowcase.jsx'
+import Loader from './Components/Loader.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
     <SmoothScrolling>
       <BrowserRouter>
       <Mousemove/>
+      <Loader/>
       <Chilli/>
       <Header/>
     <App/>
@@ -27,5 +29,5 @@ createRoot(document.getElementById('root')).render(
 
 
     </SmoothScrolling>
-  </StrictMode>,
+  </StrictMode>
 )
