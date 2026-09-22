@@ -38,19 +38,19 @@ const Impactfulldesign = () => {
               <div className="text-content">
                 <div className="work-with-image"></div>
   
-                <h2 className="Morganite lg:text-[28vw] text-[43vw]  md:text-[45vw]">
+                <h2 className="Morganites lg:text-[28vw] text-[43vw]  md:text-[45vw] ">
                   {elem.h1}
                 </h2>
-                <h2 className="lg:text-[28vw] text-[43vw] md:text-[45vw] Morganite">
+                <h2 className="lg:text-[28vw] text-[43vw] md:text-[45vw] Morganites">
                   {elem.h2}
                 </h2>
-                <h2 className="lg:text-[28vw] text-[43vw] md:text-[45vw] Morganite">
+                <h2 className="lg:text-[28vw] text-[43vw] md:text-[45vw] Morganites">
                   {elem.h2_1}
                 </h2>
-                <h2 className="lg:text-[28vw] text-[43vw] md:text-[45vw] Morganite">
+                <h2 className="lg:text-[28vw] text-[43vw] md:text-[45vw] Morganites">
                   {elem.h2_2}
                 </h2>
-                <h2 className="lg:text-[28vw] text-[43vw] md:text-[45vw] Morganite">
+                <h2 className="lg:text-[28vw] text-[43vw] md:text-[45vw] Morganites">
                   {elem.h1_2}
                 </h2>
   

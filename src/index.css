@@ -21,6 +21,10 @@
     width: 0%;
   } 
 
+  html {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
   
 /*   
   ::-webkit-scrollbar {
@@ -106,7 +110,11 @@
 
    
   }
-  
+
+  html {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
   .ActayCondensed{
     font-family: 'ActayCondensed';
   
@@ -141,7 +149,7 @@
   
   @font-face {
     font-family: "Morganite";
-    src: url("/Assets/Fonts/Morganite-Black.ttf") format("truetype");
+    src: url("/Assets/Fonts/Morganite-Black.woff") format("truetype");
     font-display: swap;
   }
 
@@ -167,8 +175,7 @@
   
   @font-face {
     font-family: 'Impacted';
-    src: url('/Assets/Fonts/Impacted.ttf')  format("woff");
-    font-display: swap;
+    src: url('/Assets/Fonts/Impacted.ttf') format("truetype");
 
    
   }
@@ -258,7 +265,7 @@
   }
   
   
-  @font-face {
+  /* @font-face {
     font-family: 'Satoshi-black';
     src: url('/public/Assets/Fonts/Satoshi-Black.otf')  format("woff");
     font-display: swap;   
@@ -267,7 +274,9 @@
   .Satoshi-black{
     font-family: 'Satoshi-black';
   
-  }
+  } */
+
+
   @font-face {
     font-family: 'Queen';
     src: url('/public/Assets/Fonts/Queen.ttf')  format("woff");
@@ -287,7 +296,46 @@
     font-display: swap;   
   }
   
+
+
+
+
+
+
+
+  @font-face {
+    font-family: Morganites;
+    src: url('/public/assets/Fonts/Morganites/Morganite-ExtraBold.ttf');
+    font-display: swap;   
+
+  }
+
+  .Morganites{
+    font-family: Morganites;
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family:Satoshis ;
+    src: url('/public/assets/Fonts/Satoshi/Satoshi-Light.otf');
+    font-display: swap;   
+
+  }
   
+  .Satoshis{
+    font-family: Satoshis;
+  }
+  @font-face {
+    font-family:impact ;
+    src: url('/public/assets/Fonts/impacted/impact.ttf');
+    font-display: swap;   
+
+  }
+  
+  .impact{
+    font-family: impact;
+  }
+
   
   
   
@@ -312,42 +360,42 @@
 
 
   /* 📱 Mobile (0–640px) */
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   .swiper {
     width: 60vw;
     height: 45vh;
   }
-}
+} */
 
 /* for tablet responsive */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+/* @media (min-width: 768px) and (max-width: 1024px) {
   .swiper {
     width: 45vw;
     height: 60vh;
   }
-}
+} */
 
 
 /* for laptop and screeen */
 
 
-@media (min-width: 1024px) and (max-width: 1280px) {
+/* @media (min-width: 1024px) and (max-width: 1280px) {
   .swiper {
     
     width: 22vw;
     height: 33vw;
   }
-}
+} */
 
-
+/* 
   .swiper-slide {
     border-radius: 2vw;
     backdrop-filter: blur(20px);
     background: rgba(84, 82, 82, 0.171);
     border-radius: 15px;
   
-  }
+  } */
 /* 
   .techskills{
     transition: all 0.5s ease-in-out;

@@ -172,7 +172,7 @@ const Header = () => {
 
         {/* Actual moving text */}
         <motion.div
-          className="absolute  top-1 flex gap-4 whitespace-nowrap"
+          className="absolute  top-1 2xl:top-1 flex gap-4 whitespace-nowrap"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             duration: 45,
@@ -205,7 +205,7 @@ const Header = () => {
             return (
               <div
                 key={index}
-                className="menu-item ppneuemontreal flex items-center justify-center w-full px-3"
+                className="menu-item actay flex items-center justify-center w-full px-3"
               >
                 <button className="bg-[#BBFD6A] tracking-tight w-full lg:py-3 py-2 rounded-[1vw] font-bold uppercase lg:text-[1vw] text-[3vw] md:text-2xl">
                   <Textanimation text={elem.text} href={elem.href} />

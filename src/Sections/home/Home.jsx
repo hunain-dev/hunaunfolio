@@ -5,7 +5,7 @@ import LandingHero from './LandingHero'
 import HappyClients from './HappyClients'
 const Home = () => {
   return (
-    <div id='home' className='min-h-full w-full lg:mt-14 md:mt-16' >
+    <div id='home' className='min-h-full w-full lg:mt-14 md:mt-16 mt-13' >
     <LandingHero />
     <HappyClients/>
   

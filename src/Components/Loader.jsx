@@ -27,7 +27,10 @@ const Loader = () => {
         tl.to(".loader", {
             opacity: 0,
     duration: 2,
-    ease: "power2.inOut"
+    ease: "power2.inOut",
+    onComplete: () => {
+        document.querySelector(".loader").classList.add("pointer-events-none");
+      }
         })
         
 
@@ -38,7 +41,7 @@ const Loader = () => {
 
     return (
         <div className='loader h-screen w-full flex items-center justify-center fixed     pointer-events: none;
- z-[99999] bg-[#F4F4F4]'>
+ z-[99999] bg-[#F4F4F4] pointer-events-auto'>
             <h2 className='actay loader-text text-[6vh]'>
                 Hey
             </h2>

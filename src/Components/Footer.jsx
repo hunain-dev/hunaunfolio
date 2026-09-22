@@ -24,15 +24,15 @@ const Footer = () => {
       { x: 30 },
       {
         x: -width,
-        duration: width / 100, // adjust speed
-        repeat: -1,
+        duration: width / 30, // adjust speed
+        repeat: -2,
         ease: "linear",
       }
     );
   }, []);
 
   return (
-    <div id="contact" className="min-h-full lg:mt-19   w-full">
+    <div id="contact" className="min-h-full   lg:mt-19 mt-0 w-full">
 
 
       <div className="h-full w-full  flex items-center overflow-hidden lg:text-[13vw] text-[18vw] ">
@@ -63,7 +63,7 @@ const Footer = () => {
 
 
       
-      <div className="relative flex   z-99  h-fit  lg:py-12 xl:py-9 2xl:py-14 ">
+      <div className="relative flex  z-99  h-fit    lg:py-12 xl:py-9 2xl:py-14 ">
         {/* Main Content */}
         <div className=" w-full mx-auto  grid lg:grid-cols-2 md:grid-cols-2  ">
           <div className="actay w-full h-full  px-3 py-3">

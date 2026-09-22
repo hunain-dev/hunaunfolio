@@ -12,18 +12,21 @@ import Header from './Components/Header.jsx'
 import TechStack from './Sections/skills/TechStack.jsx'
 import ProjectShowcase from './Sections/projects/ProjectsShowcase.jsx'
 import Loader from './Components/Loader.jsx'
+import Impactfulldesign from './Sections/about/ImpactfulDesign.jsx'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <SmoothScrolling>
-      <BrowserRouter>
-      <Mousemove/>
-      <Chilli/>
-      <Header/>
-    <App/>
-    <Footer/> 
-     </BrowserRouter>
+  <SmoothScrolling>
+    <BrowserRouter>
+    <Mousemove/>
+    <Loader/>
+    <Chilli/>
+    <Header/>
+  <App/>
+  <Footer/> 
+
+    </BrowserRouter>
 
 
 

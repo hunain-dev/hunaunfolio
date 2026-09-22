@@ -115,7 +115,7 @@ const ProjectsShowcase = () => {
       const cardWidth = items[0].offsetWidth;
       const radius =
         (cardWidth * cardGap) / (2 * Math.sin((angleStep * Math.PI) / 360));
-      const startAngle = isMobile ? -92 : isTablet ? -104 : -110;
+      const startAngle = isMobile ? -40 : isTablet ? -104 : -110;
 
       items.forEach((item, index) => {
         const angle = index * angleStep + startAngle;
@@ -129,7 +129,8 @@ const ProjectsShowcase = () => {
 
       gsap.set(itemsContainer, {
         rotation,
-        y: isMobile ? window.innerHeight * 0.08 : isTablet ? window.innerHeight * 0.02 : 0,
+        y:0
+        
       });
     };
 
@@ -188,11 +189,26 @@ const ProjectsShowcase = () => {
     };
 
     let resizeTimer;
+    let lastWidth = window.innerWidth;
+    
     const handleResize = () => {
+      const currentWidth = window.innerWidth;
+    
+      // Mobile browser address bar ki wajah se
+      // height change ko ignore karo.
+      if (currentWidth === lastWidth) return;
+    
+      lastWidth = currentWidth;
+    
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(layoutItems, 150);
+    
+      resizeTimer = setTimeout(() => {
+        if (!isAnimating) {
+          layoutItems();
+        }
+      }, 200);
     };
-
+    
     requestAnimationFrame(() => {
       requestAnimationFrame(layoutItems);
     });
@@ -220,14 +236,15 @@ const ProjectsShowcase = () => {
   return (
     <section
       ref={sliderRef}
-      className="slider  relative w-full lg:mt-0  mt-3 xl:mt-0 min-h-[78vh] md:h-[92vh] lg:h-[100vh] xl:h-screen overflow-hidden"
+      className="slider   
+          relative w-full lg:mt-0  mt-3 xl:mt-0 min-h-[72vh] md:h-[92vh] lg:h-[100vh] xl:h-screen overflow-hidden"
     >
       <div
         className="
           items
           absolute
           inset-0
-          top-[135%]
+          top-[150%]
           md:top-[160%]
           lg:top-[162%]
           xl:top-[160%]
@@ -237,6 +254,7 @@ const ProjectsShowcase = () => {
           cursor-grab
           select-none
           touch-pan-y
+        
         "
       >
         {projects.map((project, index) => (

@@ -12,10 +12,10 @@ const Awards = () => {
       <h2 className="text-center">
         <Textanimation
           text="1st Runner-Up in Web Design | Techwiz Pakistan Web Design Competition"
-          classname="Satoshi lg:text-[2.3vw] md:text-3xl text-1xl"
+          classname="Satoshis lg:text-[2.3vw] md:text-3xl text-lg"
         />
       </h2>
-      <div className="flex justify-center w-full gap-8 flex-wrap py-10">
+    <div className="flex justify-center w-full gap-8 flex-wrap lg:py-10 py-4 ">
         {data.map((elem, index) => (
           <div
             key={index}

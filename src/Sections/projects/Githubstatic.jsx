@@ -2,13 +2,11 @@ import Textanimation from "../../Components/Ui/Textaniamtion";
 
 const Githubstatic = () => {
   return (
-    <div className="w-full   lg:px-0 px-4 lg:mt-0 mt-3 flex flex-col items-center justify-center ">
-      <h1 className="Satoshi text-[4vw]">
+    <div className="w-full lg:px-0 px-4 lg:mt-0 mt-3 flex flex-col items-center justify-center ">
         <Textanimation
           text="My GitHub Activity"
-          classname="Satoshi text-black lg:text-[3.5vw] md:text-5xl text-3xl"
-        />{" "}
-      </h1>
+          classname="Satoshis text-black lg:text-[3.5vw] md:text-5xl text-3xl"
+      />{" "}
 
       <div
         className="
